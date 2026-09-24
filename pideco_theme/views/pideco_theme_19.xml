@@ -1,0 +1,262 @@
+<odoo>
+    <template id="pideco_layout_19" inherit_id="website.layout" name="PIDECO site shell" priority="90">
+        <xpath expr="//header" position="replace">
+            <header id="top" class="pideco-header">
+                <div class="pideco-announcement" data-pideco-promo-slider="" aria-live="polite">
+                    <div class="pideco-promo-track">
+                        <span class="pideco-promo-item is-active" t-field="website.pideco_promo_text_1"/>
+                        <span class="pideco-promo-item" t-field="website.pideco_promo_text_2"/>
+                        <span class="pideco-promo-item" t-field="website.pideco_promo_text_3"/>
+                    </div>
+                </div>
+                <div class="container-fluid pideco-header-main">
+                    <button class="pideco-mobile-menu" type="button" data-pideco-menu-open="" aria-controls="pidecoNav" aria-expanded="false" aria-label="Open menu"><i class="fa fa-bars" t-translation="off"/></button>
+                    <ul class="top_menu d-none"><li class="o_no_autohide_item"/></ul>
+                    <nav id="pidecoNav" class="pideco-nav d-lg-flex">
+                        <div class="pideco-nav-mobile-head"><span>PIDECO</span><button type="button" data-pideco-menu-close="" aria-label="Close menu"><i class="fa fa-times" t-translation="off"/></button></div>
+                        <form class="pideco-nav-search" action="/shop" method="get" role="search">
+                            <input type="search" name="search" placeholder="Search products…" aria-label="Search"/>
+                            <button type="submit" aria-label="Search"><i class="fa fa-search" t-translation="off"/></button>
+                        </form>
+                        <a href="/shop?order=create_date+desc">New arrivals</a>
+                        <a href="/shop">Shop</a>
+                        <div class="pideco-mega" data-pideco-mega="">
+                            <button type="button" class="pideco-mega-toggle" data-pideco-mega-toggle="" aria-expanded="false">Categories <i class="fa fa-angle-down" t-translation="off"/></button>
+                            <div class="pideco-mega-panel">
+                                <div class="pideco-mega-inner">
+                                    <div class="pideco-mega-title"><span>Categories</span></div>
+                                    <t t-set="pideco_menu_categories" t-value="request.env['product.public.category'].search([('parent_id', '=', False), ('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id', limit=6)"/>
+                                    <div class="pideco-mega-groups">
+                                        <section t-foreach="pideco_menu_categories" t-as="menu_category">
+                                            <a class="pideco-mega-heading" t-att-href="'/shop/category/%s' % slug(menu_category)" t-out="menu_category.name"/>
+                                            <a t-foreach="menu_category.child_id.filtered_domain([('has_published_products', 'in', [True])] + list(website.website_domain()))[:6]" t-as="menu_child" t-att-href="'/shop/category/%s' % slug(menu_child)" t-out="menu_child.name"/>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pideco-mobile-category-view" data-pideco-mobile-category-view="" aria-hidden="true">
+                            <button type="button" class="pideco-mobile-category-back" data-pideco-mobile-category-back=""><i class="fa fa-arrow-left" t-translation="off"/> <span>Back to menu</span></button>
+                            <h2>Categories</h2>
+                            <t t-set="pideco_mobile_categories" t-value="request.env['product.public.category'].search([('parent_id', '=', False), ('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id', limit=6)"/>
+                            <div class="pideco-mobile-category-groups">
+                                <section t-foreach="pideco_mobile_categories" t-as="mobile_category">
+                                    <a class="pideco-mobile-category-heading" t-att-href="'/shop/category/%s' % slug(mobile_category)" t-out="mobile_category.name"/>
+                                    <a t-foreach="mobile_category.child_id.filtered_domain([('has_published_products', 'in', [True])] + list(website.website_domain()))[:6]" t-as="mobile_child" t-att-href="'/shop/category/%s' % slug(mobile_child)" t-out="mobile_child.name"/>
+                                </section>
+                            </div>
+                        </div>
+                        <a href="/#historia">About us</a>
+                        <div class="pideco-nav-account">
+                            <a href="/shop/wishlist"><i class="fa fa-heart-o" t-translation="off"/><span>Wishlist</span></a>
+                            <a href="/my"><i class="fa fa-user-o" t-translation="off"/><span>My account</span></a>
+                        </div>
+                    </nav>
+                    <div class="pideco-nav-backdrop" data-pideco-menu-close="" aria-hidden="true"/>
+                    <a class="pideco-brand" href="/" aria-label="PIDECO home"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/></a>
+                    <div class="pideco-actions">
+                        <button type="button" data-pideco-search-open="" aria-label="Search"><i class="fa fa-search" t-translation="off"/><span>Search</span></button>
+                        <a href="/web/login" aria-label="My account"><i class="fa fa-user-o" t-translation="off"/><span>Account</span></a>
+                        <a href="/shop/wishlist" aria-label="Wishlist"><i class="fa fa-heart-o" t-translation="off"/></a>
+                        <t t-set="pideco_order" t-value="request.cart"/>
+                        <ul class="list-unstyled m-0"><li class="pideco-header-cart"><button type="button" data-pideco-cart-open="" class="pideco-cart-button" aria-label="Open cart"><i class="fa fa-shopping-bag" t-translation="off"/><span class="pideco-cart-label">Cart</span><sup class="my_cart_quantity" t-out="pideco_order.cart_quantity or 0"/></button></li></ul>
+                    </div>
+                </div>
+            </header>
+        </xpath>
+
+        <xpath expr="//header" position="after">
+            <div class="pideco-search-overlay" data-pideco-search-overlay="" aria-hidden="true">
+                <div class="pideco-search-panel">
+                    <div class="pideco-panel-heading"><span>Search products</span><button type="button" data-pideco-search-close="" aria-label="Close search"><i class="fa fa-times"/></button></div>
+                    <form method="get" class="pideco-overlay-form" action="/shop"><div class="pideco-overlay-input"><i class="fa fa-search"/><input type="search" name="search" placeholder="Search products…" autocomplete="off"/><button class="btn btn-primary" type="submit">Search</button></div></form>
+                    <div class="pideco-search-hints"><span>Suggestions</span><a href="/shop?search=Canastos">Baskets</a><a href="/shop?search=Frascos">Jars</a><a href="/shop?search=Cubiertos">Cutlery</a><a href="/shop?search=Alfombras">Rugs</a></div>
+                </div>
+            </div>
+
+            <div class="pideco-drawer-backdrop" data-pideco-cart-close=""/>
+            <aside id="pideco-cart-drawer" class="pideco-cart-drawer" aria-hidden="true">
+                <t t-set="website_sale_order" t-value="request.cart"/>
+                <div class="pideco-cart-head"><div><small>Your cart</small><h2><span t-out="website_sale_order.cart_quantity or 0"/> products</h2></div><button type="button" data-pideco-cart-close="" aria-label="Close cart"><i class="fa fa-times"/></button></div>
+                <div class="pideco-cart-lines">
+                    <t t-if="website_sale_order and website_sale_order.website_order_line">
+                        <article class="pideco-cart-line" t-foreach="website_sale_order.website_order_line" t-as="line">
+                            <a t-att-href="line.product_id.website_url" class="pideco-cart-thumb"><img t-att-src="'/web/image/product.product/%s/image_128' % line.product_id.id" t-att-alt="line.name_short"/></a>
+                            <div><a t-att-href="line.product_id.website_url" t-out="line.name_short"/><small>Quantity <span t-out="line.product_uom_qty"/></small><strong t-out="line.price_total" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
+                        </article>
+                    </t>
+                    <div t-else="" class="pideco-empty-cart"><i class="fa fa-shopping-bag"/><h3>Your cart is empty</h3><p>Discover simple, durable objects for your home.</p></div>
+                </div>
+                <div class="pideco-cart-summary" t-if="website_sale_order and website_sale_order.website_order_line">
+                    <div><span>Subtotal</span><strong t-field="website_sale_order.amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
+                    <div><span>VAT</span><strong t-field="website_sale_order.amount_tax" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
+                    <div class="pideco-cart-total"><span>Total</span><strong t-field="website_sale_order.amount_total" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
+                    <a href="/shop/cart" class="btn btn-primary w-100">View cart and checkout</a>
+                </div>
+                <a t-else="" href="/shop" class="btn btn-primary pideco-cart-shop">Go to the shop</a>
+            </aside>
+        </xpath>
+
+        <xpath expr="//footer" position="attributes">
+            <attribute name="class" add="pideco-footer" separator=" "/>
+        </xpath>
+        <xpath expr="//div[@id='footer']/section[1]" position="replace">
+            <section class="pideco-footer pideco-footer-content" data-name="PIDECO footer">
+                <div class="container pideco-footer-grid">
+                    <div class="pideco-footer-intro"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/><p>Homeware and decor for bright, balanced spaces.</p></div>
+                    <div><h3>Shop</h3><a href="/shop?search=Cocina">Kitchen</a><a href="/shop?search=Baño">Bathroom</a><a href="/shop?search=Bazar">Homeware</a><a href="/shop">New arrivals</a></div>
+                    <div><h3>Help</h3><a href="/contactus">Shipping and delivery times</a><a href="/contactus">Returns and exchanges</a><a href="/contactus">Product care</a><a href="/contactus">Contact</a></div>
+                    <div><h3>Brand</h3><a href="/#historia">Our story</a><a href="/#historia">Materials</a><a href="/contactus">Stores</a><a href="/contactus">Wholesale</a></div>
+                </div>
+                <div class="container pideco-footer-bottom">
+                    <span>© 2026 PIDECO</span>
+                    <span>Practical simplicity · Organic essence · Coming together at home</span>
+                    <nav class="pideco-language-selector" aria-label="Language">
+                        <t t-set="pideco_lang_es" t-value="website.language_ids.filtered_domain([('code', '=', 'es_AR')])[:1]"/>
+                        <t t-set="pideco_lang_zh" t-value="website.language_ids.filtered_domain([('code', '=', 'zh_CN')])[:1]"/>
+                        <span>Language</span>
+                        <a t-if="pideco_lang_es" t-att-href="'/website/lang/%s?r=/' % pideco_lang_es.url_code" t-att-data-pideco-language="pideco_lang_es.url_code" t-att-class="'is-active' if request.env.lang == 'es_AR' else ''" lang="es">ES</a>
+                        <a t-if="pideco_lang_zh" t-att-href="'/website/lang/%s?r=/' % pideco_lang_zh.url_code" t-att-data-pideco-language="pideco_lang_zh.url_code" t-att-class="'is-active' if request.env.lang == 'zh_CN' else ''" lang="zh-CN">中文</a>
+                    </nav>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+    <template id="pideco_homepage_19" inherit_id="website.homepage" name="PIDECO homepage" priority="90">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure pideco-home oe_website_sale">
+                <section class="pideco-home-banner s_cover oe_img_bg o_bg_img_center" data-snippet="s_cover" data-name="Banner principal PIDECO" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');">
+                    <div class="o_we_bg_filter bg-black-50"/>
+                    <div class="container pideco-banner-content position-relative"><p class="pideco-kicker">Homeware and decor for everyday living</p><h1>Transform your home<br/>into your favorite place.</h1><p>Functional objects, natural textures and simple design for every space.</p><a class="btn btn-light" href="/shop">Shop now</a></div>
+                </section>
+
+                <section class="pideco-benefits" data-name="Beneficios de compra">
+                    <div class="container pideco-benefits-grid">
+                        <div><i class="fa fa-shopping-bag"/><span><strong>Minimum order</strong><small>$200,000</small></span></div>
+                        <div><i class="fa fa-truck"/><span><strong>Shipping</strong><small>Nationwide</small></span></div>
+                        <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Arrange your pickup</small></span></div>
+                    </div>
+                </section>
+
+                <section class="container pideco-home-section pideco-category-slider-section" data-name="Categorías principales">
+                    <div class="pideco-section-head"><div><p class="pideco-kicker">Explore</p><h2>Featured categories</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="categories" aria-label="Previous category"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="categories" aria-label="Next category"><i class="fa fa-arrow-right"/></button></div></div>
+                    <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
+                    <t t-set="pideco_categories" t-value="request.env['product.public.category'].search([('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id')"/>
+                    <div class="pideco-category-slider pideco-slider-track" data-pideco-slider="categories">
+                        <a class="pideco-category-slide" t-foreach="pideco_categories" t-as="category" t-att-href="'/shop/category/%s' % slug(category)"><div class="pideco-category-slide-image"><img t-att-src="'/web/image/product.public.category/%s/image_512' % category.id" t-att-alt="category.name"/></div><span><strong t-out="category.name"/><small>View products <i class="fa fa-arrow-right"/></small></span></a>
+                        <a class="pideco-category-slide" t-if="not pideco_categories" href="/shop"><div class="pideco-category-placeholder"><i class="fa fa-th-large"/></div><span><strong>All PIDECO</strong><small>View products <i class="fa fa-arrow-right"/></small></span></a>
+                    </div>
+                </section>
+
+                <section class="container pideco-home-section pideco-featured" data-name="Productos destacados">
+                    <div class="pideco-section-head"><div><p class="pideco-kicker">Selected for you</p><h2>Featured products</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="featured" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="featured" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
+                    <t t-set="pideco_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id desc', limit=8)"/>
+                    <div class="pideco-product-grid pideco-slider-track pideco-featured-slider" data-pideco-slider="featured">
+                        <t t-foreach="pideco_products" t-as="product"><t t-call="pideco_theme.pideco_slider_product_card"/></t>
+                        <div class="pideco-products-empty" t-if="not pideco_products"><h3>The collection is on its way</h3><p>Publish products in Odoo to display them here.</p><a href="/shop" class="btn btn-primary">Go to the shop</a></div>
+                    </div>
+                </section>
+
+                <section class="container pideco-home-section" data-name="Banners editoriales">
+                    <div class="pideco-promo-grid">
+                        <a href="/shop?search=Cocina" class="pideco-promo-card pideco-promo-card-light"><img src="/pideco_theme/static/src/assets/pideco-editorial.png" alt="Refresh your kitchen"/><span><small>New ways of living</small><strong>A simpler kitchen</strong><em>Discover the collection</em></span></a>
+                        <a href="/shop?search=Organizadores" class="pideco-promo-card pideco-promo-card-dark"><img src="/pideco_theme/static/src/assets/pideco-editorial.png" alt="Order and design"/><span><small>Order you can enjoy</small><strong>Everything in its place</strong><em>View organizers</em></span></a>
+                    </div>
+                </section>
+
+                <section class="container pideco-home-section pideco-transform" data-name="Transformá tus espacios">
+                    <div class="pideco-section-head"><div><p class="pideco-kicker">Ideas for your home</p><h2>Transform your spaces</h2><p>Small changes, new sensations. Find pieces that add order, warmth and personality.</p></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="transform" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="transform" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
+                    <t t-set="pideco_short_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id', limit=8)"/>
+                    <div class="pideco-product-grid pideco-product-grid-short pideco-slider-track" data-pideco-slider="transform"><t t-foreach="pideco_short_products" t-as="product"><t t-call="pideco_theme.pideco_slider_product_card"/></t></div>
+                </section>
+
+                <section class="pideco-wholesale" data-name="Beneficios mayoristas">
+                    <div class="container pideco-wholesale-grid">
+                        <div><p class="pideco-kicker">Purchasing for your business</p><h2>Wholesale benefits</h2><p>Get volume discounts, personal service and offers tailored to retailers, projects and large orders.</p><a class="btn btn-light" href="/contactus">I want to buy wholesale</a></div>
+                        <div class="pideco-wholesale-benefits"><div><i class="fa fa-tags"/><strong>Volume discounts</strong><span>Better terms based on your order.</span></div><div><i class="fa fa-user"/><strong>Personal service</strong><span>We help you choose every product.</span></div><div><i class="fa fa-cubes"/><strong>Project orders</strong><span>Solutions for retailers and interior projects.</span></div></div>
+                    </div>
+                </section>
+
+                <section class="container pideco-home-section pideco-discounts" data-name="Discounts">
+                    <div class="pideco-section-head"><div><p class="pideco-kicker">More you buy, more you save</p><h2>Discounts by order amount</h2><p>Choose the payment method that works best for your order.</p></div></div>
+                    <div class="pideco-discount-grid">
+                        <div class="pideco-discount-card"><h3>Cash payment</h3><div><span>Purchasing $200,000</span><strong>5% Off</strong></div><div><span>Purchasing $400,000</span><strong>10% Off</strong></div><div><span>Purchasing $700,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>20% Off</strong></div></div>
+                        <div class="pideco-discount-card"><h3>Bank transfer</h3><div><span>Purchasing $300,000</span><strong>5% Off</strong></div><div><span>Purchasing $600,000</span><strong>10% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,500,000</span><strong>20% Off</strong></div></div>
+                    </div>
+                    <p class="pideco-discount-note">* Discounts are subject to change and do not apply to sale items.</p>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="pideco_product_page_19" inherit_id="website_sale.product" name="PIDECO product page" priority="90">
+        <xpath expr="//section[@id='product_detail']" position="after">
+            <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
+            <t t-set="pideco_recommendation_domain" t-value="pideco_sale_domain + [('id', '!=', product.id)] + ([('public_categ_ids', 'in', product.public_categ_ids.ids)] if product.public_categ_ids else [])"/>
+            <t t-set="pideco_primary_recommendations" t-value="product.alternative_product_ids.filtered_domain(pideco_sale_domain) | request.env['product.template'].search(pideco_recommendation_domain, order='website_sequence, id desc', limit=4)"/>
+            <t t-set="pideco_fallback_domain" t-value="pideco_sale_domain + [('id', 'not in', [product.id] + pideco_primary_recommendations.ids)]"/>
+            <t t-set="pideco_recommended_products" t-value="(pideco_primary_recommendations | request.env['product.template'].search(pideco_fallback_domain, order='website_sequence, id desc', limit=4))[:4]"/>
+            <section class="container pideco-product-recommendations" t-if="pideco_recommended_products">
+                <div class="pideco-section-head">
+                    <div>
+                        <p class="pideco-kicker">Complete your space</p>
+                        <h2>You may also like</h2>
+                        <p>Products to pair with this selection.</p>
+                    </div>
+                    <a href="/shop">View all <i class="fa fa-arrow-right"/></a>
+                </div>
+                <div class="pideco-product-grid pideco-product-grid-short">
+                    <a class="pideco-product-card" t-foreach="pideco_recommended_products" t-as="recommended" t-att-href="recommended.website_url">
+                        <div class="pideco-product-image">
+                            <div class="pideco-product-badges"><span t-if="recommended.compare_list_price and recommended.compare_list_price &gt; recommended.list_price">Offer</span><span t-elif="recommended.create_date">New</span></div>
+                            <img t-att-src="'/web/image/product.template/%s/image_512' % recommended.id" t-att-alt="recommended.name"/>
+                        </div>
+                        <small t-out="recommended.public_categ_ids[:1].name or 'PIDECO'"/>
+                        <h3 t-out="recommended.name"/>
+                        <strong t-out="recommended.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                        <span class="pideco-product-link">View product <i class="fa fa-arrow-right"/></span>
+                    </a>
+                </div>
+            </section>
+            <section class="container pideco-product-discounts" data-name="Discounts">
+                <div class="pideco-section-head"><div><p class="pideco-kicker">Save on larger orders</p><h2>Discounts</h2><p>Choose the payment method that works best for your order.</p></div></div>
+                <div class="pideco-discount-grid">
+                    <div class="pideco-discount-card"><h3>Cash payment</h3><div><span>Purchasing $200,000</span><strong>5% Off</strong></div><div><span>Purchasing $400,000</span><strong>10% Off</strong></div><div><span>Purchasing $700,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>20% Off</strong></div></div>
+                    <div class="pideco-discount-card"><h3>Bank transfer</h3><div><span>Purchasing $300,000</span><strong>5% Off</strong></div><div><span>Purchasing $600,000</span><strong>10% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,500,000</span><strong>20% Off</strong></div></div>
+                </div>
+                <p class="pideco-discount-note">* Discounts are subject to change and do not apply to sale items.</p>
+            </section>
+        </xpath>
+    </template>
+
+    <template id="pideco_product_title_19" inherit_id="website_sale.product_title" name="PIDECO product title" priority="90">
+        <xpath expr="//h1" position="before">
+            <div class="pideco-product-meta">
+                <a t-if="product.public_categ_ids" t-att-href="'/shop/category/%s' % slug(product.public_categ_ids[:1])" t-out="product.public_categ_ids[:1].name"/>
+                <span t-if="product_variant.default_code">SKU <t t-out="product_variant.default_code"/></span>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="pideco_product_terms_19" inherit_id="website_sale.product_terms_and_conditions" name="PIDECO product assurances" priority="90">
+        <xpath expr="//small" position="replace">
+            <div class="pideco-product-assurances">
+                <div><i class="fa fa-shopping-bag"/><span><strong>Minimum order $200,000</strong><small>Applies to wholesale orders</small></span></div>
+                <div><i class="fa fa-truck"/><span><strong>Nationwide shipping</strong><small>We coordinate the delivery of your order</small></span></div>
+                <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Available by prior arrangement</small></span></div>
+            </div>
+        </xpath>
+    </template>
+    <template id="pideco_slider_product_card" name="PIDECO slider product card">
+        <article class="pideco-product-card" t-att-data-product-template-id="product.id" t-att-data-product-id="product._get_first_possible_variant_id()" t-att-data-is-combo="'true' if product.type == 'combo' else 'false'">
+            <a class="pideco-product-image" t-att-href="product.website_url">
+                <div class="pideco-product-badges"><span t-if="product.compare_list_price and product.compare_list_price &gt; product.list_price">Offer</span><span t-elif="product.create_date">New</span></div>
+                <img t-att-src="'/web/image/product.template/%s/image_512' % product.id" t-att-alt="product.name" loading="lazy"/>
+            </a>
+            <h3><a t-att-href="product.website_url" t-out="product.name"/></h3>
+            <strong t-out="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+            <button type="button" class="btn btn-primary pideco-card-add" t-if="product._website_show_quick_add()">Add to cart</button>
+        </article>
+    </template>
+</odoo>

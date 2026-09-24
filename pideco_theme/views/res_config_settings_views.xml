@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_pideco" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.pideco</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='website_info_settings']" position="inside">
+                <setting id="pideco_promo_bar" string="PIDECO promotional bar" help="Messages rotate vertically every four seconds. Edit them in each website language to maintain their translations.">
+                    <div class="content-group">
+                        <div class="row mt8">
+                            <label class="col-lg-3" string="Message 1" for="pideco_promo_text_1"/>
+                            <field name="pideco_promo_text_1" placeholder="Free shipping throughout the country"/>
+                        </div>
+                        <div class="row mt8">
+                            <label class="col-lg-3" string="Message 2" for="pideco_promo_text_2"/>
+                            <field name="pideco_promo_text_2" placeholder="Minimum purchase $200,000"/>
+                        </div>
+                        <div class="row mt8">
+                            <label class="col-lg-3" string="Message 3" for="pideco_promo_text_3"/>
+                            <field name="pideco_promo_text_3" placeholder="Store pickup available"/>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
