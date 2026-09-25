@@ -1,5 +1,15 @@
 # Historial de cambios — PIDECO Theme
 
+## Sin publicar
+
+### Home
+
+- El banner principal pasa a ser un carrusel de 3 diapositivas que cambia cada 4 segundos, con flechas a los lados e indicadores. Ocupa todo el ancho y el alto de la pantalla debajo del encabezado.
+- Usa el carrusel nativo de Odoo, así que desde el editor se pueden agregar o quitar diapositivas y cambiar la imagen de fondo, los textos, el botón y la velocidad.
+- Toda la diapositiva es clickeable y lleva al link de su botón.
+- En celular el texto se ubica abajo y cada diapositiva muestra la parte de la imagen elegida como punto de foco en el editor.
+- Los textos de las diapositivas 2 y 3 todavía no tienen traducción.
+
 ## 19.0.1.2.0
 
 Correcciones realizadas por Devoo sobre la versión 19.0.1.1.0.

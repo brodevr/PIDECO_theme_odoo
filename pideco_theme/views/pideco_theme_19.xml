@@ -128,9 +128,49 @@
     <template id="pideco_homepage_19" inherit_id="website.homepage" name="PIDECO homepage" priority="90">
         <xpath expr="//div[@id='wrap']" position="replace">
             <div id="wrap" class="oe_structure pideco-home oe_website_sale">
-                <section class="pideco-home-banner s_cover oe_img_bg o_bg_img_center" data-snippet="s_cover" data-name="Banner principal PIDECO" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');">
-                    <div class="o_we_bg_filter bg-black-50"/>
-                    <div class="container pideco-banner-content position-relative"><p class="pideco-kicker">Homeware and decor for everyday living</p><h1>Transform your home<br/>into your favorite place.</h1><p>Functional objects, natural textures and simple design for every space.</p><a class="btn btn-light" href="/shop">Shop now</a></div>
+                <!-- Native Odoo s_carousel markup, so the website editor can add slides, change backgrounds, links and speed. -->
+                <section class="s_carousel_wrapper p-0 pideco-hero-carousel" data-snippet="s_carousel" data-name="Banner principal PIDECO" data-vxml="001" data-vcss="001">
+                    <div id="pidecoHeroCarousel" class="s_carousel s_carousel_default carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');" data-name="Slide">
+                                <div class="o_we_bg_filter bg-black-50"/>
+                                <div class="container oe_unremovable">
+                                    <div class="row">
+                                        <div class="carousel-content pideco-banner-content col-lg-7"><p class="pideco-kicker">Homeware and decor for everyday living</p><h1>Transform your home<br/>into your favorite place.</h1><p>Functional objects, natural textures and simple design for every space.</p><p><a class="btn btn-light stretched-link" href="/shop">Shop now</a></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');" data-name="Slide">
+                                <div class="o_we_bg_filter bg-black-50"/>
+                                <div class="container oe_unremovable">
+                                    <div class="row">
+                                        <div class="carousel-content pideco-banner-content col-lg-7"><p class="pideco-kicker">Just arrived</p><h2>New pieces<br/>for every room.</h2><p>Discover the latest additions to the PIDECO collection.</p><p><a class="btn btn-light stretched-link" href="/shop?order=create_date+desc">New arrivals</a></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');" data-name="Slide">
+                                <div class="o_we_bg_filter bg-black-50"/>
+                                <div class="container oe_unremovable">
+                                    <div class="row">
+                                        <div class="carousel-content pideco-banner-content col-lg-7"><p class="pideco-kicker">Purchasing for your business</p><h2>Wholesale benefits</h2><p>Volume discounts and personal service for retailers and projects.</p><p><a class="btn btn-light stretched-link" href="/contactus">I want to buy wholesale</a></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="next" aria-label="Next" title="Next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"/>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        <div class="carousel-indicators o_not_editable">
+                            <button type="button" data-bs-target="#pidecoHeroCarousel" data-bs-slide-to="0" class="active" aria-label="Carousel indicator"/>
+                            <button type="button" data-bs-target="#pidecoHeroCarousel" data-bs-slide-to="1" aria-label="Carousel indicator"/>
+                            <button type="button" data-bs-target="#pidecoHeroCarousel" data-bs-slide-to="2" aria-label="Carousel indicator"/>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="pideco-benefits" data-name="Beneficios de compra">
