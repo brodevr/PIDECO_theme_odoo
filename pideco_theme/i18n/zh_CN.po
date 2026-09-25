@@ -9,306 +9,45 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
-msgid "Add to cart"
-msgstr "加入购物车"
-
-#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
-msgid "Offer"
-msgstr "优惠"
+msgid "* Discounts are subject to change and do not apply to sale items."
+msgstr "* 折扣可能会有调整，特价商品不适用。"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
-msgid "New"
-msgstr "新品"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Open menu"
-msgstr "打开菜单"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close menu"
-msgstr "关闭菜单"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "New arrivals"
-msgstr "新品"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Shop"
-msgstr "商店"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"<small>Explore PIDECO</small>\n"
-"                                        <strong>Everything you need to transform your spaces.</strong>"
+"<i class=\"fa fa-cubes\"/><strong>Project orders</strong><span>Solutions for"
+" retailers and interior projects.</span>"
 msgstr ""
-"<small>探索 PIDECO</small>\n"
-"                                        <strong>打造理想空间所需的一切。</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "About us"
-msgstr "关于我们"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "PIDECO"
-msgstr "PIDECO"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "PIDECO home"
-msgstr "PIDECO 首页"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Search"
-msgstr "搜索"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "My account"
-msgstr "我的账户"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Wishlist"
-msgstr "愿望清单"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Open cart"
-msgstr "打开购物车"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Search products</span>"
-msgstr "<span>搜索商品</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close search"
-msgstr "关闭搜索"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Search products…"
-msgstr "搜索商品…"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Suggestions</span>"
-msgstr "<span>推荐搜索</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Baskets"
-msgstr "篮筐"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Jars"
-msgstr "罐子"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Cutlery"
-msgstr "餐具"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Rugs"
-msgstr "地毯"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<small>Your cart</small>"
-msgstr "<small>您的购物车</small>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "products"
-msgstr "件商品"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close cart"
-msgstr "关闭购物车"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Quantity"
-msgstr "数量"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Your cart is empty"
-msgstr "您的购物车是空的"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Discover simple, durable objects for your home."
-msgstr "探索简约耐用的家居好物。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Subtotal</span>"
-msgstr "<span>小计</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>VAT</span>"
-msgstr "<span>增值税</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Total</span>"
-msgstr "<span>总计</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "View cart and checkout"
-msgstr "查看购物车并结账"
+"<i class=\"fa fa-cubes\"/><strong>项目订单</strong><span>为商店和空间项目提供解决方案。</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Go to the shop"
-msgstr "前往商店"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Homeware and decor for bright, balanced spaces."
-msgstr "为明亮、平衡的空间提供家居用品与装饰。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Kitchen"
-msgstr "厨房"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Bathroom"
-msgstr "浴室"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Homeware"
-msgstr "家居用品"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Help"
-msgstr "帮助"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Shipping and delivery times"
-msgstr "配送与时效"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Returns and exchanges"
-msgstr "退换货"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Product care"
-msgstr "商品保养"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Contact"
-msgstr "联系我们"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Brand"
-msgstr "品牌"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Our story"
-msgstr "品牌故事"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Materials"
-msgstr "材质"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Stores"
-msgstr "门店"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Wholesale"
-msgstr "批发"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid ""
-"<span>© 2026 PIDECO</span>\n"
-"                    <span>Practical simplicity · Organic essence · Coming together at home</span>"
+"<i class=\"fa fa-map-marker\"/><span><strong>Store "
+"pickup</strong><small>Arrange your pickup</small></span>"
 msgstr ""
-"<span>© 2026 PIDECO</span>\n"
-"                    <span>实用简约 · 自然本真 · 家中相聚</span>"
+"<i class=\"fa fa-map-"
+"marker\"/><span><strong>门店自提</strong><small>联系我们安排取货</small></span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Language</span>"
-msgstr "<span>语言</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "ES"
-msgstr "ES"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "EN"
-msgstr "EN"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "中文"
-msgstr "中文"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Language"
-msgstr "语言"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Homeware and decor for everyday living"
-msgstr "适合日常生活的家居用品与装饰"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Transform your home<br/>into your favorite place."
-msgstr "把家变成<br/>您最爱的地方。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
 msgid ""
-"Functional objects, natural textures and simple design for every space."
-msgstr "以实用物件、天然质感和简约设计陪伴每个空间。"
+"<i class=\"fa fa-map-marker\"/><span><strong>Store "
+"pickup</strong><small>Available by prior arrangement</small></span>"
+msgstr ""
+"<i class=\"fa fa-map-"
+"marker\"/><span><strong>门店自提</strong><small>需提前协调安排</small></span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Shop now"
-msgstr "立即购买"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid ""
+"<i class=\"fa fa-shopping-bag\"/><span><strong>Minimum order "
+"$200,000</strong><small>Applies to wholesale orders</small></span>"
+msgstr ""
+"<i class=\"fa fa-shopping-bag\"/><span><strong>最低购买金额 "
+"$200,000</strong><small>适用于批发订单</small></span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
@@ -322,204 +61,9 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"<i class=\"fa fa-"
-"truck\"/><span><strong>Shipping</strong><small>Nationwide</small></span>"
-msgstr ""
-"<i class=\"fa fa-"
-"truck\"/><span><strong>配送</strong><small>覆盖全国</small></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<i class=\"fa fa-map-marker\"/><span><strong>Store "
-"pickup</strong><small>Arrange your pickup</small></span>"
-msgstr ""
-"<i class=\"fa fa-map-"
-"marker\"/><span><strong>门店自提</strong><small>联系我们安排取货</small></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Explore"
-msgstr "探索"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Featured categories"
-msgstr "主要分类"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Previous category"
-msgstr "上一个分类"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Next category"
-msgstr "下一个分类"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<small>View products <i class=\"fa fa-arrow-right\"/></small>"
-msgstr "<small>查看商品 <i class=\"fa fa-arrow-right\"/></small>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><strong>All PIDECO</strong><small>View products <i class=\"fa fa-"
-"arrow-right\"/></small></span>"
-msgstr ""
-"<span><strong>全部 PIDECO</strong><small>查看商品 <i class=\"fa fa-arrow-"
-"right\"/></small></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Selected for you"
-msgstr "为您精选"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Featured products"
-msgstr "精选商品"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "View all <i class=\"fa fa-arrow-right\"/>"
-msgstr "查看全部 <i class=\"fa fa-arrow-right\"/>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "The collection is on its way"
-msgstr "新品系列即将上线"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Publish products in Odoo to display them here."
-msgstr "请在 Odoo 中发布商品，以便在此显示。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Refresh your kitchen"
-msgstr "焕新厨房"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><small>New ways of living</small><strong>A simpler "
-"kitchen</strong><em>Discover the collection</em></span>"
-msgstr ""
-"<span><small>全新的生活方式</small><strong>让厨房更简洁</strong><em>探索系列</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Order and design"
-msgstr "收纳与设计"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><small>Order you can enjoy</small><strong>Everything in its "
-"place</strong><em>View organizers</em></span>"
-msgstr ""
-"<span><small>享受井然有序</small><strong>让每件物品各得其所</strong><em>查看收纳用品</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Ideas for your home"
-msgstr "家居灵感"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Transform your spaces"
-msgstr "焕新您的空间"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"Small changes, new sensations. Find pieces that add order, warmth and "
-"personality."
-msgstr "小小改变，焕新感受。寻找兼具秩序、温暖与个性的家居好物。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Purchasing for your business"
-msgstr "企业采购"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Wholesale benefits"
-msgstr "批发优惠"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"Get volume discounts, personal service and offers tailored to retailers, "
-"projects and large orders."
-msgstr "享受批量折扣、专属服务，以及为商店、项目和大宗采购量身打造的方案。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "I want to buy wholesale"
-msgstr "我要批量采购"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
 "<i class=\"fa fa-tags\"/><strong>Volume discounts</strong><span>Better terms"
 " based on your order.</span>"
 msgstr "<i class=\"fa fa-tags\"/><strong>批量折扣</strong><span>订单越大，条件越优惠。</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<i class=\"fa fa-user\"/><strong>Personal service</strong><span>We help you "
-"choose every product.</span>"
-msgstr "<i class=\"fa fa-user\"/><strong>个性化服务</strong><span>我们协助您挑选每件商品。</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<i class=\"fa fa-cubes\"/><strong>Project orders</strong><span>Solutions for"
-" retailers and interior projects.</span>"
-msgstr ""
-"<i class=\"fa fa-cubes\"/><strong>项目订单</strong><span>为商店和空间项目提供解决方案。</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Complete your space"
-msgstr "完善您的空间"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "You may also like"
-msgstr "您可能也喜欢"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Products to pair with this selection."
-msgstr "为这次选择搭配更多商品。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid ""
-"<span class=\"pideco-product-link\">View product <i class=\"fa fa-arrow-"
-"right\"/></span>"
-msgstr ""
-"<span class=\"pideco-product-link\">查看商品 <i class=\"fa fa-arrow-"
-"right\"/></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_title_19
-msgid "SKU"
-msgstr "SKU"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
-msgid ""
-"<i class=\"fa fa-shopping-bag\"/><span><strong>Minimum order "
-"$200,000</strong><small>Applies to wholesale orders</small></span>"
-msgstr ""
-"<i class=\"fa fa-shopping-bag\"/><span><strong>最低购买金额 "
-"$200,000</strong><small>适用于批发订单</small></span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
@@ -532,61 +76,30 @@ msgstr ""
 "truck\"/><span><strong>全国配送</strong><small>我们会协调您的订单配送</small></span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"<i class=\"fa fa-map-marker\"/><span><strong>Store "
-"pickup</strong><small>Available by prior arrangement</small></span>"
+"<i class=\"fa fa-"
+"truck\"/><span><strong>Shipping</strong><small>Nationwide</small></span>"
 msgstr ""
-"<i class=\"fa fa-map-"
-"marker\"/><span><strong>门店自提</strong><small>需提前协调安排</small></span>"
-
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "More you buy, more you save"
-msgstr "购买越多，节省越多"
+"<i class=\"fa fa-"
+"truck\"/><span><strong>配送</strong><small>覆盖全国</small></span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "* Discounts are subject to change and do not apply to sale items."
-msgstr "* 折扣可能会有调整，特价商品不适用。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Discounts"
-msgstr "折扣"
+msgid ""
+"<i class=\"fa fa-user\"/><strong>Personal service</strong><span>We help you "
+"choose every product.</span>"
+msgstr "<i class=\"fa fa-user\"/><strong>个性化服务</strong><span>我们协助您挑选每件商品。</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "More you buy, more you save"
-msgstr "购买越多，节省越多"
+msgid "<small>View products <i class=\"fa fa-arrow-right\"/></small>"
+msgstr "<small>查看商品 <i class=\"fa fa-arrow-right\"/></small>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Save on larger orders"
-msgstr "大额订单可享优惠"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Discounts by order amount"
-msgstr "按订单金额享受折扣"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Choose the payment method that works best for your order."
-msgstr "选择最适合您订单的付款方式。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Cash payment"
-msgstr "现金支付"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Bank transfer"
-msgstr "银行转账"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<small>Your cart</small>"
+msgstr "<small>您的购物车</small>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
@@ -594,9 +107,63 @@ msgid "<span class=\"pideco-cart-label\">Cart</span>"
 msgstr "<span class=\"pideco-cart-label\">购物车</span>"
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid ""
+"<span class=\"pideco-product-link\">View product <i class=\"fa fa-arrow-"
+"right\"/></span>"
+msgstr ""
+"<span class=\"pideco-product-link\">查看商品 <i class=\"fa fa-arrow-"
+"right\"/></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>New ways of living</small><strong>A simpler "
+"kitchen</strong><em>Discover the collection</em></span>"
+msgstr ""
+"<span><small>全新的生活方式</small><strong>让厨房更简洁</strong><em>探索系列</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>Order you can enjoy</small><strong>Everything in its "
+"place</strong><em>View organizers</em></span>"
+msgstr ""
+"<span><small>享受井然有序</small><strong>让每件物品各得其所</strong><em>查看收纳用品</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><strong>All PIDECO</strong><small>View products <i class=\"fa fa-"
+"arrow-right\"/></small></span>"
+msgstr ""
+"<span><strong>全部 PIDECO</strong><small>查看商品 <i class=\"fa fa-arrow-"
+"right\"/></small></span>"
+
+#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "<span>Account</span>"
 msgstr "<span>账户</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Back to menu</span>"
+msgstr "<span>返回菜单</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Categories</span>"
+msgstr "<span>分类</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Language</span>"
+msgstr "<span>语言</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Log out</span>"
+msgstr "<span>退出登录</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
@@ -609,116 +176,22 @@ msgid "<span>PIDECO</span>"
 msgstr "<span>PIDECO</span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Search</span>"
-msgstr "<span>搜索</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Wishlist</span>"
-msgstr "<span>收藏夹</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Categories"
-msgstr "分类"
-
-#. module: pideco_theme
-#: model:ir.model,name:pideco_theme.model_res_config_settings
-msgid "Config Settings"
-msgstr "配置设置"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:pideco_theme.field_website__display_name
-msgid "Display Name"
-msgstr "显示名称"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Free shipping throughout the country"
-msgstr "全国免运费"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__id
-#: model:ir.model.fields,field_description:pideco_theme.field_website__id
-msgid "ID"
-msgstr "ID"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Message 1"
-msgstr "消息 1"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Message 2"
-msgstr "消息 2"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Message 3"
-msgstr "消息 3"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid ""
-"Messages rotate vertically every four seconds. Edit them in each website "
-"language to maintain their translations."
-msgstr "消息每四秒垂直轮播。请在各网站语言中编辑，以保持翻译一致。"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Minimum purchase $200,000"
-msgstr "最低购买金额 $200,000"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "<span>Purchasing $1,000,000</span><strong>15% Off</strong>"
+msgstr "<span>购买 $1,000,000</span><strong>优惠 15%</strong>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Next product"
-msgstr "下一个商品"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "PIDECO promotional bar"
-msgstr "PIDECO 促销栏"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "<span>Purchasing $1,000,000</span><strong>20% Off</strong>"
+msgstr "<span>购买 $1,000,000</span><strong>优惠 20%</strong>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Previous product"
-msgstr "上一个商品"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_1
-#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_1
-msgid "Promo message 1"
-msgstr "促销消息 1"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_2
-#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_2
-msgid "Promo message 2"
-msgstr "促销消息 2"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_3
-#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_3
-msgid "Promo message 3"
-msgstr "促销消息 3"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Store pickup available"
-msgstr "支持门店自提"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "View all products"
-msgstr "查看所有商品"
-
-#. module: pideco_theme
-#: model:ir.model,name:pideco_theme.model_website
-msgid "Website"
-msgstr "网站"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "<span>Purchasing $1,500,000</span><strong>20% Off</strong>"
+msgstr "<span>购买 $1,500,000</span><strong>优惠 20%</strong>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
@@ -751,19 +224,538 @@ msgid "<span>Purchasing $700,000</span><strong>15% Off</strong>"
 msgstr "<span>购买 $700,000</span><strong>优惠 15%</strong>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "<span>Purchasing $1,000,000</span><strong>15% Off</strong>"
-msgstr "<span>购买 $1,000,000</span><strong>优惠 15%</strong>"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Search products</span>"
+msgstr "<span>搜索商品</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Search</span>"
+msgstr "<span>搜索</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Subtotal</span>"
+msgstr "<span>小计</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Suggestions</span>"
+msgstr "<span>推荐搜索</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Total</span>"
+msgstr "<span>总计</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>VAT</span>"
+msgstr "<span>增值税</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Wishlist</span>"
+msgstr "<span>收藏夹</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid ""
+"<span>© 2026 PIDECO</span>\n"
+"                    <span>Practical simplicity · Organic essence · Coming together at home</span>"
+msgstr ""
+"<span>© 2026 PIDECO</span>\n"
+"                    <span>实用简约 · 自然本真 · 家中相聚</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "About us"
+msgstr "关于我们"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
+msgid "Add to cart"
+msgstr "加入购物车"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "<span>Purchasing $1,000,000</span><strong>20% Off</strong>"
-msgstr "<span>购买 $1,000,000</span><strong>优惠 20%</strong>"
+msgid "Bank transfer"
+msgstr "银行转账"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Baskets"
+msgstr "篮筐"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Bathroom"
+msgstr "浴室"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Brand"
+msgstr "品牌"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "<span>Purchasing $1,500,000</span><strong>20% Off</strong>"
-msgstr "<span>购买 $1,500,000</span><strong>优惠 20%</strong>"
+msgid "Cash payment"
+msgstr "现金支付"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Categories"
+msgstr "分类"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Choose the payment method that works best for your order."
+msgstr "选择最适合您订单的付款方式。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Close cart"
+msgstr "关闭购物车"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Close menu"
+msgstr "关闭菜单"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Close search"
+msgstr "关闭搜索"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Complete your space"
+msgstr "完善您的空间"
+
+#. module: pideco_theme
+#: model:ir.model,name:pideco_theme.model_res_config_settings
+msgid "Config Settings"
+msgstr "配置设置"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Contact"
+msgstr "联系我们"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Cutlery"
+msgstr "餐具"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Discounts"
+msgstr "折扣"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Discounts by order amount"
+msgstr "按订单金额享受折扣"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Discover simple, durable objects for your home."
+msgstr "探索简约耐用的家居好物。"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:pideco_theme.field_website__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "ES"
+msgstr "ES"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Explore"
+msgstr "探索"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Featured categories"
+msgstr "主要分类"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Featured products"
+msgstr "精选商品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Free shipping throughout the country"
+msgstr "全国免运费"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Functional objects, natural textures and simple design for every space."
+msgstr "以实用物件、天然质感和简约设计陪伴每个空间。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Get volume discounts, personal service and offers tailored to retailers, "
+"projects and large orders."
+msgstr "享受批量折扣、专属服务，以及为商店、项目和大宗采购量身打造的方案。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Go to the shop"
+msgstr "前往商店"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Help"
+msgstr "帮助"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Homeware"
+msgstr "家居用品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Homeware and decor for bright, balanced spaces."
+msgstr "为明亮、平衡的空间提供家居用品与装饰。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Homeware and decor for everyday living"
+msgstr "适合日常生活的家居用品与装饰"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "I want to buy wholesale"
+msgstr "我要批量采购"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__id
+#: model:ir.model.fields,field_description:pideco_theme.field_website__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Ideas for your home"
+msgstr "家居灵感"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Jars"
+msgstr "罐子"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Kitchen"
+msgstr "厨房"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Language"
+msgstr "语言"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Materials"
+msgstr "材质"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Message 1"
+msgstr "消息 1"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Message 2"
+msgstr "消息 2"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Message 3"
+msgstr "消息 3"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid ""
+"Messages rotate vertically every four seconds. Edit them in each website "
+"language to maintain their translations."
+msgstr "消息每四秒垂直轮播。请在各网站语言中编辑，以保持翻译一致。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Minimum purchase $200,000"
+msgstr "最低购买金额 $200,000"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "More you buy, more you save"
+msgstr "购买越多，节省越多"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "My account"
+msgstr "我的账户"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
+msgid "New"
+msgstr "新品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "New arrivals"
+msgstr "新品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Next category"
+msgstr "下一个分类"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Next product"
+msgstr "下一个商品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
+msgid "Offer"
+msgstr "优惠"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Open cart"
+msgstr "打开购物车"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Open menu"
+msgstr "打开菜单"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Order and design"
+msgstr "收纳与设计"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Our story"
+msgstr "品牌故事"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "PIDECO"
+msgstr "PIDECO"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "PIDECO home"
+msgstr "PIDECO 首页"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "PIDECO promotional bar"
+msgstr "PIDECO 促销栏"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Previous category"
+msgstr "上一个分类"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Previous product"
+msgstr "上一个商品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Product care"
+msgstr "商品保养"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Products to pair with this selection."
+msgstr "为这次选择搭配更多商品。"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_1
+#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_1
+msgid "Promo message 1"
+msgstr "促销消息 1"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_2
+#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_2
+msgid "Promo message 2"
+msgstr "促销消息 2"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_3
+#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_3
+msgid "Promo message 3"
+msgstr "促销消息 3"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Publish products in Odoo to display them here."
+msgstr "请在 Odoo 中发布商品，以便在此显示。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Purchasing for your business"
+msgstr "企业采购"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Quantity"
+msgstr "数量"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Refresh your kitchen"
+msgstr "焕新厨房"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Returns and exchanges"
+msgstr "退换货"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Rugs"
+msgstr "地毯"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_title_19
+msgid "SKU"
+msgstr "SKU"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Save on larger orders"
+msgstr "大额订单可享优惠"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Search"
+msgstr "搜索"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Search products…"
+msgstr "搜索商品…"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Selected for you"
+msgstr "为您精选"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Shipping and delivery times"
+msgstr "配送与时效"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Shop"
+msgstr "商店"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Shop now"
+msgstr "立即购买"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Small changes, new sensations. Find pieces that add order, warmth and "
+"personality."
+msgstr "小小改变，焕新感受。寻找兼具秩序、温暖与个性的家居好物。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Store pickup available"
+msgstr "支持门店自提"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Stores"
+msgstr "门店"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "The collection is on its way"
+msgstr "新品系列即将上线"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Transform your home<br/>into your favorite place."
+msgstr "把家变成<br/>您最爱的地方。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Transform your spaces"
+msgstr "焕新您的空间"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "View all <i class=\"fa fa-arrow-right\"/>"
+msgstr "查看全部 <i class=\"fa fa-arrow-right\"/>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "View cart and checkout"
+msgstr "查看购物车并结账"
+
+#. module: pideco_theme
+#: model:ir.model,name:pideco_theme.model_website
+msgid "Website"
+msgstr "网站"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Wholesale"
+msgstr "批发"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Wholesale benefits"
+msgstr "批发优惠"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Wishlist"
+msgstr "愿望清单"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "You may also like"
+msgstr "您可能也喜欢"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Your cart is empty"
+msgstr "您的购物车是空的"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "products"
+msgstr "件商品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "中文"
+msgstr "中文"

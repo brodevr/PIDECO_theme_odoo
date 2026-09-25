@@ -13,6 +13,7 @@
     --pideco-surface: #fff9f1;
     --pideco-text: #5f3b2c;
     --pideco-border: #d5c7bb;
+    --pideco-muted: #936546;
 }
 
 body,
@@ -60,12 +61,19 @@ a:hover { color: var(--pideco-clay); }
     background-color: var(--pideco-wine);
     color: var(--pideco-cream);
 }
-body:has(.pideco-header) .toast .btn-primary {
+/* Toasts and dialogs (e.g. product configurator) render outside #wrapwrap. */
+body:has(.pideco-header) .toast .btn-primary,
+body:has(.pideco-header) .modal .btn-primary {
     background-color: var(--pideco-wine);
     border-color: var(--pideco-wine);
     color: var(--pideco-cream);
 }
-body:has(.pideco-header) .toast .btn-primary:hover {
+body:has(.pideco-header) .modal .btn-outline-primary {
+    border-color: var(--pideco-wine);
+    color: var(--pideco-wine);
+}
+body:has(.pideco-header) .toast .btn-primary:hover,
+body:has(.pideco-header) .modal .btn-primary:hover {
     background-color: #351014;
     border-color: #351014;
 }
@@ -256,8 +264,10 @@ body:has(.pideco-header) .toast .btn-primary:hover {
 .pideco-actions i { font-size: 1rem; }
 .pideco-actions span { margin-left: .35rem; }
 .pideco-brand img { display: block; width: Clamp(132px, 14vw, 188px); height: auto; }
-.pideco-cart-button { position: relative; }
-.pideco-cart-button sup {
+.pideco-cart-button,
+.pideco-wish-button { position: relative; }
+.pideco-cart-button sup,
+.pideco-wish-button sup {
     display: inline-grid;
     place-items: center;
     min-width: 1.25rem;
@@ -692,6 +702,10 @@ body:not(.editor_enable) .o_wsale_products_page #o_wsale_products_grid .oe_subde
 .o_wsale_products_page #o_wsale_products_grid .o_l10n_ar_price_tax_excluded {
     display: none !important;
 }
+/* Product page and product dialogs: hide l10n_ar "Precio s/Imp. Nac." line (label + amount). */
+small:has(> .o_l10n_ar_price_tax_excluded) {
+    display: none !important;
+}
 
 .o_wsale_products_page #o_wsale_products_grid .o_wsale_product_btn {
     position: static;
@@ -1062,6 +1076,27 @@ body:not(.editor_enable) .o_wsale_products_page #o_wsale_products_grid .oe_subde
     text-transform: uppercase;
 }
 
+/* "Buy now" (website_sale.product_buy_now): full row, centered like Add to cart. */
+.o_wsale_product_page .o_we_buy_now {
+    grid-column: 1 / -1;
+    width: 100% !important;
+    min-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0 !important;
+    padding-inline: .85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}
+.o_wsale_product_page .o_we_buy_now .fa { margin: 0 !important; }
+
 .o_wsale_product_page .css_quantity {
     width: 110px !important;
     min-height: 54px;
@@ -1240,7 +1275,7 @@ body:not(.editor_enable) .o_wsale_products_page #o_wsale_products_grid .oe_subde
     .pideco-header-main { padding: .7rem 1rem; }
     .pideco-brand img { width: 120px; }
     .pideco-actions { gap: .7rem; }
-    .pideco-actions a[href='/web/login'] { display: none; }
+    .pideco-actions .pideco-account-link { display: none; }
     .pideco-search-overlay { padding-top: 100px; }
     .pideco-nav { width: Min(88vw, 350px); padding-inline: 1.15rem; }
     .o_wsale_product_page #product_detail { padding-inline: 1rem; }

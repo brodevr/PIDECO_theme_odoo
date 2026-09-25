@@ -20,12 +20,12 @@
                         </form>
                         <a href="/shop?order=create_date+desc">New arrivals</a>
                         <a href="/shop">Shop</a>
-                        <div class="pideco-mega" data-pideco-mega="">
+                        <t t-set="pideco_menu_categories" t-value="request.env['product.public.category'].search([('parent_id', '=', False), ('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id', limit=6)"/>
+                        <div class="pideco-mega" data-pideco-mega="" t-if="pideco_menu_categories">
                             <button type="button" class="pideco-mega-toggle" data-pideco-mega-toggle="" aria-expanded="false">Categories <i class="fa fa-angle-down" t-translation="off"/></button>
                             <div class="pideco-mega-panel">
                                 <div class="pideco-mega-inner">
                                     <div class="pideco-mega-title"><span>Categories</span></div>
-                                    <t t-set="pideco_menu_categories" t-value="request.env['product.public.category'].search([('parent_id', '=', False), ('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id', limit=6)"/>
                                     <div class="pideco-mega-groups">
                                         <section t-foreach="pideco_menu_categories" t-as="menu_category">
                                             <a class="pideco-mega-heading" t-att-href="'/shop/category/%s' % slug(menu_category)" t-out="menu_category.name"/>
@@ -35,12 +35,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pideco-mobile-category-view" data-pideco-mobile-category-view="" aria-hidden="true">
+                        <div class="pideco-mobile-category-view" data-pideco-mobile-category-view="" aria-hidden="true" t-if="pideco_menu_categories">
                             <button type="button" class="pideco-mobile-category-back" data-pideco-mobile-category-back=""><i class="fa fa-arrow-left" t-translation="off"/> <span>Back to menu</span></button>
                             <h2>Categories</h2>
-                            <t t-set="pideco_mobile_categories" t-value="request.env['product.public.category'].search([('parent_id', '=', False), ('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id', limit=6)"/>
                             <div class="pideco-mobile-category-groups">
-                                <section t-foreach="pideco_mobile_categories" t-as="mobile_category">
+                                <section t-foreach="pideco_menu_categories" t-as="mobile_category">
                                     <a class="pideco-mobile-category-heading" t-att-href="'/shop/category/%s' % slug(mobile_category)" t-out="mobile_category.name"/>
                                     <a t-foreach="mobile_category.child_id.filtered_domain([('has_published_products', 'in', [True])] + list(website.website_domain()))[:6]" t-as="mobile_child" t-att-href="'/shop/category/%s' % slug(mobile_child)" t-out="mobile_child.name"/>
                                 </section>
@@ -50,16 +49,19 @@
                         <div class="pideco-nav-account">
                             <a href="/shop/wishlist"><i class="fa fa-heart-o" t-translation="off"/><span>Wishlist</span></a>
                             <a href="/my"><i class="fa fa-user-o" t-translation="off"/><span>My account</span></a>
+                            <a t-if="not request.env.user._is_public()" href="/web/session/logout?redirect=/"><i class="fa fa-sign-out" t-translation="off"/><span>Log out</span></a>
                         </div>
                     </nav>
                     <div class="pideco-nav-backdrop" data-pideco-menu-close="" aria-hidden="true"/>
                     <a class="pideco-brand" href="/" aria-label="PIDECO home"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/></a>
                     <div class="pideco-actions">
                         <button type="button" data-pideco-search-open="" aria-label="Search"><i class="fa fa-search" t-translation="off"/><span>Search</span></button>
-                        <a href="/web/login" aria-label="My account"><i class="fa fa-user-o" t-translation="off"/><span>Account</span></a>
-                        <a href="/shop/wishlist" aria-label="Wishlist"><i class="fa fa-heart-o" t-translation="off"/></a>
+                        <a class="pideco-account-link" t-att-href="'/web/login' if request.env.user._is_public() else '/my'" aria-label="My account"><i class="fa fa-user-o" t-translation="off"/><span>Account</span></a>
+                        <!-- o_wsale_my_wish / o_wsale_my_cart / my_*_quantity are the hooks Odoo's wishlist and cart JS update. -->
+                        <t t-set="pideco_wishcount" t-value="len(request.env['product.wishlist'].current())"/>
+                        <a href="/shop/wishlist" class="o_wsale_my_wish pideco-wish-button" aria-label="Wishlist"><i class="fa fa-heart-o" t-translation="off"/><sup t-attf-class="my_wish_quantity #{'d-none' if not pideco_wishcount else ''}" t-out="pideco_wishcount"/></a>
                         <t t-set="pideco_order" t-value="request.cart"/>
-                        <ul class="list-unstyled m-0"><li class="pideco-header-cart"><button type="button" data-pideco-cart-open="" class="pideco-cart-button" aria-label="Open cart"><i class="fa fa-shopping-bag" t-translation="off"/><span class="pideco-cart-label">Cart</span><sup class="my_cart_quantity" t-out="pideco_order.cart_quantity or 0"/></button></li></ul>
+                        <ul class="list-unstyled m-0"><li class="pideco-header-cart o_wsale_my_cart"><button type="button" data-pideco-cart-open="" class="pideco-cart-button" aria-label="Open cart"><i class="fa fa-shopping-bag" t-translation="off"/><span class="pideco-cart-label">Cart</span><sup t-attf-class="my_cart_quantity #{'d-none' if not pideco_order.cart_quantity else ''}" t-out="pideco_order.cart_quantity or 0"/></button></li></ul>
                     </div>
                 </div>
             </header>
@@ -82,7 +84,7 @@
                     <t t-if="website_sale_order and website_sale_order.website_order_line">
                         <article class="pideco-cart-line" t-foreach="website_sale_order.website_order_line" t-as="line">
                             <a t-att-href="line.product_id.website_url" class="pideco-cart-thumb"><img t-att-src="'/web/image/product.product/%s/image_128' % line.product_id.id" t-att-alt="line.name_short"/></a>
-                            <div><a t-att-href="line.product_id.website_url" t-out="line.name_short"/><small>Quantity <span t-out="line.product_uom_qty"/></small><strong t-out="line.price_total" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
+                            <div><a t-att-href="line.product_id.website_url" t-out="line.name_short"/><small>Quantity <span t-out="int(line.product_uom_qty) if line.product_uom_qty.is_integer() else line.product_uom_qty"/></small><strong t-out="line.price_total" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
                         </article>
                     </t>
                     <div t-else="" class="pideco-empty-cart"><i class="fa fa-shopping-bag"/><h3>Your cart is empty</h3><p>Discover simple, durable objects for your home.</p></div>

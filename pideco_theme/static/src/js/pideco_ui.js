@@ -50,10 +50,10 @@ function renderResults(form, results) {
         <a class="dropdown-item" href="${escapeHtml(item.website_url || "/shop")}">
             ${item.image_url ? `<img src="${escapeHtml(item.image_url)}" alt=""/>` : ""}
             <span class="pideco-live-copy">
-                <span>${item.name || ""}</span>
-                ${item.description ? `<small>${item.description}</small>` : ""}
+                <span>${escapeHtml(item.name)}</span>
+                ${item.description ? `<small>${escapeHtml(item.description)}</small>` : ""}
             </span>
-            ${item.detail ? `<em>${item.detail}</em>` : ""}
+            ${item.detail ? `<em>${escapeHtml(item.detail)}</em>` : ""}
         </a>`).join("");
     form.append(menu);
 }
@@ -118,7 +118,10 @@ function closeSearch() {
 async function openCart() {
     const drawer = document.querySelector("#pideco-cart-drawer");
     if (!drawer || drawer.getAttribute("aria-busy") === "true") return;
-    const prefix = window.location.pathname.match(/^\/(en|es|zh_CN)(?=\/|$)/)?.[0] || "";
+    // Language url codes come from the footer selector, so any website language is supported.
+    const langCodes = [...document.querySelectorAll("[data-pideco-language]")].map((link) => link.dataset.pidecoLanguage);
+    const firstSegment = window.location.pathname.split("/")[1];
+    const prefix = langCodes.includes(firstSegment) ? `/${firstSegment}` : "";
     const cartUrl = `${prefix}/shop/cart`;
     drawer.setAttribute("aria-busy", "true");
     try {
@@ -234,7 +237,12 @@ document.addEventListener("click", (event) => {
     const languageLink = event.target.closest("[data-pideco-language]");
     if (languageLink) {
         event.preventDefault();
-        const destination = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+        // Drop the current language prefix, otherwise Odoo redirects back to it and the switch is ignored.
+        const langCodes = [...document.querySelectorAll("[data-pideco-language]")].map((link) => link.dataset.pidecoLanguage);
+        const segments = window.location.pathname.split("/");
+        if (langCodes.includes(segments[1])) segments.splice(1, 1);
+        const path = segments.join("/") || "/";
+        const destination = `${path}${window.location.search}${window.location.hash}`;
         window.location.href = `/website/lang/${encodeURIComponent(languageLink.dataset.pidecoLanguage)}?r=${encodeURIComponent(destination)}`;
         return;
     }

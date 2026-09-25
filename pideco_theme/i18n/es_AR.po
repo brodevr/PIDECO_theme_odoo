@@ -9,308 +9,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
-msgid "Add to cart"
-msgstr "Agregar al carrito"
-
-#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
-msgid "Offer"
-msgstr "Oferta"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
-msgid "New"
-msgstr "Nuevo"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Open menu"
-msgstr "Abrir menú"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close menu"
-msgstr "Cerrar menú"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "New arrivals"
-msgstr "Nuevos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Shop"
-msgstr "Tienda"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid ""
-"<small>Explore PIDECO</small>\n"
-"                                        <strong>Everything you need to transform your spaces.</strong>"
+msgid "* Discounts are subject to change and do not apply to sale items."
 msgstr ""
-"<small>Explorá PIDECO</small>\n"
-"                                        <strong>Todo para transformar tus espacios.</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "About us"
-msgstr "Nosotros"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "PIDECO"
-msgstr "PIDECO"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "PIDECO home"
-msgstr "PIDECO inicio"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Search"
-msgstr "Buscar"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "My account"
-msgstr "Mi cuenta"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Wishlist"
-msgstr "Lista de deseos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Open cart"
-msgstr "Abrir carrito"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Search products</span>"
-msgstr "<span>Buscar productos</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close search"
-msgstr "Cerrar búsqueda"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Search products…"
-msgstr "Buscar productos…"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Suggestions</span>"
-msgstr "<span>Sugerencias</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Baskets"
-msgstr "Canastos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Jars"
-msgstr "Frascos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Cutlery"
-msgstr "Cubiertos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Rugs"
-msgstr "Alfombras"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<small>Your cart</small>"
-msgstr "<small>Tu carrito</small>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "products"
-msgstr "productos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close cart"
-msgstr "Cerrar carrito"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Quantity"
-msgstr "Cantidad"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Your cart is empty"
-msgstr "Tu carrito está vacío"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Discover simple, durable objects for your home."
-msgstr "Descubrí objetos simples y durables para tu casa."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Subtotal</span>"
-msgstr "<span>Subtotal</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>VAT</span>"
-msgstr "<span>IVA</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Total</span>"
-msgstr "<span>Total</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "View cart and checkout"
-msgstr "Ver carrito y finalizar"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Go to the shop"
-msgstr "Ir a la tienda"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Homeware and decor for bright, balanced spaces."
-msgstr "Bazar y decoración para ambientes luminosos y equilibrados."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Kitchen"
-msgstr "Cocina"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Bathroom"
-msgstr "Baño"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Homeware"
-msgstr "Bazar"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Help"
-msgstr "Ayuda"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Shipping and delivery times"
-msgstr "Envíos y plazos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Returns and exchanges"
-msgstr "Cambios"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Product care"
-msgstr "Cuidado de las piezas"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Contact"
-msgstr "Contacto"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Brand"
-msgstr "Marca"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Our story"
-msgstr "Nuestra historia"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Materials"
-msgstr "Materiales"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Stores"
-msgstr "Tiendas"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Wholesale"
-msgstr "Mayoristas"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid ""
-"<span>© 2026 PIDECO</span>\n"
-"                    <span>Practical simplicity · Organic essence · Coming together at home</span>"
-msgstr ""
-"<span>© 2026 PIDECO</span>\n"
-"                    <span>Sencillez práctica · Esencia orgánica · Encuentro en el hogar</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Language</span>"
-msgstr "<span>Idioma</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "ES"
-msgstr "ES"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "EN"
-msgstr "EN"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "中文"
-msgstr "中文"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Language"
-msgstr "Idioma"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Homeware and decor for everyday living"
-msgstr "Bazar y decoración para todos los días"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Transform your home<br/>into your favorite place."
-msgstr "Transformá tu casa<br/>en tu lugar favorito."
+"* Los descuentos están sujetos a modificaciones y no aplican para productos "
+"en oferta."
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"Functional objects, natural textures and simple design for every space."
+"<i class=\"fa fa-cubes\"/><strong>Project orders</strong><span>Solutions for"
+" retailers and interior projects.</span>"
 msgstr ""
-"Objetos funcionales, texturas nobles y diseño simple para acompañar cada "
-"espacio."
+"<i class=\"fa fa-cubes\"/><strong>Pedidos para "
+"proyectos</strong><span>Soluciones para comercios y espacios.</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Shop now"
-msgstr "Comprar ahora"
+msgid ""
+"<i class=\"fa fa-map-marker\"/><span><strong>Store "
+"pickup</strong><small>Arrange your pickup</small></span>"
+msgstr ""
+"<i class=\"fa fa-map-marker\"/><span><strong>Retiro en "
+"tienda</strong><small>Coordiná tu pedido</small></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid ""
+"<i class=\"fa fa-map-marker\"/><span><strong>Store "
+"pickup</strong><small>Available by prior arrangement</small></span>"
+msgstr ""
+"<i class=\"fa fa-map-marker\"/><span><strong>Retiro en "
+"tienda</strong><small>Disponible con coordinación previa</small></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid ""
+"<i class=\"fa fa-shopping-bag\"/><span><strong>Minimum order "
+"$200,000</strong><small>Applies to wholesale orders</small></span>"
+msgstr ""
+"<i class=\"fa fa-shopping-bag\"/><span><strong>Compra mínima "
+"$200.000</strong><small>Condición para pedidos mayoristas</small></span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
@@ -324,215 +64,11 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"<i class=\"fa fa-"
-"truck\"/><span><strong>Shipping</strong><small>Nationwide</small></span>"
-msgstr ""
-"<i class=\"fa fa-truck\"/><span><strong>Envíos</strong><small>A todo el "
-"país</small></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<i class=\"fa fa-map-marker\"/><span><strong>Store "
-"pickup</strong><small>Arrange your pickup</small></span>"
-msgstr ""
-"<i class=\"fa fa-map-marker\"/><span><strong>Retiro en "
-"tienda</strong><small>Coordiná tu pedido</small></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Explore"
-msgstr "Explorá"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Featured categories"
-msgstr "Categorías principales"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Previous category"
-msgstr "Categoría anterior"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Next category"
-msgstr "Categoría siguiente"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<small>View products <i class=\"fa fa-arrow-right\"/></small>"
-msgstr "<small>Ver productos <i class=\"fa fa-arrow-right\"/></small>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><strong>All PIDECO</strong><small>View products <i class=\"fa fa-"
-"arrow-right\"/></small></span>"
-msgstr ""
-"<span><strong>Todo PIDECO</strong><small>Ver productos <i class=\"fa fa-"
-"arrow-right\"/></small></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Selected for you"
-msgstr "Elegidos para vos"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Featured products"
-msgstr "Productos destacados"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "View all <i class=\"fa fa-arrow-right\"/>"
-msgstr "Ver todos <i class=\"fa fa-arrow-right\"/>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "The collection is on its way"
-msgstr "La colección está en camino"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Publish products in Odoo to display them here."
-msgstr "Cargá productos publicados desde Odoo para verlos aquí."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Refresh your kitchen"
-msgstr "Renová tu cocina"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><small>New ways of living</small><strong>A simpler "
-"kitchen</strong><em>Discover the collection</em></span>"
-msgstr ""
-"<span><small>Nuevas formas de habitar</small><strong>Una cocina más "
-"simple</strong><em>Descubrir la colección</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Order and design"
-msgstr "Orden y diseño"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><small>Order you can enjoy</small><strong>Everything in its "
-"place</strong><em>View organizers</em></span>"
-msgstr ""
-"<span><small>Orden que se disfruta</small><strong>Cada cosa en su "
-"lugar</strong><em>Ver organizadores</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Ideas for your home"
-msgstr "Ideas para tu hogar"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Transform your spaces"
-msgstr "Transformá tus espacios"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"Small changes, new sensations. Find pieces that add order, warmth and "
-"personality."
-msgstr ""
-"Pequeños cambios, nuevas sensaciones. Encontrá piezas que suman orden, "
-"calidez y personalidad."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Purchasing for your business"
-msgstr "Compras para tu negocio"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Wholesale benefits"
-msgstr "Beneficios mayoristas"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"Get volume discounts, personal service and offers tailored to retailers, "
-"projects and large orders."
-msgstr ""
-"Accedé a descuentos por cantidad, atención personalizada y propuestas "
-"pensadas para comercios, proyectos y grandes compras."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "I want to buy wholesale"
-msgstr "Quiero comprar por mayor"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
 "<i class=\"fa fa-tags\"/><strong>Volume discounts</strong><span>Better terms"
 " based on your order.</span>"
 msgstr ""
 "<i class=\"fa fa-tags\"/><strong>Descuentos por "
 "volumen</strong><span>Mejores condiciones según tu compra.</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<i class=\"fa fa-user\"/><strong>Personal service</strong><span>We help you "
-"choose every product.</span>"
-msgstr ""
-"<i class=\"fa fa-user\"/><strong>Atención personalizada</strong><span>Te "
-"acompañamos a elegir cada producto.</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<i class=\"fa fa-cubes\"/><strong>Project orders</strong><span>Solutions for"
-" retailers and interior projects.</span>"
-msgstr ""
-"<i class=\"fa fa-cubes\"/><strong>Pedidos para "
-"proyectos</strong><span>Soluciones para comercios y espacios.</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Complete your space"
-msgstr "Completá tu espacio"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "You may also like"
-msgstr "También te puede gustar"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Products to pair with this selection."
-msgstr "Productos para combinar con esta elección."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid ""
-"<span class=\"pideco-product-link\">View product <i class=\"fa fa-arrow-"
-"right\"/></span>"
-msgstr ""
-"<span class=\"pideco-product-link\">Ver producto <i class=\"fa fa-arrow-"
-"right\"/></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_title_19
-msgid "SKU"
-msgstr "SKU"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
-msgid ""
-"<i class=\"fa fa-shopping-bag\"/><span><strong>Minimum order "
-"$200,000</strong><small>Applies to wholesale orders</small></span>"
-msgstr ""
-"<i class=\"fa fa-shopping-bag\"/><span><strong>Compra mínima "
-"$200.000</strong><small>Condición para pedidos mayoristas</small></span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
@@ -545,63 +81,32 @@ msgstr ""
 "país</strong><small>Coordinamos la entrega de tu pedido</small></span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"<i class=\"fa fa-map-marker\"/><span><strong>Store "
-"pickup</strong><small>Available by prior arrangement</small></span>"
+"<i class=\"fa fa-"
+"truck\"/><span><strong>Shipping</strong><small>Nationwide</small></span>"
 msgstr ""
-"<i class=\"fa fa-map-marker\"/><span><strong>Retiro en "
-"tienda</strong><small>Disponible con coordinación previa</small></span>"
-
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "More you buy, more you save"
-msgstr "Cuanto más comprás, más ahorrás"
+"<i class=\"fa fa-truck\"/><span><strong>Envíos</strong><small>A todo el "
+"país</small></span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "* Discounts are subject to change and do not apply to sale items."
+msgid ""
+"<i class=\"fa fa-user\"/><strong>Personal service</strong><span>We help you "
+"choose every product.</span>"
 msgstr ""
-"* Los descuentos están sujetos a modificaciones y no aplican para productos "
-"en oferta."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Discounts"
-msgstr "Descuentos"
+"<i class=\"fa fa-user\"/><strong>Atención personalizada</strong><span>Te "
+"acompañamos a elegir cada producto.</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "More you buy, more you save"
-msgstr "Cuanto más comprás, más ahorrás"
+msgid "<small>View products <i class=\"fa fa-arrow-right\"/></small>"
+msgstr "<small>Ver productos <i class=\"fa fa-arrow-right\"/></small>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Save on larger orders"
-msgstr "Ahorrá en pedidos grandes"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Discounts by order amount"
-msgstr "Descuentos por monto de compra"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Choose the payment method that works best for your order."
-msgstr "Elegí el medio de pago que mejor se adapte a tu pedido."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Cash payment"
-msgstr "Pago en efectivo"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "Bank transfer"
-msgstr "Pago por transferencia"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<small>Your cart</small>"
+msgstr "<small>Tu carrito</small>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
@@ -609,9 +114,65 @@ msgid "<span class=\"pideco-cart-label\">Cart</span>"
 msgstr "<span class=\"pideco-cart-label\">Carrito</span>"
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid ""
+"<span class=\"pideco-product-link\">View product <i class=\"fa fa-arrow-"
+"right\"/></span>"
+msgstr ""
+"<span class=\"pideco-product-link\">Ver producto <i class=\"fa fa-arrow-"
+"right\"/></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>New ways of living</small><strong>A simpler "
+"kitchen</strong><em>Discover the collection</em></span>"
+msgstr ""
+"<span><small>Nuevas formas de habitar</small><strong>Una cocina más "
+"simple</strong><em>Descubrir la colección</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>Order you can enjoy</small><strong>Everything in its "
+"place</strong><em>View organizers</em></span>"
+msgstr ""
+"<span><small>Orden que se disfruta</small><strong>Cada cosa en su "
+"lugar</strong><em>Ver organizadores</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><strong>All PIDECO</strong><small>View products <i class=\"fa fa-"
+"arrow-right\"/></small></span>"
+msgstr ""
+"<span><strong>Todo PIDECO</strong><small>Ver productos <i class=\"fa fa-"
+"arrow-right\"/></small></span>"
+
+#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "<span>Account</span>"
 msgstr "<span>Cuenta</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Back to menu</span>"
+msgstr "<span>Volver al menú</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Categories</span>"
+msgstr "<span>Categorías</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Language</span>"
+msgstr "<span>Idioma</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Log out</span>"
+msgstr "<span>Cerrar sesión</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
@@ -624,118 +185,22 @@ msgid "<span>PIDECO</span>"
 msgstr "<span>PIDECO</span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Search</span>"
-msgstr "<span>Buscar</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Wishlist</span>"
-msgstr "<span>Favoritos</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Categories"
-msgstr "Categorías"
-
-#. module: pideco_theme
-#: model:ir.model,name:pideco_theme.model_res_config_settings
-msgid "Config Settings"
-msgstr "Ajustes de configuración"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:pideco_theme.field_website__display_name
-msgid "Display Name"
-msgstr "Nombre mostrado"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Free shipping throughout the country"
-msgstr "Envíos gratis a todo el país"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__id
-#: model:ir.model.fields,field_description:pideco_theme.field_website__id
-msgid "ID"
-msgstr "ID"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Message 1"
-msgstr "Mensaje 1"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Message 2"
-msgstr "Mensaje 2"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Message 3"
-msgstr "Mensaje 3"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid ""
-"Messages rotate vertically every four seconds. Edit them in each website "
-"language to maintain their translations."
-msgstr ""
-"Los mensajes se desplazan verticalmente cada cuatro segundos. Editalos en "
-"cada idioma del sitio para mantener sus traducciones."
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Minimum purchase $200,000"
-msgstr "Compra mínima $200.000"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "<span>Purchasing $1,000,000</span><strong>15% Off</strong>"
+msgstr "<span>Comprando $1.000.000</span><strong>15% de descuento</strong>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Next product"
-msgstr "Producto siguiente"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "PIDECO promotional bar"
-msgstr "Barra promocional PIDECO"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "<span>Purchasing $1,000,000</span><strong>20% Off</strong>"
+msgstr "<span>Comprando $1.000.000</span><strong>20% de descuento</strong>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Previous product"
-msgstr "Producto anterior"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_1
-#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_1
-msgid "Promo message 1"
-msgstr "Mensaje promocional 1"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_2
-#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_2
-msgid "Promo message 2"
-msgstr "Mensaje promocional 2"
-
-#. module: pideco_theme
-#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_3
-#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_3
-msgid "Promo message 3"
-msgstr "Mensaje promocional 3"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
-msgid "Store pickup available"
-msgstr "Retiro en tienda disponible"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "View all products"
-msgstr "Ver todos los productos"
-
-#. module: pideco_theme
-#: model:ir.model,name:pideco_theme.model_website
-msgid "Website"
-msgstr "Sitio web"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "<span>Purchasing $1,500,000</span><strong>20% Off</strong>"
+msgstr "<span>Comprando $1.500.000</span><strong>20% de descuento</strong>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
@@ -768,19 +233,546 @@ msgid "<span>Purchasing $700,000</span><strong>15% Off</strong>"
 msgstr "<span>Comprando $700.000</span><strong>15% de descuento</strong>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "<span>Purchasing $1,000,000</span><strong>15% Off</strong>"
-msgstr "<span>Comprando $1.000.000</span><strong>15% de descuento</strong>"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Search products</span>"
+msgstr "<span>Buscar productos</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Search</span>"
+msgstr "<span>Buscar</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Subtotal</span>"
+msgstr "<span>Subtotal</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Suggestions</span>"
+msgstr "<span>Sugerencias</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Total</span>"
+msgstr "<span>Total</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>VAT</span>"
+msgstr "<span>IVA</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "<span>Wishlist</span>"
+msgstr "<span>Favoritos</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid ""
+"<span>© 2026 PIDECO</span>\n"
+"                    <span>Practical simplicity · Organic essence · Coming together at home</span>"
+msgstr ""
+"<span>© 2026 PIDECO</span>\n"
+"                    <span>Sencillez práctica · Esencia orgánica · Encuentro en el hogar</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "About us"
+msgstr "Nosotros"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
+msgid "Add to cart"
+msgstr "Agregar al carrito"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "<span>Purchasing $1,000,000</span><strong>20% Off</strong>"
-msgstr "<span>Comprando $1.000.000</span><strong>20% de descuento</strong>"
+msgid "Bank transfer"
+msgstr "Pago por transferencia"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Baskets"
+msgstr "Canastos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Bathroom"
+msgstr "Baño"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Brand"
+msgstr "Marca"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-msgid "<span>Purchasing $1,500,000</span><strong>20% Off</strong>"
-msgstr "<span>Comprando $1.500.000</span><strong>20% de descuento</strong>"
+msgid "Cash payment"
+msgstr "Pago en efectivo"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Categories"
+msgstr "Categorías"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Choose the payment method that works best for your order."
+msgstr "Elegí el medio de pago que mejor se adapte a tu pedido."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Close cart"
+msgstr "Cerrar carrito"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Close menu"
+msgstr "Cerrar menú"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Close search"
+msgstr "Cerrar búsqueda"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Complete your space"
+msgstr "Completá tu espacio"
+
+#. module: pideco_theme
+#: model:ir.model,name:pideco_theme.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Cutlery"
+msgstr "Cubiertos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Discounts"
+msgstr "Descuentos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Discounts by order amount"
+msgstr "Descuentos por monto de compra"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Discover simple, durable objects for your home."
+msgstr "Descubrí objetos simples y durables para tu casa."
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:pideco_theme.field_website__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "ES"
+msgstr "ES"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Explore"
+msgstr "Explorá"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Featured categories"
+msgstr "Categorías principales"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Featured products"
+msgstr "Productos destacados"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Free shipping throughout the country"
+msgstr "Envíos gratis a todo el país"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Functional objects, natural textures and simple design for every space."
+msgstr ""
+"Objetos funcionales, texturas nobles y diseño simple para acompañar cada "
+"espacio."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Get volume discounts, personal service and offers tailored to retailers, "
+"projects and large orders."
+msgstr ""
+"Accedé a descuentos por cantidad, atención personalizada y propuestas "
+"pensadas para comercios, proyectos y grandes compras."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Go to the shop"
+msgstr "Ir a la tienda"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Help"
+msgstr "Ayuda"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Homeware"
+msgstr "Bazar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Homeware and decor for bright, balanced spaces."
+msgstr "Bazar y decoración para ambientes luminosos y equilibrados."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Homeware and decor for everyday living"
+msgstr "Bazar y decoración para todos los días"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "I want to buy wholesale"
+msgstr "Quiero comprar por mayor"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__id
+#: model:ir.model.fields,field_description:pideco_theme.field_website__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Ideas for your home"
+msgstr "Ideas para tu hogar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Jars"
+msgstr "Frascos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Kitchen"
+msgstr "Cocina"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Language"
+msgstr "Idioma"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Materials"
+msgstr "Materiales"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Message 1"
+msgstr "Mensaje 1"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Message 2"
+msgstr "Mensaje 2"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Message 3"
+msgstr "Mensaje 3"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid ""
+"Messages rotate vertically every four seconds. Edit them in each website "
+"language to maintain their translations."
+msgstr ""
+"Los mensajes se desplazan verticalmente cada cuatro segundos. Editalos en "
+"cada idioma del sitio para mantener sus traducciones."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Minimum purchase $200,000"
+msgstr "Compra mínima $200.000"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "More you buy, more you save"
+msgstr "Cuanto más comprás, más ahorrás"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "My account"
+msgstr "Mi cuenta"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
+msgid "New"
+msgstr "Nuevo"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "New arrivals"
+msgstr "Nuevos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Next category"
+msgstr "Categoría siguiente"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Next product"
+msgstr "Producto siguiente"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
+msgid "Offer"
+msgstr "Oferta"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Open cart"
+msgstr "Abrir carrito"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Open menu"
+msgstr "Abrir menú"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Order and design"
+msgstr "Orden y diseño"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Our story"
+msgstr "Nuestra historia"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "PIDECO"
+msgstr "PIDECO"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "PIDECO home"
+msgstr "PIDECO inicio"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "PIDECO promotional bar"
+msgstr "Barra promocional PIDECO"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Previous category"
+msgstr "Categoría anterior"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Previous product"
+msgstr "Producto anterior"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Product care"
+msgstr "Cuidado de las piezas"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Products to pair with this selection."
+msgstr "Productos para combinar con esta elección."
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_1
+#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_1
+msgid "Promo message 1"
+msgstr "Mensaje promocional 1"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_2
+#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_2
+msgid "Promo message 2"
+msgstr "Mensaje promocional 2"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__pideco_promo_text_3
+#: model:ir.model.fields,field_description:pideco_theme.field_website__pideco_promo_text_3
+msgid "Promo message 3"
+msgstr "Mensaje promocional 3"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Publish products in Odoo to display them here."
+msgstr "Cargá productos publicados desde Odoo para verlos aquí."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Purchasing for your business"
+msgstr "Compras para tu negocio"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Refresh your kitchen"
+msgstr "Renová tu cocina"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Returns and exchanges"
+msgstr "Cambios"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Rugs"
+msgstr "Alfombras"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_title_19
+msgid "SKU"
+msgstr "SKU"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "Save on larger orders"
+msgstr "Ahorrá en pedidos grandes"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Search"
+msgstr "Buscar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Search products…"
+msgstr "Buscar productos…"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Selected for you"
+msgstr "Elegidos para vos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Shipping and delivery times"
+msgstr "Envíos y plazos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Shop"
+msgstr "Tienda"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Shop now"
+msgstr "Comprar ahora"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Small changes, new sensations. Find pieces that add order, warmth and "
+"personality."
+msgstr ""
+"Pequeños cambios, nuevas sensaciones. Encontrá piezas que suman orden, "
+"calidez y personalidad."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Store pickup available"
+msgstr "Retiro en tienda disponible"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Stores"
+msgstr "Tiendas"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "The collection is on its way"
+msgstr "La colección está en camino"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Transform your home<br/>into your favorite place."
+msgstr "Transformá tu casa<br/>en tu lugar favorito."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Transform your spaces"
+msgstr "Transformá tus espacios"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "View all <i class=\"fa fa-arrow-right\"/>"
+msgstr "Ver todos <i class=\"fa fa-arrow-right\"/>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "View cart and checkout"
+msgstr "Ver carrito y finalizar"
+
+#. module: pideco_theme
+#: model:ir.model,name:pideco_theme.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Wholesale"
+msgstr "Mayoristas"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Wholesale benefits"
+msgstr "Beneficios mayoristas"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Wishlist"
+msgstr "Lista de deseos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+msgid "You may also like"
+msgstr "También te puede gustar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Your cart is empty"
+msgstr "Tu carrito está vacío"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "products"
+msgstr "productos"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "中文"
+msgstr "中文"
