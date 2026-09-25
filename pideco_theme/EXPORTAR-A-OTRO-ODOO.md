@@ -21,7 +21,7 @@ Odoo Online estándar no permite instalar módulos personalizados. Para este mó
 odoo -d NOMBRE_BASE -i pideco_theme --stop-after-init
 ```
 
-Después de instalar, seleccionar **PIDECO Theme como tema activo del website PIDECO**. Instalar el módulo no basta: Odoo excluye los assets de los temas que no están seleccionados. Verificar que `website.theme_id` apunte a `pideco_theme`; si conserva `theme_default`, la web aparecerá sin estilos ni interacciones PIDECO.
+Desde la versión 19.0.1.2.0 el módulo es de categoría **Website/eCommerce**, no un tema de Odoo. No hay que seleccionarlo como tema activo: al instalarlo, sus estilos, interacciones y plantillas se aplican directamente. Si la base tiene más de un website, el diseño PIDECO se aplica a todos.
 
 Para actualizar una instalación existente:
 
@@ -39,6 +39,25 @@ El banner del home es un carrusel nativo de Odoo y se edita desde el editor del 
 - **Diapositivas y velocidad:** agregar, quitar o reordenar diapositivas y cambiar el intervalo (4 segundos por defecto) desde las opciones del carrusel.
 
 Si el home ya había sido editado con el editor antes de actualizar el módulo, esa versión personalizada tiene prioridad y el carrusel no aparece. Hay que restablecer la vista del home o insertar el bloque desde el editor.
+
+## Montos escritos en el sitio
+
+La compra mínima y los descuentos por monto se muestran como texto fijo en el frontend. Son informativos: el theme no aplica ninguna regla de compra mínima ni descuento. Las reglas reales se configuran en el backend de Odoo.
+
+Compra mínima ($200,000):
+
+- **Barra de anuncios:** mensaje 2. Se edita en *Website → Configuración → Ajustes → PIDECO promotional bar*, en cada idioma. El monto del código es solo el valor inicial.
+- **Home, bloque de beneficios:** "Minimum order $200,000", en la plantilla `pideco_homepage_19`.
+- **Página de producto, garantías:** "Minimum order $200,000", en la plantilla `pideco_product_terms_19`.
+
+Descuentos por monto (efectivo y transferencia):
+
+- **Home:** bloque "Discounts by order amount", en `pideco_homepage_19`.
+- **Página de producto:** bloque "Discounts", en `pideco_product_page_19`.
+
+Para cambiar un monto fuera de la barra de anuncios hay que editar `views/pideco_theme_19.xml` y las traducciones de `i18n/`, que en español usan punto de miles ($200.000). Después hay que actualizar el módulo. Los bloques del home también se pueden editar con el editor del website, pero ese cambio queda solo en esa base.
+
+A futuro se puede reemplazar el monto fijo por un campo de configuración conectado a la regla de pedido mínimo de Odoo.
 
 ## Datos que no viajan con el módulo
 
