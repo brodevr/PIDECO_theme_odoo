@@ -396,22 +396,59 @@ body:has(.pideco-header) .modal .btn-primary:hover {
 .pideco-kicker { margin: 0 0 1.25rem; color: var(--pideco-clay); font-size: .7rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
 
 /* Home */
-.pideco-home-banner {
-    position: relative;
-    display: flex;
-    min-height: Min(76vh, 760px);
-    align-items: center;
-    padding: Clamp(5rem, 10vw, 9rem) 0;
+/* Hero carousel: fills the viewport below the header (--pideco-top-h is measured in pideco_ui.js). */
+.pideco-hero-carousel,
+.pideco-hero-carousel .carousel,
+.pideco-hero-carousel .carousel-inner { height: 100%; }
+.pideco-hero-carousel { height: calc(100svh - var(--pideco-top-h, 140px)); min-height: 520px; }
+.pideco-hero-carousel .carousel-item {
+    height: 100%;
+    padding: 4rem 0 5rem;
     background-position: center;
     background-size: cover;
     color: #fff9f1;
+    /* Own stacking context: the filter sits under the text without positioning it,
+       so the button's stretched-link can cover the whole slide. */
+    isolation: isolate;
 }
-.pideco-home-banner .o_we_bg_filter { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(35, 12, 14, .76), rgba(35, 12, 14, .12) 72%); }
-.pideco-banner-content { z-index: 1; }
+.pideco-hero-carousel .carousel-item.active,
+.pideco-hero-carousel .carousel-item-next,
+.pideco-hero-carousel .carousel-item-prev { display: flex; align-items: center; }
+.pideco-hero-carousel .carousel-item > .container,
+.pideco-hero-carousel .carousel-item .row,
+.pideco-hero-carousel .carousel-content { position: static; }
+.pideco-hero-carousel .o_we_bg_filter { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(35, 12, 14, .76), rgba(35, 12, 14, .12) 72%); }
+body.editor_enable .pideco-hero-carousel .stretched-link::after { display: none; }
 .pideco-banner-content .pideco-kicker { color: #ead9c7; }
-.pideco-banner-content h1 { max-width: 780px; margin: 0; color: #fff9f1; font-size: Clamp(3rem, 7vw, 6.4rem); line-height: .96; letter-spacing: -.05em; }
+.pideco-banner-content h1,
+.pideco-banner-content h2 { max-width: 780px; margin: 0; color: #fff9f1; font-size: Clamp(3rem, 7vw, 6.4rem); line-height: .96; letter-spacing: -.05em; }
 .pideco-banner-content > p:not(.pideco-kicker) { max-width: 520px; margin: 1.6rem 0 2rem; color: #fff9f1; font-size: 1.08rem; line-height: 1.65; }
+.pideco-banner-content > p:last-child { margin-bottom: 0; }
 .pideco-banner-content .btn { padding: 1rem 1.8rem; color: var(--pideco-wine); }
+.pideco-hero-carousel .carousel-control-prev,
+.pideco-hero-carousel .carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 249, 241, .88);
+    color: var(--pideco-wine);
+    opacity: 1;
+    transform: translateY(-50%);
+    transition: background-color .2s ease;
+}
+.pideco-hero-carousel .carousel-control-prev { left: Clamp(.75rem, 2vw, 1.75rem); }
+.pideco-hero-carousel .carousel-control-next { right: Clamp(.75rem, 2vw, 1.75rem); }
+.pideco-hero-carousel .carousel-control-prev:hover,
+.pideco-hero-carousel .carousel-control-next:hover { background: var(--pideco-cream); }
+.pideco-hero-carousel .carousel-control-prev-icon,
+.pideco-hero-carousel .carousel-control-next-icon { width: auto; height: auto; background: none; font: normal 1rem/1 FontAwesome; }
+.pideco-hero-carousel .carousel-control-prev-icon::before { content: "\f060"; }
+.pideco-hero-carousel .carousel-control-next-icon::before { content: "\f061"; }
+.pideco-hero-carousel .carousel-indicators { margin-bottom: 1.5rem; }
+.pideco-hero-carousel .carousel-indicators [data-bs-target] { width: 28px; height: 3px; margin-inline: 4px; border: 0; background-color: #fff9f1; opacity: .45; }
+.pideco-hero-carousel .carousel-indicators .active { opacity: 1; }
 
 .pideco-benefits { border-bottom: 1px solid rgba(147, 101, 70, .25); background: var(--pideco-surface); }
 .pideco-benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -1286,9 +1323,16 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-overlay-input .btn { grid-column: 1 / -1; justify-self: end; }
     .pideco-hero h1 { font-size: Clamp(2.9rem, 16vw, 4.4rem); }
     .pideco-hero-media { min-height: 390px; }
-    .pideco-home-banner { min-height: 590px; align-items: end; background-position: 58% center; }
-    .pideco-home-banner .o_we_bg_filter { background: linear-gradient(180deg, rgba(35, 12, 14, .08) 5%, rgba(35, 12, 14, .8) 82%); }
-    .pideco-banner-content h1 { font-size: Clamp(2.7rem, 13vw, 4rem); }
+    /* Background position is left to each slide's inline style: it is the focal point chosen in the editor. */
+    .pideco-hero-carousel .carousel-item { padding: 3rem .5rem 4.5rem; }
+    .pideco-hero-carousel .carousel-item.active,
+    .pideco-hero-carousel .carousel-item-next,
+    .pideco-hero-carousel .carousel-item-prev { align-items: end; }
+    .pideco-hero-carousel .o_we_bg_filter { background: linear-gradient(180deg, rgba(35, 12, 14, .08) 5%, rgba(35, 12, 14, .8) 82%); }
+    .pideco-hero-carousel .carousel-control-prev,
+    .pideco-hero-carousel .carousel-control-next { width: 40px; height: 40px; }
+    .pideco-banner-content h1,
+    .pideco-banner-content h2 { font-size: Clamp(2.7rem, 13vw, 4rem); }
     .pideco-benefits-grid { grid-template-columns: 1fr; }
     .pideco-benefits-grid > div { min-height: 92px; justify-content: flex-start; border-right: 0; border-bottom: 1px solid rgba(147, 101, 70, .22); }
     .pideco-benefits-grid > div:last-child { border-bottom: 0; }

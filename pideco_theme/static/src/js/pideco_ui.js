@@ -314,12 +314,25 @@ function initAutoCart() {
     });
 }
 
+// The hero carousel fills the viewport below the header, whose height changes with
+// the announcement bar and breakpoints. The CSS falls back to 140px without this.
+function initHeroHeight() {
+    const header = document.querySelector(".pideco-header");
+    if (!header || header.dataset.pidecoHeightReady || !window.ResizeObserver) return;
+    header.dataset.pidecoHeightReady = "true";
+    new ResizeObserver(() => {
+        document.documentElement.style.setProperty("--pideco-top-h", `${header.offsetHeight}px`);
+    }).observe(header);
+}
+
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
         initPromoSliders();
         initAutoCart();
+        initHeroHeight();
     }, {once: true});
 } else {
     initPromoSliders();
     initAutoCart();
+    initHeroHeight();
 }

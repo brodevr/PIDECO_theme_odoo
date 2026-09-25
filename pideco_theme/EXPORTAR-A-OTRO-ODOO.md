@@ -29,6 +29,17 @@ Para actualizar una instalación existente:
 odoo -d NOMBRE_BASE -u pideco_theme --stop-after-init
 ```
 
+## Carrusel del banner principal
+
+El banner del home es un carrusel nativo de Odoo y se edita desde el editor del website:
+
+- **Imagen de fondo:** seleccionar la diapositiva y cambiar su fondo. Tamaño recomendado: 2400 × 1350 px, con el motivo principal centrado.
+- **Punto de foco para celular:** en celular la imagen se recorta a lo alto. Ajustar la posición del fondo de cada diapositiva para elegir qué parte queda visible.
+- **Link:** toda la diapositiva lleva al link de su botón. Para cambiarlo, editar el link del botón. Si una diapositiva no debe tener link, borrar el botón.
+- **Diapositivas y velocidad:** agregar, quitar o reordenar diapositivas y cambiar el intervalo (4 segundos por defecto) desde las opciones del carrusel.
+
+Si el home ya había sido editado con el editor antes de actualizar el módulo, esa versión personalizada tiene prioridad y el carrusel no aparece. Hay que restablecer la vista del home o insertar el bloque desde el editor.
+
 ## Datos que no viajan con el módulo
 
 El paquete no incluye productos, imágenes del catálogo, categorías importadas, clientes, pedidos, usuarios, métodos de pago, reglas de envío ni configuraciones de compañía. Tampoco incluye cambios hechos directamente con el editor visual de una base distinta.
