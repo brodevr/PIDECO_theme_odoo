@@ -118,22 +118,6 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"<span><small>New ways of living</small><strong>A simpler "
-"kitchen</strong><em>Discover the collection</em></span>"
-msgstr ""
-"<span><small>全新的生活方式</small><strong>让厨房更简洁</strong><em>探索系列</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><small>Order you can enjoy</small><strong>Everything in its "
-"place</strong><em>View organizers</em></span>"
-msgstr ""
-"<span><small>享受井然有序</small><strong>让每件物品各得其所</strong><em>查看收纳用品</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
 "<span><strong>All PIDECO</strong><small>View products <i class=\"fa fa-"
 "arrow-right\"/></small></span>"
 msgstr ""
@@ -383,11 +367,6 @@ msgstr "探索"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Featured categories"
-msgstr "主要分类"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Featured products"
 msgstr "精选商品"
 
@@ -515,6 +494,7 @@ msgid "New"
 msgstr "新品"
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "New arrivals"
 msgstr "新品"
@@ -679,13 +659,6 @@ msgid "Shop now"
 msgstr "立即购买"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"Small changes, new sensations. Find pieces that add order, warmth and "
-"personality."
-msgstr "小小改变，焕新感受。寻找兼具秩序、温暖与个性的家居好物。"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
 msgid "Store pickup available"
 msgstr "支持门店自提"
@@ -759,3 +732,146 @@ msgstr "件商品"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "中文"
 msgstr "中文"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Noble, lasting pieces"
+msgstr "质感耐用的精选器物"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Usefulness and<br/>pared-back beauty."
+msgstr "实用与<br/>简约之美。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Homeware and decor selected to celebrate calm, order and the small moments "
+"at home."
+msgstr "精选家居杂货与装饰，礼赞宁静、秩序与居家的美好片刻。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Volume discounts and personal service for retailers and projects."
+msgstr "为零售商和项目提供批量折扣与专属服务。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Previous"
+msgstr "上一张"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Next"
+msgstr "下一张"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Carousel indicator"
+msgstr "轮播指示器"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Every corner of your home"
+msgstr "家中每一个角落"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "PIDECO home decor"
+msgstr "PIDECO 家居装饰"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Our essence"
+msgstr "我们的理念"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Designed for everyday life"
+msgstr "为日常生活而设计"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"We select noble, durable pieces that balance usefulness and beauty, so "
+"every routine at home becomes a meaningful moment."
+msgstr "我们甄选质感耐用的器物，兼顾实用与美感，让家中的每个日常都成为有意义的时刻。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">01</span><strong>Practical "
+"simplicity</strong>"
+msgstr "<span class=\"pideco-essence-num\">01</span><strong>实用简约</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">02</span><strong>Organic essence</strong>"
+msgstr "<span class=\"pideco-essence-num\">02</span><strong>自然本真</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">03</span><strong>Approachable "
+"design</strong>"
+msgstr "<span class=\"pideco-essence-num\">03</span><strong>亲和设计</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">04</span><strong>Gathering at "
+"home</strong>"
+msgstr "<span class=\"pideco-essence-num\">04</span><strong>家中相聚</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Every piece serves a clear purpose."
+msgstr "每件器物都有明确的用途。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Noble materials and gentle textures."
+msgstr "天然材质，温和质感。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Aesthetic distinction for real life."
+msgstr "将美感融入真实生活。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Corners that invite rest and time with family."
+msgstr "营造让人放松、与家人共处的角落。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Discover the collection"
+msgstr "探索系列"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>Small moments at home</small><strong>A simpler "
+"kitchen</strong><em>Discover the collection</em></span>"
+msgstr ""
+"<span><small>家中的美好片刻</small><strong>让厨房更简洁</strong><em>探索系列</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>Calm and order</small><strong>Everything in its "
+"place</strong><em>View organizers</em></span>"
+msgstr ""
+"<span><small>宁静与秩序</small><strong>让每件物品各得其所</strong><em>查看收纳用品</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Create cozy, bright and balanced spaces with essential, timeless pieces."
+msgstr "用简约永恒的器物，打造温馨、明亮而平衡的空间。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "EN"
+msgstr "EN"
