@@ -1,6 +1,8 @@
 # PIDECO Theme — instalación en Odoo 19
 
-Módulo visual para Website y eCommerce en Odoo 19 Community o Enterprise. Incluye el home base, header, footer, tienda, ficha de producto, estilos responsive, interacciones, fuentes y traducciones.
+Módulo visual para Website y eCommerce en Odoo 19 Community o Enterprise. Incluye el home (carrusel principal, secciones e imágenes), header, footer, buscador, carrito lateral, tienda, ficha de producto, estilos responsive, interacciones, fuentes y traducciones (español y chino; los textos base están en inglés).
+
+El historial de cambios por versión está en `CHANGELOG.md`.
 
 ## Requisitos
 
@@ -57,6 +59,19 @@ Para reemplazarlas en el módulo, conviene respetar la orientación y usar JPG o
 
 `static/src/assets/pideco-editorial.png` ya no se usa en las plantillas, pero se conserva porque un home editado en alguna base puede seguir referenciándola.
 
+## Página de producto
+
+- **Escritorio (desde 992 px):** la ficha ocupa todo el ancho. Las imágenes del producto se muestran en mosaico: la primera grande a lo ancho y el resto en dos columnas. Los detalles quedan fijos a la derecha mientras se recorren las imágenes.
+- **Celular y tablet:** carrusel con la imagen de borde a borde y las miniaturas debajo.
+- **Imágenes:** llenan su cuadro y se recorta lo que sobra (el mosaico usa cuadros 3:2 y 1:1). Conviene cargar fotos con el producto centrado y algo de aire alrededor.
+- **Opción de Odoo:** el diseño funciona con la galería en modo **Carrusel**, que es el valor por defecto de Odoo (editor del website → página de producto → imágenes). Si se cambia a **Grilla**, se usa la grilla nativa de Odoo y el mosaico PIDECO no se aplica.
+- Es un ajuste solo de estilos: no reemplaza plantillas de `website_sale`, así que las opciones y funciones nativas de la ficha siguen disponibles.
+
+## Carrito lateral y buscador
+
+- Al agregar un producto se abre el carrito lateral PIDECO. El aviso flotante de Odoo ("agregado al carrito") se oculta para que no quede encima; los avisos de advertencia, como falta de stock, se siguen mostrando.
+- El buscador se abre como un panel pegado al borde superior de la pantalla, con resultados en vivo a partir de 2 caracteres y sugerencias fijas (Baskets, Jars, Cutlery, Rugs), que se editan en `views/pideco_theme_19.xml`.
+
 ## Montos escritos en el sitio
 
 La compra mínima y los descuentos por monto se muestran como texto fijo en el frontend. Son informativos: el theme no aplica ninguna regla de compra mínima ni descuento. Las reglas reales se configuran en el backend de Odoo.
@@ -88,7 +103,12 @@ Para reproducir el catálogo hay que importar sus datos e imágenes por separado
 - Revisar home, tienda, wishlist, ficha de producto, carrito y checkout en español, inglés y chino.
 - Confirmar que el QR de ARCA, el botón de arrepentimiento y cualquier otro bloque legal del footer sigan visibles.
 - Validar las reglas reales de compra mínima y descuentos en el backend. Los montos mostrados por el theme son informativos.
-- Probar editar el hero, actualizar el módulo y verificar que la personalización del editor se conserve.
+- Carrusel del home: cambia cada 4 segundos, las flechas funcionan, toda la diapositiva lleva al link del botón y desde el editor se pueden agregar diapositivas y cambiar la velocidad.
+- Probar editar el carrusel del home, actualizar el módulo y verificar que la personalización del editor se conserve.
+- Ficha de producto: revisar productos con 1, 2 y 4 o más imágenes, que los detalles queden fijos al hacer scroll en escritorio, y el carrusel con miniaturas en celular.
+- Agregar al carrito desde el home, la tienda y la ficha: debe abrirse solo el carrito lateral, sin el aviso flotante de Odoo encima.
+- Abrir el buscador con la página scrolleada: el panel debe quedar pegado arriba.
+- Cambiar entre ES, EN y 中文 desde el footer y volver, en distintas páginas.
 - Verificar móvil desde 320 px y escritorio desde 1024 px.
 
 ## Alcance técnico
@@ -96,3 +116,11 @@ Para reproducir el catálogo hay que importar sus datos e imágenes por separado
 Los estilos, interacciones y variables SCSS se declaran únicamente en `web.assets_frontend`. Las variables se anteponen dentro de ese bundle para no cambiar la compilación de estilos del backend. El módulo añade sus campos de configuración al formulario de ajustes de Website.
 
 El footer PIDECO reemplaza únicamente el primer bloque visual del footer estándar y conserva el contenedor nativo para que otros módulos puedan añadir contenido legal.
+
+Plantillas que modifica el módulo (`views/pideco_theme_19.xml`):
+
+- `pideco_layout_19` (hereda `website.layout`): header, barra de anuncios, buscador, carrito lateral y footer con selector de idioma.
+- `pideco_homepage_19` (hereda `website.homepage`): contenido completo del home.
+- `pideco_product_page_19`, `pideco_product_title_19` y `pideco_product_terms_19` (heredan de `website_sale`): recomendaciones, descuentos, categoría y SKU sobre el título, y garantías de compra.
+
+La página de producto, el aviso del carrito y la posición del buscador se ajustan solo con CSS, sin reemplazar plantillas nativas. El JS (`static/src/js/pideco_ui.js`) maneja el buscador en vivo, el carrito lateral, el menú, los sliders, el cambio de idioma y la medición del alto del header para el carrusel del home.

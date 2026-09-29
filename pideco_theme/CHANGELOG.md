@@ -18,6 +18,10 @@
 - En celular, la imagen va de borde a borde, con las miniaturas debajo.
 - Es un cambio solo visual (CSS): no modifica las plantillas ni las opciones de Odoo.
 
+### Buscador
+
+- El panel de búsqueda se abre pegado al borde superior de la pantalla, deslizándose desde arriba, en lugar de aparecer a mitad de pantalla cuando la página está scrolleada.
+
 ### Carrito
 
 - Al agregar un producto ya no aparece el aviso flotante de Odoo encima del carrito lateral: se abre solo el carrito lateral. Los avisos de advertencia (por ejemplo, falta de stock) se siguen mostrando.
@@ -27,6 +31,12 @@
 - Traducciones al español y al chino de todos los textos nuevos del home: carrusel, "Nuestra esencia", banners editoriales y secciones reescritas.
 - Se quitaron del archivo base (.pot) y de las traducciones los textos que ya no se usan.
 - El selector de idioma del footer suma inglés (ES · EN · 中文). Aparece si el website tiene activa alguna variante de inglés.
+
+### Documentación
+
+- La guía de instalación ya no pide seleccionar el módulo como tema activo, suma el inglés a los idiomas del sitio y documenta el carrusel, las imágenes del home, la página de producto, el carrito lateral, el buscador y los montos escritos en el sitio.
+- Nuevas validaciones de UAT para el carrusel, la galería, el carrito y el buscador.
+- El README del repositorio explica la documentación, las ramas y cómo publicar una versión.
 
 ## 19.0.1.2.0
 

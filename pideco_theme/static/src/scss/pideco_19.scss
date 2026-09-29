@@ -297,7 +297,8 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
     z-index: 1055;
     visibility: hidden;
     opacity: 0;
-    padding-top: 117px;
+    /* The panel sits flush with the top of the viewport, whatever the scroll position. */
+    padding-top: 0;
     background: rgba(78, 14, 20, .32);
     backdrop-filter: blur(4px);
     transition: opacity .25s ease, visibility .25s ease;
@@ -306,9 +307,10 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
 .pideco-search-panel {
     width: 100%;
     padding: Clamp(1.5rem, 4vw, 3.5rem) Clamp(1.25rem, 7vw, 8rem);
+    padding-top: Max(Clamp(1.5rem, 4vw, 3.5rem), env(safe-area-inset-top));
     background: var(--pideco-cream);
     box-shadow: 0 22px 60px rgba(45, 17, 18, .18);
-    transform: translateY(-20px);
+    transform: translateY(-100%);
     transition: transform .25s ease;
 }
 .pideco-search-overlay.is-open .pideco-search-panel { transform: translateY(0); }
@@ -1398,7 +1400,6 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-brand img { width: 120px; }
     .pideco-actions { gap: .7rem; }
     .pideco-actions .pideco-account-link { display: none; }
-    .pideco-search-overlay { padding-top: 100px; }
     .pideco-nav { width: Min(88vw, 350px); padding-inline: 1.15rem; }
     .o_wsale_product_page #product_detail { --pideco-pd-pad: 1rem; }
     .o_wsale_product_page #o_wsale_product_details_content { padding: 1.35rem; }
