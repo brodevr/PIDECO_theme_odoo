@@ -10,7 +10,12 @@
 - En celular el texto se ubica abajo y cada diapositiva muestra la parte de la imagen elegida como punto de foco en el editor.
 - Nueva sección "Nuestra esencia" con los cuatro valores del manual de marca (Sencillez práctica, Esencia orgánica, Cercanía en el diseño y Encuentro en el hogar) y una imagen con forma de arco.
 - Textos del home reescritos con el tono del manual de marca: carrusel, categorías, banners editoriales y "Transformá tus espacios".
-- Los textos nuevos o modificados todavía no tienen traducción.
+
+### Traducciones
+
+- Traducciones al español y al chino de todos los textos nuevos del home: carrusel, "Nuestra esencia", banners editoriales y secciones reescritas.
+- Se quitaron del archivo base (.pot) y de las traducciones los textos que ya no se usan.
+- El selector de idioma del footer suma inglés (ES · EN · 中文). Aparece si el website tiene activa alguna variante de inglés.
 
 ## 19.0.1.2.0
 

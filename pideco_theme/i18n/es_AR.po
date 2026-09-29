@@ -125,24 +125,6 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid ""
-"<span><small>New ways of living</small><strong>A simpler "
-"kitchen</strong><em>Discover the collection</em></span>"
-msgstr ""
-"<span><small>Nuevas formas de habitar</small><strong>Una cocina más "
-"simple</strong><em>Descubrir la colección</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span><small>Order you can enjoy</small><strong>Everything in its "
-"place</strong><em>View organizers</em></span>"
-msgstr ""
-"<span><small>Orden que se disfruta</small><strong>Cada cosa en su "
-"lugar</strong><em>Ver organizadores</em></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
 "<span><strong>All PIDECO</strong><small>View products <i class=\"fa fa-"
 "arrow-right\"/></small></span>"
 msgstr ""
@@ -392,11 +374,6 @@ msgstr "Explorá"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "Featured categories"
-msgstr "Categorías principales"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Featured products"
 msgstr "Productos destacados"
 
@@ -530,6 +507,7 @@ msgid "New"
 msgstr "Nuevo"
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "New arrivals"
 msgstr "Nuevos"
@@ -694,15 +672,6 @@ msgid "Shop now"
 msgstr "Comprar ahora"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"Small changes, new sensations. Find pieces that add order, warmth and "
-"personality."
-msgstr ""
-"Pequeños cambios, nuevas sensaciones. Encontrá piezas que suman orden, "
-"calidez y personalidad."
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
 msgid "Store pickup available"
 msgstr "Retiro en tienda disponible"
@@ -776,3 +745,163 @@ msgstr "productos"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "中文"
 msgstr "中文"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Noble, lasting pieces"
+msgstr "Piezas nobles y duraderas"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Usefulness and<br/>pared-back beauty."
+msgstr "Utilidad y<br/>belleza despojada."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Homeware and decor selected to celebrate calm, order and the small moments "
+"at home."
+msgstr ""
+"Bazar y decoración seleccionados para celebrar la serenidad, el orden y los "
+"pequeños instantes en el hogar."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Volume discounts and personal service for retailers and projects."
+msgstr ""
+"Descuentos por volumen y atención personalizada para comercios y proyectos."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Previous"
+msgstr "Anterior"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Next"
+msgstr "Siguiente"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Carousel indicator"
+msgstr "Indicador del carrusel"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Every corner of your home"
+msgstr "Cada rincón de tu casa"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "PIDECO home decor"
+msgstr "Decoración para el hogar PIDECO"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Our essence"
+msgstr "Nuestra esencia"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Designed for everyday life"
+msgstr "Pensado para la vida diaria"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"We select noble, durable pieces that balance usefulness and beauty, so "
+"every routine at home becomes a meaningful moment."
+msgstr ""
+"Seleccionamos piezas nobles y duraderas que equilibran utilidad y belleza, "
+"para que cada rutina en casa se convierta en un momento significativo."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">01</span><strong>Practical "
+"simplicity</strong>"
+msgstr ""
+"<span class=\"pideco-essence-num\">01</span><strong>Sencillez "
+"práctica</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">02</span><strong>Organic essence</strong>"
+msgstr ""
+"<span class=\"pideco-essence-num\">02</span><strong>Esencia "
+"orgánica</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">03</span><strong>Approachable "
+"design</strong>"
+msgstr ""
+"<span class=\"pideco-essence-num\">03</span><strong>Cercanía en el "
+"diseño</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"pideco-essence-num\">04</span><strong>Gathering at "
+"home</strong>"
+msgstr ""
+"<span class=\"pideco-essence-num\">04</span><strong>Encuentro en el "
+"hogar</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Every piece serves a clear purpose."
+msgstr "Cada pieza cumple un propósito claro."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Noble materials and gentle textures."
+msgstr "Materiales nobles y texturas amables."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Aesthetic distinction for real life."
+msgstr "Distinción estética para la vida real."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Corners that invite rest and time with family."
+msgstr "Rincones que invitan al descanso y a compartir en familia."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Discover the collection"
+msgstr "Descubrir la colección"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>Small moments at home</small><strong>A simpler "
+"kitchen</strong><em>Discover the collection</em></span>"
+msgstr ""
+"<span><small>Pequeños instantes en casa</small><strong>Una cocina más "
+"simple</strong><em>Descubrir la colección</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span><small>Calm and order</small><strong>Everything in its "
+"place</strong><em>View organizers</em></span>"
+msgstr ""
+"<span><small>Serenidad y orden</small><strong>Cada cosa en su "
+"lugar</strong><em>Ver organizadores</em></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Create cozy, bright and balanced spaces with essential, timeless pieces."
+msgstr ""
+"Creá ambientes acogedores, luminosos y equilibrados con piezas esenciales y "
+"atemporales."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "EN"
+msgstr "EN"

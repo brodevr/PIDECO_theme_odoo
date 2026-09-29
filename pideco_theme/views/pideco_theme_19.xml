@@ -116,8 +116,10 @@
                     <nav class="pideco-language-selector" aria-label="Language">
                         <t t-set="pideco_lang_es" t-value="website.language_ids.filtered_domain([('code', '=', 'es_AR')])[:1]"/>
                         <t t-set="pideco_lang_zh" t-value="website.language_ids.filtered_domain([('code', '=', 'zh_CN')])[:1]"/>
+                        <t t-set="pideco_lang_en" t-value="website.language_ids.filtered_domain([('code', '=like', 'en_%')])[:1]"/>
                         <span>Language</span>
                         <a t-if="pideco_lang_es" t-att-href="'/website/lang/%s?r=/' % pideco_lang_es.url_code" t-att-data-pideco-language="pideco_lang_es.url_code" t-att-class="'is-active' if request.env.lang == 'es_AR' else ''" lang="es">ES</a>
+                        <a t-if="pideco_lang_en" t-att-href="'/website/lang/%s?r=/' % pideco_lang_en.url_code" t-att-data-pideco-language="pideco_lang_en.url_code" t-att-class="'is-active' if request.env.lang == pideco_lang_en.code else ''" lang="en">EN</a>
                         <a t-if="pideco_lang_zh" t-att-href="'/website/lang/%s?r=/' % pideco_lang_zh.url_code" t-att-data-pideco-language="pideco_lang_zh.url_code" t-att-class="'is-active' if request.env.lang == 'zh_CN' else ''" lang="zh-CN">中文</a>
                     </nav>
                 </div>

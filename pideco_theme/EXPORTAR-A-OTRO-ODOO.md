@@ -5,7 +5,7 @@ Módulo visual para Website y eCommerce en Odoo 19 Community o Enterprise. Inclu
 ## Requisitos
 
 - Odoo 19 con `website_sale` y `website_sale_wishlist` instalados.
-- Los idiomas públicos del sitio son `es_AR` y `zh_CN`. `es_AR` debe quedar como idioma principal y predeterminado. Inglés se mantiene únicamente como idioma fuente técnico de Odoo y no debe añadirse al website de PIDECO.
+- Los idiomas públicos del sitio son `es_AR`, inglés y `zh_CN`. `es_AR` debe quedar como idioma principal y predeterminado. Los tres deben estar activos en *Website → Configuración → Ajustes → Idiomas* para aparecer en el selector del footer (ES · EN · 中文). Sirve cualquier variante de inglés (`en_US`, `en_GB`, etc.). Los textos del theme están escritos en inglés, así que ese idioma no necesita archivo de traducción.
 - Configurar `auto_redirect_lang=False`. En esta versión de Odoo 19, el enrutador todavía puede priorizar el idioma del navegador o una selección recordada; comprobar ese comportamiento en UAT. El enlace `/website/lang/es?r=/` selecciona español explícitamente.
 - La localización argentina, impuestos, moneda, medios de pago, envíos y compra mínima se configuran en el entorno. No son dependencias del theme.
 
@@ -85,7 +85,7 @@ Para reproducir el catálogo hay que importar sus datos e imágenes por separado
 ## Validaciones obligatorias en UAT
 
 - Confirmar que el website de PIDECO sea el website activo y que sus productos y categorías estén asignados correctamente.
-- Revisar home, tienda, wishlist, ficha de producto, carrito y checkout en español y chino.
+- Revisar home, tienda, wishlist, ficha de producto, carrito y checkout en español, inglés y chino.
 - Confirmar que el QR de ARCA, el botón de arrepentimiento y cualquier otro bloque legal del footer sigan visibles.
 - Validar las reglas reales de compra mínima y descuentos en el backend. Los montos mostrados por el theme son informativos.
 - Probar editar el hero, actualizar el módulo y verificar que la personalización del editor se conserve.
