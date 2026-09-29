@@ -77,6 +77,11 @@ body:has(.pideco-header) .modal .btn-primary:hover {
     background-color: #351014;
     border-color: #351014;
 }
+/* The PIDECO cart drawer opens after adding a product, so Odoo's "added to cart" toast
+   (it shows the product image) would overlap it. Warning toasts (e.g. stock) stay visible. */
+body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-warning)) {
+    display: none !important;
+}
 #wrapwrap .btn-primary:hover,
 #wrapwrap .btn-primary:focus {
     border-color: #351014;
@@ -995,10 +1000,12 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 .o_website_sale_checkout .btn-primary { border-radius: 999px; }
 
 /* Product detail */
+/* Full width; the side padding lives in a variable so the mobile gallery can bleed to the edges. */
 .o_wsale_product_page #product_detail {
-    max-width: 1380px;
-    margin-inline: auto;
-    padding-inline: Clamp(1rem, 4vw, 4rem);
+    --pideco-pd-pad: Clamp(1rem, 2.8vw, 2.5rem);
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: var(--pideco-pd-pad);
 }
 
 .o_wsale_product_page #product_detail > .o_wsale_content_contained {
@@ -1008,7 +1015,7 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 
 .o_wsale_product_page #product_detail_main {
     display: grid !important;
-    grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr);
+    grid-template-columns: minmax(0, 1fr) Clamp(380px, 31vw, 460px);
     align-items: start !important;
     gap: Clamp(1.5rem, 3vw, 3rem);
     margin: 0;
@@ -1223,13 +1230,54 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 .pideco-product-recommendations .pideco-product-card { min-width: 0; }
 .pideco-product-recommendations .pideco-product-card h3 { overflow-wrap: anywhere; }
 
+/* Desktop gallery as a mosaic: Odoo's product carousel shows every image at once, the first
+   one (and a lone last one) full width, the rest in two columns. Details stay sticky. */
+@media (min-width: 992px) {
+    .o_wsale_product_page #product_detail_main #o-carousel-product {
+        display: block !important;
+        aspect-ratio: auto;
+        margin: 0 !important;
+        overflow: visible !important;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+    }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .o_carousel_product_outer { display: block !important; overflow: visible !important; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-inner {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .75rem;
+        height: auto !important;
+        overflow: visible;
+    }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-item {
+        display: block !important;
+        float: none;
+        height: auto !important;
+        margin: 0;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: 1.25rem;
+        background: var(--pideco-surface);
+        transform: none !important;
+        transition: none;
+    }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-item:first-child,
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-item:nth-child(even):last-child { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .o_product_detail_img_wrapper { height: 100% !important; padding: 0; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .product_detail_img { object-fit: cover !important; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-control-prev,
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-control-next,
+    .o_wsale_product_page #product_detail_main #o-carousel-product .o_carousel_product_indicators { display: none !important; }
+    .o_wsale_product_page #product_details { position: sticky !important; top: 1.5rem; }
+}
+
 @media (max-width: 767.98px) {
     .pideco-section-head { flex-wrap: wrap; gap: 1rem; }
     .pideco-header-main, .pideco-footer-grid > *, .pideco-section-head > * { min-width: 0; }
     .pideco-promo-item { padding-inline: .5rem; letter-spacing: .05em; }
     .o_wsale_product_page #product_detail_main { gap: 1rem; }
     .o_wsale_product_page #product_detail > .o_wsale_content_contained { padding-block: .85rem !important; }
-    .o_wsale_product_page .o_product_detail_img_wrapper { padding: 1rem; }
     .o_wsale_product_page #o_wsale_product_details_content h1 { font-size: 1.4rem; }
     .pideco-product-assurances strong { font-size: .85rem; }
     .pideco-product-assurances small { font-size: .8rem; }
@@ -1324,7 +1372,24 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-footer-grid { grid-template-columns: repeat(2, 1fr); }
     .o_wsale_product_page #product_detail_main { grid-template-columns: 1fr; gap: 1.5rem; }
     .o_wsale_product_page #product_details { position: static !important; }
-    .o_wsale_product_page .o_wsale_product_images #o-carousel-product { max-width: 520px; margin-inline: auto !important; }
+    /* Mobile gallery: carousel with the image edge to edge and the thumbnails below it. */
+    .o_wsale_product_page .o_wsale_product_images #o-carousel-product {
+        display: flex !important;
+        flex-direction: column;
+        max-width: none;
+        margin: 0 calc(-1 * var(--pideco-pd-pad)) !important;
+        aspect-ratio: auto;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+    }
+    .o_wsale_product_page #o-carousel-product .o_carousel_product_outer { order: 0; aspect-ratio: 10 / 11; background: var(--pideco-surface); }
+    .o_wsale_product_page #o-carousel-product .o_product_detail_img_wrapper { padding: 0; }
+    .o_wsale_product_page #o-carousel-product .product_detail_img { object-fit: cover !important; }
+    .o_wsale_product_page #o-carousel-product .o_carousel_product_indicators { order: 1; padding: .75rem var(--pideco-pd-pad) 0; }
+    .o_wsale_product_page #o-carousel-product .carousel-indicators { display: flex !important; gap: .5rem; justify-content: flex-start !important; margin: 0 !important; padding: 0; overflow-x: auto; }
+    .o_wsale_product_page #o-carousel-product .carousel-indicators li { flex: 0 0 64px; width: 64px; height: 64px; margin: 0; overflow: hidden; border: 1px solid var(--pideco-border); border-radius: 10px; opacity: 1; }
+    .o_wsale_product_page #o-carousel-product .carousel-indicators li.active { border: 2px solid var(--pideco-wine); }
 }
 
 @media (max-width: 575.98px) {
@@ -1335,7 +1400,7 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-actions .pideco-account-link { display: none; }
     .pideco-search-overlay { padding-top: 100px; }
     .pideco-nav { width: Min(88vw, 350px); padding-inline: 1.15rem; }
-    .o_wsale_product_page #product_detail { padding-inline: 1rem; }
+    .o_wsale_product_page #product_detail { --pideco-pd-pad: 1rem; }
     .o_wsale_product_page #o_wsale_product_details_content { padding: 1.35rem; }
     .o_wsale_product_page #add_to_cart_wrap { grid-template-columns: 100px minmax(0, 1fr); }
     .o_wsale_product_page .css_quantity { width: 100px !important; }

@@ -11,6 +11,17 @@
 - Nueva sección "Nuestra esencia" con los cuatro valores del manual de marca (Sencillez práctica, Esencia orgánica, Cercanía en el diseño y Encuentro en el hogar) y una imagen con forma de arco.
 - Textos del home reescritos con el tono del manual de marca: carrusel, categorías, banners editoriales y "Transformá tus espacios".
 
+### Página de producto
+
+- La ficha ocupa todo el ancho de la pantalla.
+- En escritorio, la galería se muestra como mosaico: la primera imagen grande a lo ancho y el resto en dos columnas. Los detalles del producto quedan fijos a la derecha mientras se recorren las imágenes.
+- En celular, la imagen va de borde a borde, con las miniaturas debajo.
+- Es un cambio solo visual (CSS): no modifica las plantillas ni las opciones de Odoo.
+
+### Carrito
+
+- Al agregar un producto ya no aparece el aviso flotante de Odoo encima del carrito lateral: se abre solo el carrito lateral. Los avisos de advertencia (por ejemplo, falta de stock) se siguen mostrando.
+
 ### Traducciones
 
 - Traducciones al español y al chino de todos los textos nuevos del home: carrusel, "Nuestra esencia", banners editoriales y secciones reescritas.
