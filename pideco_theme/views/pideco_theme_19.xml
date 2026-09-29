@@ -132,7 +132,7 @@
                 <section class="s_carousel_wrapper p-0 pideco-hero-carousel" data-snippet="s_carousel" data-name="Banner principal PIDECO" data-vxml="001" data-vcss="001">
                     <div id="pidecoHeroCarousel" class="s_carousel s_carousel_default carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                         <div class="carousel-inner">
-                            <div class="carousel-item active oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');" data-name="Slide">
+                            <div class="carousel-item active oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/img/home/hero-1.jpg');" data-name="Slide">
                                 <div class="o_we_bg_filter bg-black-50"/>
                                 <div class="container oe_unremovable">
                                     <div class="row">
@@ -140,15 +140,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');" data-name="Slide">
+                            <div class="carousel-item oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/img/home/hero-2.jpg');" data-name="Slide">
                                 <div class="o_we_bg_filter bg-black-50"/>
                                 <div class="container oe_unremovable">
                                     <div class="row">
-                                        <div class="carousel-content pideco-banner-content col-lg-7"><p class="pideco-kicker">Just arrived</p><h2>New pieces<br/>for every room.</h2><p>Discover the latest additions to the PIDECO collection.</p><p><a class="btn btn-light stretched-link" href="/shop?order=create_date+desc">New arrivals</a></p></div>
+                                        <div class="carousel-content pideco-banner-content col-lg-7"><p class="pideco-kicker">Noble, lasting pieces</p><h2>Usefulness and<br/>pared-back beauty.</h2><p>Homeware and decor selected to celebrate calm, order and the small moments at home.</p><p><a class="btn btn-light stretched-link" href="/shop?order=create_date+desc">New arrivals</a></p></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/assets/pideco-editorial.png');" data-name="Slide">
+                            <div class="carousel-item oe_img_bg o_bg_img_center" style="background-image: url('/pideco_theme/static/src/img/home/hero-3.jpg');" data-name="Slide">
                                 <div class="o_we_bg_filter bg-black-50"/>
                                 <div class="container oe_unremovable">
                                     <div class="row">
@@ -182,12 +182,30 @@
                 </section>
 
                 <section class="container pideco-home-section pideco-category-slider-section" data-name="Categorías principales">
-                    <div class="pideco-section-head"><div><p class="pideco-kicker">Explore</p><h2>Featured categories</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="categories" aria-label="Previous category"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="categories" aria-label="Next category"><i class="fa fa-arrow-right"/></button></div></div>
+                    <div class="pideco-section-head"><div><p class="pideco-kicker">Explore</p><h2>Every corner of your home</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="categories" aria-label="Previous category"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="categories" aria-label="Next category"><i class="fa fa-arrow-right"/></button></div></div>
                     <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
                     <t t-set="pideco_categories" t-value="request.env['product.public.category'].search([('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id')"/>
                     <div class="pideco-category-slider pideco-slider-track" data-pideco-slider="categories">
                         <a class="pideco-category-slide" t-foreach="pideco_categories" t-as="category" t-att-href="'/shop/category/%s' % slug(category)"><div class="pideco-category-slide-image"><img t-att-src="'/web/image/product.public.category/%s/image_512' % category.id" t-att-alt="category.name"/></div><span><strong t-out="category.name"/><small>View products <i class="fa fa-arrow-right"/></small></span></a>
                         <a class="pideco-category-slide" t-if="not pideco_categories" href="/shop"><div class="pideco-category-placeholder"><i class="fa fa-th-large"/></div><span><strong>All PIDECO</strong><small>View products <i class="fa fa-arrow-right"/></small></span></a>
+                    </div>
+                </section>
+
+                <section class="container pideco-home-section pideco-essence" data-name="Nuestra esencia">
+                    <div class="pideco-essence-grid">
+                        <div class="pideco-essence-media"><img src="/pideco_theme/static/src/img/home/esencia.jpg" alt="PIDECO home decor"/></div>
+                        <div class="pideco-essence-copy">
+                            <p class="pideco-kicker">Our essence</p>
+                            <h2>Designed for everyday life</h2>
+                            <p>We select noble, durable pieces that balance usefulness and beauty, so every routine at home becomes a meaningful moment.</p>
+                            <div class="pideco-essence-values">
+                                <div><span class="pideco-essence-num">01</span><strong>Practical simplicity</strong><p>Every piece serves a clear purpose.</p></div>
+                                <div><span class="pideco-essence-num">02</span><strong>Organic essence</strong><p>Noble materials and gentle textures.</p></div>
+                                <div><span class="pideco-essence-num">03</span><strong>Approachable design</strong><p>Aesthetic distinction for real life.</p></div>
+                                <div><span class="pideco-essence-num">04</span><strong>Gathering at home</strong><p>Corners that invite rest and time with family.</p></div>
+                            </div>
+                            <a class="btn btn-primary" href="/shop">Discover the collection</a>
+                        </div>
                     </div>
                 </section>
 
@@ -202,13 +220,13 @@
 
                 <section class="container pideco-home-section" data-name="Banners editoriales">
                     <div class="pideco-promo-grid">
-                        <a href="/shop?search=Cocina" class="pideco-promo-card pideco-promo-card-light"><img src="/pideco_theme/static/src/assets/pideco-editorial.png" alt="Refresh your kitchen"/><span><small>New ways of living</small><strong>A simpler kitchen</strong><em>Discover the collection</em></span></a>
-                        <a href="/shop?search=Organizadores" class="pideco-promo-card pideco-promo-card-dark"><img src="/pideco_theme/static/src/assets/pideco-editorial.png" alt="Order and design"/><span><small>Order you can enjoy</small><strong>Everything in its place</strong><em>View organizers</em></span></a>
+                        <a href="/shop?search=Cocina" class="pideco-promo-card pideco-promo-card-light"><img src="/pideco_theme/static/src/img/home/editorial-cocina.jpg" alt="Refresh your kitchen"/><span><small>Small moments at home</small><strong>A simpler kitchen</strong><em>Discover the collection</em></span></a>
+                        <a href="/shop?search=Organizadores" class="pideco-promo-card pideco-promo-card-dark"><img src="/pideco_theme/static/src/img/home/editorial-orden.jpg" alt="Order and design"/><span><small>Calm and order</small><strong>Everything in its place</strong><em>View organizers</em></span></a>
                     </div>
                 </section>
 
                 <section class="container pideco-home-section pideco-transform" data-name="Transformá tus espacios">
-                    <div class="pideco-section-head"><div><p class="pideco-kicker">Ideas for your home</p><h2>Transform your spaces</h2><p>Small changes, new sensations. Find pieces that add order, warmth and personality.</p></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="transform" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="transform" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
+                    <div class="pideco-section-head"><div><p class="pideco-kicker">Ideas for your home</p><h2>Transform your spaces</h2><p>Create cozy, bright and balanced spaces with essential, timeless pieces.</p></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="transform" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="transform" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
                     <t t-set="pideco_short_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id', limit=8)"/>
                     <div class="pideco-product-grid pideco-product-grid-short pideco-slider-track" data-pideco-slider="transform"><t t-foreach="pideco_short_products" t-as="product"><t t-call="pideco_theme.pideco_slider_product_card"/></t></div>
                 </section>

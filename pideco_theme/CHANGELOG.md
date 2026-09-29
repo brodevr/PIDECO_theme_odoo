@@ -8,7 +8,9 @@
 - Usa el carrusel nativo de Odoo, así que desde el editor se pueden agregar o quitar diapositivas y cambiar la imagen de fondo, los textos, el botón y la velocidad.
 - Toda la diapositiva es clickeable y lleva al link de su botón.
 - En celular el texto se ubica abajo y cada diapositiva muestra la parte de la imagen elegida como punto de foco en el editor.
-- Los textos de las diapositivas 2 y 3 todavía no tienen traducción.
+- Nueva sección "Nuestra esencia" con los cuatro valores del manual de marca (Sencillez práctica, Esencia orgánica, Cercanía en el diseño y Encuentro en el hogar) y una imagen con forma de arco.
+- Textos del home reescritos con el tono del manual de marca: carrusel, categorías, banners editoriales y "Transformá tus espacios".
+- Los textos nuevos o modificados todavía no tienen traducción.
 
 ## 19.0.1.2.0
 

@@ -552,6 +552,26 @@ body.editor_enable .pideco-hero-carousel .stretched-link::after { display: none;
 .pideco-promo-card strong { max-width: 500px; color: #fff9f1; font-size: Clamp(2rem, 4vw, 3.7rem); line-height: 1; }
 .pideco-promo-card em { margin-top: 1.1rem; color: #fff9f1; font-size: .72rem; font-style: normal; letter-spacing: .12em; text-transform: uppercase; }
 
+/* "Our essence": arched image, as suggested by the brand manual, next to the four brand values. */
+.pideco-essence-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: Clamp(2.5rem, 7vw, 7rem); align-items: center; }
+.pideco-essence-media { overflow: hidden; aspect-ratio: 4 / 5; border-radius: 999px 999px 0 0; background: var(--pideco-border); }
+.pideco-essence-media img { width: 100%; height: 100%; object-fit: cover; }
+.pideco-essence-copy h2 { max-width: 560px; margin: 0; font-size: Clamp(2.4rem, 4.5vw, 4.2rem); line-height: .98; }
+.pideco-essence-copy > p:not(.pideco-kicker) { max-width: 560px; margin: 1.3rem 0 2.2rem; color: var(--pideco-text); font-size: 1.05rem; line-height: 1.65; }
+.pideco-essence-values { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem 2rem; margin-bottom: 2.4rem; }
+.pideco-essence-values > div { padding-top: 1rem; border-top: 1px solid rgba(147, 101, 70, .3); }
+.pideco-essence-num { display: block; margin-bottom: .45rem; color: var(--pideco-clay); font-size: .72rem; font-weight: 600; letter-spacing: .16em; }
+.pideco-essence-values strong { display: block; color: var(--pideco-wine); font-size: 1.05rem; }
+.pideco-essence-values p { margin: .35rem 0 0; color: var(--pideco-text); font-size: .9rem; line-height: 1.55; }
+@media (max-width: 991.98px) {
+    .pideco-essence-grid { grid-template-columns: 1fr; }
+    .pideco-essence-media { width: Min(100%, 420px); margin-inline: auto; }
+}
+@media (max-width: 575.98px) {
+    .pideco-essence-values { grid-template-columns: 1fr; gap: 1.2rem; }
+    .pideco-essence-copy .btn { width: 100%; }
+}
+
 .pideco-transform .pideco-section-head > div { max-width: 760px; }
 .pideco-transform .pideco-section-head p:last-child { max-width: 620px; margin: 1rem 0 0; color: var(--pideco-text); line-height: 1.6; }
 .pideco-product-grid-short .pideco-product-card p { display: none; }

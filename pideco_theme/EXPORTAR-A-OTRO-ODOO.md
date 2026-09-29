@@ -40,6 +40,23 @@ El banner del home es un carrusel nativo de Odoo y se edita desde el editor del 
 
 Si el home ya había sido editado con el editor antes de actualizar el módulo, esa versión personalizada tiene prioridad y el carrusel no aparece. Hay que restablecer la vista del home o insertar el bloque desde el editor.
 
+## Imágenes del home
+
+El home usa 6 imágenes que viajan con el módulo, en `static/src/img/home/`. Así aparecen al instalar en cualquier base y se pueden reemplazar desde el editor.
+
+| Espacio | Archivo | Tamaño actual | Encuadre |
+|---|---|---|---|
+| Carrusel, diapositiva 1 | `hero-1.jpg` (mesa de comedor) | 1672 × 941 px | Motivo centrado; en celular se recorta a lo alto |
+| Carrusel, diapositiva 2 | `hero-2.jpg` (consola de madera) | 1672 × 941 px | Igual que la 1 |
+| Carrusel, diapositiva 3 | `hero-3.jpg` (showroom mayorista) | 1672 × 941 px | Igual que la 1 |
+| Nuestra esencia | `esencia.jpg` (sillón borgoña) | 1122 × 1402 px | Se muestra con la parte superior en arco |
+| Banner editorial "cocina" | `editorial-cocina.jpg` (utensilios) | 1400 × 788 px | El texto va abajo a la izquierda |
+| Banner editorial "orden" | `editorial-orden.jpg` (tarros de vidrio) | 1355 × 1161 px | El texto va abajo a la izquierda |
+
+Para reemplazarlas en el módulo, conviene respetar la orientación y usar JPG o WebP de menos de 400 KB. Para el carrusel se recomienda 2400 × 1350 px, así se ve nítido en pantallas grandes. Si el home ya fue editado con el editor en una base, las imágenes nuevas del módulo no reemplazan las que ya se cargaron ahí.
+
+`static/src/assets/pideco-editorial.png` ya no se usa en las plantillas, pero se conserva porque un home editado en alguna base puede seguir referenciándola.
+
 ## Montos escritos en el sitio
 
 La compra mínima y los descuentos por monto se muestran como texto fijo en el frontend. Son informativos: el theme no aplica ninguna regla de compra mínima ni descuento. Las reglas reales se configuran en el backend de Odoo.
