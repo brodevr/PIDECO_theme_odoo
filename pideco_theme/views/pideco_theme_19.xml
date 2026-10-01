@@ -57,9 +57,7 @@
                     <div class="pideco-actions">
                         <button type="button" data-pideco-search-open="" aria-label="Search" title="Search"><i class="fa fa-search" t-translation="off"/></button>
                         <a class="pideco-account-link" t-att-href="'/web/login' if request.env.user._is_public() else '/my'" aria-label="My account" title="My account"><i class="fa fa-user-o" t-translation="off"/></a>
-                        <!-- o_wsale_my_wish / o_wsale_my_cart / my_*_quantity are the hooks Odoo's wishlist and cart JS update. -->
-                        <t t-set="pideco_wishcount" t-value="len(request.env['product.wishlist'].current())"/>
-                        <a href="/shop/wishlist" class="o_wsale_my_wish pideco-wish-button" aria-label="Wishlist"><i class="fa fa-heart-o" t-translation="off"/><sup t-attf-class="my_wish_quantity #{'d-none' if not pideco_wishcount else ''}" t-out="pideco_wishcount"/></a>
+                        <!-- o_wsale_my_cart / my_cart_quantity are the hooks Odoo's cart JS updates. The wishlist lives in the menu and on each product. -->
                         <t t-set="pideco_order" t-value="request.cart"/>
                         <ul class="list-unstyled m-0"><li class="pideco-header-cart o_wsale_my_cart"><button type="button" data-pideco-cart-open="" class="pideco-cart-button" aria-label="Open cart" title="Open cart"><i class="fa fa-shopping-bag" t-translation="off"/><sup t-attf-class="my_cart_quantity #{'d-none' if not pideco_order.cart_quantity else ''}" t-out="pideco_order.cart_quantity or 0"/></button></li></ul>
                     </div>

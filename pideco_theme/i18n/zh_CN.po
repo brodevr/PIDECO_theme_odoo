@@ -694,11 +694,6 @@ msgid "Wholesale benefits"
 msgstr "批发优惠"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Wishlist"
-msgstr "愿望清单"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid "You may also like"
 msgstr "您可能也喜欢"

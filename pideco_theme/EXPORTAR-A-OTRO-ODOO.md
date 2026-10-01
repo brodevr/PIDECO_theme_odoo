@@ -109,7 +109,7 @@ Para reproducir el catálogo hay que importar sus datos e imágenes por separado
 - Agregar al carrito desde el home, la tienda y la ficha: debe abrirse solo el carrito lateral, sin el aviso flotante de Odoo encima.
 - Abrir el buscador con la página scrolleada: el panel debe quedar pegado arriba.
 - Cambiar entre ES, EN y ZH desde el footer y volver, en distintas páginas.
-- Header: los íconos de búsqueda, cuenta y carrito se ven sin texto y los contadores quedan en la esquina del ícono.
+- Header: en escritorio se ven solo los íconos de búsqueda, cuenta y carrito; en celular, menú, logo centrado, búsqueda y carrito (también en 320 px). El contador del carrito queda en la esquina del ícono.
 - Verificar móvil desde 320 px y escritorio desde 1024 px.
 
 ## Alcance técnico

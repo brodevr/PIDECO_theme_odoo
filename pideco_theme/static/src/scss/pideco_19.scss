@@ -272,10 +272,8 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
 .pideco-actions .pideco-cart-button { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; }
 .pideco-actions i { font-size: 1.15rem; }
 .pideco-brand img { display: block; width: Clamp(132px, 14vw, 188px); height: auto; }
-.pideco-cart-button,
-.pideco-wish-button { position: relative; }
-.pideco-cart-button sup,
-.pideco-wish-button sup {
+.pideco-cart-button { position: relative; }
+.pideco-cart-button sup {
     position: absolute;
     top: 2px;
     right: 0;
@@ -1343,10 +1341,11 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 }
 
 @media (max-width: 991.98px) {
-    .pideco-header-main { grid-template-columns: 44px minmax(0, 1fr) 44px; min-height: 70px; }
+    /* Equal side columns keep the logo centered: menu on the left, search + cart on the right. */
+    .pideco-header-main { grid-template-columns: 92px minmax(0, 1fr) 92px; min-height: 70px; }
     .pideco-mobile-menu { display: block; width: 44px; height: 44px; }
-    .pideco-actions > button,
-    .pideco-actions > a { display: none; }
+    .pideco-actions { gap: .25rem; }
+    .pideco-actions > .pideco-account-link { display: none; }
     html:has(.pideco-nav.show) { overflow: hidden; }
     .pideco-nav { position: fixed; z-index: 1070; top: 0; right: auto; bottom: 0; left: 0; display: flex; width: Min(88vw, 380px); max-width: 100%; height: 100dvh; padding: 1.15rem 1.35rem 2rem; flex-direction: column; align-items: stretch; gap: .9rem; overflow-y: auto; background: var(--pideco-cream); border: 0; box-shadow: 18px 0 45px rgba(42, 17, 19, .18); transform: translateX(-105%); transition: transform .28s cubic-bezier(.2, .8, .2, 1); }
     .pideco-nav {
@@ -1423,10 +1422,9 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 
 @media (max-width: 575.98px) {
     .pideco-announcement { font-size: .6rem; letter-spacing: .1em; }
-    .pideco-header-main { padding: .7rem 1rem; }
-    .pideco-brand img { width: 120px; }
-    .pideco-actions { gap: .7rem; }
-    .pideco-actions .pideco-account-link { display: none; }
+    .pideco-header-main { grid-template-columns: 88px minmax(0, 1fr) 88px; gap: .5rem; padding: .7rem 1rem; }
+    .pideco-actions { gap: 0; }
+    .pideco-brand img { width: Min(120px, 100%); }
     .pideco-nav { width: Min(88vw, 350px); padding-inline: 1.15rem; }
     .o_wsale_product_page #product_detail { --pideco-pd-pad: 1rem; }
     .o_wsale_product_page #o_wsale_product_details_content { padding: 1.35rem; }

@@ -707,11 +707,6 @@ msgid "Wholesale benefits"
 msgstr "Beneficios mayoristas"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Wishlist"
-msgstr "Lista de deseos"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid "You may also like"
 msgstr "También te puede gustar"

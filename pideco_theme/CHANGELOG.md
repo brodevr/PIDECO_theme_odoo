@@ -22,7 +22,8 @@
 
 ### Encabezado
 
-- Búsqueda, cuenta y carrito se muestran solo como íconos, sin texto, con área de toque de 44 px. Los contadores del carrito y de favoritos quedan en la esquina del ícono. Los nombres siguen disponibles para lectores de pantalla y al pasar el mouse.
+- El header muestra solo íconos: búsqueda, cuenta y carrito en escritorio; menú, búsqueda y carrito en celular. Cada ícono tiene un área de toque de 44 px y el contador del carrito queda en su esquina. Los nombres siguen disponibles para lectores de pantalla y al pasar el mouse.
+- Favoritos sale del header: sigue accesible desde el menú y desde cada producto.
 
 ### Buscador
 
