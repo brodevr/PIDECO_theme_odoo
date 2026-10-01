@@ -102,11 +102,6 @@ msgid "<small>Your cart</small>"
 msgstr "<small>您的购物车</small>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span class=\"pideco-cart-label\">Cart</span>"
-msgstr "<span class=\"pideco-cart-label\">购物车</span>"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid ""
 "<span class=\"pideco-product-link\">View product <i class=\"fa fa-arrow-"
@@ -123,11 +118,6 @@ msgid ""
 msgstr ""
 "<span><strong>全部 PIDECO</strong><small>查看商品 <i class=\"fa fa-arrow-"
 "right\"/></small></span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Account</span>"
-msgstr "<span>账户</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
@@ -211,11 +201,6 @@ msgstr "<span>购买 $700,000</span><strong>优惠 15%</strong>"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "<span>Search products</span>"
 msgstr "<span>搜索商品</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Search</span>"
-msgstr "<span>搜索</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
@@ -729,11 +714,6 @@ msgid "products"
 msgstr "件商品"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "中文"
-msgstr "中文"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Noble, lasting pieces"
 msgstr "质感耐用的精选器物"
@@ -875,3 +855,8 @@ msgstr "用简约永恒的器物，打造温馨、明亮而平衡的空间。"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "EN"
 msgstr "EN"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "ZH"
+msgstr "ZH"

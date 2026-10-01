@@ -55,13 +55,13 @@
                     <div class="pideco-nav-backdrop" data-pideco-menu-close="" aria-hidden="true"/>
                     <a class="pideco-brand" href="/" aria-label="PIDECO home"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/></a>
                     <div class="pideco-actions">
-                        <button type="button" data-pideco-search-open="" aria-label="Search"><i class="fa fa-search" t-translation="off"/><span>Search</span></button>
-                        <a class="pideco-account-link" t-att-href="'/web/login' if request.env.user._is_public() else '/my'" aria-label="My account"><i class="fa fa-user-o" t-translation="off"/><span>Account</span></a>
+                        <button type="button" data-pideco-search-open="" aria-label="Search" title="Search"><i class="fa fa-search" t-translation="off"/></button>
+                        <a class="pideco-account-link" t-att-href="'/web/login' if request.env.user._is_public() else '/my'" aria-label="My account" title="My account"><i class="fa fa-user-o" t-translation="off"/></a>
                         <!-- o_wsale_my_wish / o_wsale_my_cart / my_*_quantity are the hooks Odoo's wishlist and cart JS update. -->
                         <t t-set="pideco_wishcount" t-value="len(request.env['product.wishlist'].current())"/>
                         <a href="/shop/wishlist" class="o_wsale_my_wish pideco-wish-button" aria-label="Wishlist"><i class="fa fa-heart-o" t-translation="off"/><sup t-attf-class="my_wish_quantity #{'d-none' if not pideco_wishcount else ''}" t-out="pideco_wishcount"/></a>
                         <t t-set="pideco_order" t-value="request.cart"/>
-                        <ul class="list-unstyled m-0"><li class="pideco-header-cart o_wsale_my_cart"><button type="button" data-pideco-cart-open="" class="pideco-cart-button" aria-label="Open cart"><i class="fa fa-shopping-bag" t-translation="off"/><span class="pideco-cart-label">Cart</span><sup t-attf-class="my_cart_quantity #{'d-none' if not pideco_order.cart_quantity else ''}" t-out="pideco_order.cart_quantity or 0"/></button></li></ul>
+                        <ul class="list-unstyled m-0"><li class="pideco-header-cart o_wsale_my_cart"><button type="button" data-pideco-cart-open="" class="pideco-cart-button" aria-label="Open cart" title="Open cart"><i class="fa fa-shopping-bag" t-translation="off"/><sup t-attf-class="my_cart_quantity #{'d-none' if not pideco_order.cart_quantity else ''}" t-out="pideco_order.cart_quantity or 0"/></button></li></ul>
                     </div>
                 </div>
             </header>
@@ -120,7 +120,7 @@
                         <span>Language</span>
                         <a t-if="pideco_lang_es" t-att-href="'/website/lang/%s?r=/' % pideco_lang_es.url_code" t-att-data-pideco-language="pideco_lang_es.url_code" t-att-class="'is-active' if request.env.lang == 'es_AR' else ''" lang="es">ES</a>
                         <a t-if="pideco_lang_en" t-att-href="'/website/lang/%s?r=/' % pideco_lang_en.url_code" t-att-data-pideco-language="pideco_lang_en.url_code" t-att-class="'is-active' if request.env.lang == pideco_lang_en.code else ''" lang="en">EN</a>
-                        <a t-if="pideco_lang_zh" t-att-href="'/website/lang/%s?r=/' % pideco_lang_zh.url_code" t-att-data-pideco-language="pideco_lang_zh.url_code" t-att-class="'is-active' if request.env.lang == 'zh_CN' else ''" lang="zh-CN">中文</a>
+                        <a t-if="pideco_lang_zh" t-att-href="'/website/lang/%s?r=/' % pideco_lang_zh.url_code" t-att-data-pideco-language="pideco_lang_zh.url_code" t-att-class="'is-active' if request.env.lang == 'zh_CN' else ''" lang="zh-CN">ZH</a>
                     </nav>
                 </div>
             </section>

@@ -7,7 +7,7 @@ El historial de cambios por versión está en `CHANGELOG.md`.
 ## Requisitos
 
 - Odoo 19 con `website_sale` y `website_sale_wishlist` instalados.
-- Los idiomas públicos del sitio son `es_AR`, inglés y `zh_CN`. `es_AR` debe quedar como idioma principal y predeterminado. Los tres deben estar activos en *Website → Configuración → Ajustes → Idiomas* para aparecer en el selector del footer (ES · EN · 中文). Sirve cualquier variante de inglés (`en_US`, `en_GB`, etc.). Los textos del theme están escritos en inglés, así que ese idioma no necesita archivo de traducción.
+- Los idiomas públicos del sitio son `es_AR`, inglés y `zh_CN`. `es_AR` debe quedar como idioma principal y predeterminado. Los tres deben estar activos en *Website → Configuración → Ajustes → Idiomas* para aparecer en el selector del footer (ES · EN · ZH). Sirve cualquier variante de inglés (`en_US`, `en_GB`, etc.). Los textos del theme están escritos en inglés, así que ese idioma no necesita archivo de traducción.
 - Configurar `auto_redirect_lang=False`. En esta versión de Odoo 19, el enrutador todavía puede priorizar el idioma del navegador o una selección recordada; comprobar ese comportamiento en UAT. El enlace `/website/lang/es?r=/` selecciona español explícitamente.
 - La localización argentina, impuestos, moneda, medios de pago, envíos y compra mínima se configuran en el entorno. No son dependencias del theme.
 
@@ -108,7 +108,8 @@ Para reproducir el catálogo hay que importar sus datos e imágenes por separado
 - Ficha de producto: revisar productos con 1, 2 y 4 o más imágenes, que los detalles queden fijos al hacer scroll en escritorio, y el carrusel con miniaturas en celular.
 - Agregar al carrito desde el home, la tienda y la ficha: debe abrirse solo el carrito lateral, sin el aviso flotante de Odoo encima.
 - Abrir el buscador con la página scrolleada: el panel debe quedar pegado arriba.
-- Cambiar entre ES, EN y 中文 desde el footer y volver, en distintas páginas.
+- Cambiar entre ES, EN y ZH desde el footer y volver, en distintas páginas.
+- Header: los íconos de búsqueda, cuenta y carrito se ven sin texto y los contadores quedan en la esquina del ícono.
 - Verificar móvil desde 320 px y escritorio desde 1024 px.
 
 ## Alcance técnico

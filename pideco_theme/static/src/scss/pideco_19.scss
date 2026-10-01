@@ -266,18 +266,23 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
 .pideco-mega:hover .pideco-mega-toggle i,
 .pideco-mega:focus-within .pideco-mega-toggle i,
 .pideco-mega.is-open .pideco-mega-toggle i { transform: rotate(180deg); }
-.pideco-actions i { font-size: 1rem; }
-.pideco-actions span { margin-left: .35rem; }
+/* Header actions are icon-only: each one is a 44px target, counters sit on the icon's corner. */
+.pideco-actions > a,
+.pideco-actions > button,
+.pideco-actions .pideco-cart-button { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; }
+.pideco-actions i { font-size: 1.15rem; }
 .pideco-brand img { display: block; width: Clamp(132px, 14vw, 188px); height: auto; }
 .pideco-cart-button,
 .pideco-wish-button { position: relative; }
 .pideco-cart-button sup,
 .pideco-wish-button sup {
+    position: absolute;
+    top: 2px;
+    right: 0;
     display: inline-grid;
     place-items: center;
     min-width: 1.25rem;
     height: 1.25rem;
-    margin-left: .2rem;
     padding: 0 .25rem;
     border-radius: 999px;
     background: var(--pideco-wine);
@@ -407,10 +412,11 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
 .pideco-hero-carousel,
 .pideco-hero-carousel .carousel,
 .pideco-hero-carousel .carousel-inner { height: 100%; }
-.pideco-hero-carousel { height: calc(100svh - var(--pideco-top-h, 140px)); min-height: 520px; }
+.pideco-hero-carousel { --pideco-hero-arrow: 48px; height: calc(100svh - var(--pideco-top-h, 140px)); min-height: 480px; max-height: 860px; }
 .pideco-hero-carousel .carousel-item {
     height: 100%;
-    padding: 4rem 0 5rem;
+    /* Side padding keeps the copy clear of the arrows. */
+    padding: 3rem calc(var(--pideco-hero-arrow) + Clamp(1.5rem, 3vw, 2.5rem)) 4.5rem;
     background-position: center;
     background-size: cover;
     color: #fff9f1;
@@ -426,18 +432,28 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
 .pideco-hero-carousel .carousel-content { position: static; }
 .pideco-hero-carousel .o_we_bg_filter { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(35, 12, 14, .76), rgba(35, 12, 14, .12) 72%); }
 body.editor_enable .pideco-hero-carousel .stretched-link::after { display: none; }
-.pideco-banner-content .pideco-kicker { color: #ead9c7; }
+.pideco-hero-carousel .carousel-item > .container { width: 100%; max-width: 1320px; margin-inline: auto; padding-inline: 0; }
+.pideco-banner-content .pideco-kicker { margin-bottom: .9rem; color: #ead9c7; }
 .pideco-banner-content h1,
-.pideco-banner-content h2 { max-width: 780px; margin: 0; color: #fff9f1; font-size: Clamp(3rem, 7vw, 6.4rem); line-height: .96; letter-spacing: -.05em; }
-.pideco-banner-content > p:not(.pideco-kicker) { max-width: 520px; margin: 1.6rem 0 2rem; color: #fff9f1; font-size: 1.08rem; line-height: 1.65; }
+.pideco-banner-content h2 { max-width: 680px; margin: 0; color: #fff9f1; font-size: Clamp(2.1rem, 4.4vw, 4rem); line-height: 1.02; letter-spacing: -.03em; }
+.pideco-banner-content > p:not(.pideco-kicker) { max-width: 480px; margin: 1.1rem 0 1.6rem; color: #fff9f1; font-size: Clamp(.95rem, 1.2vw, 1.05rem); line-height: 1.6; }
 .pideco-banner-content > p:last-child { margin-bottom: 0; }
-.pideco-banner-content .btn { padding: 1rem 1.8rem; color: var(--pideco-wine); }
+.pideco-banner-content .btn { padding: .85rem 1.6rem; color: var(--pideco-wine); }
+/* Arrows: everything is set explicitly so Odoo's own carousel styles cannot shift them. */
 .pideco-hero-carousel .carousel-control-prev,
 .pideco-hero-carousel .carousel-control-next {
+    position: absolute;
     top: 50%;
     bottom: auto;
-    width: 48px;
-    height: 48px;
+    z-index: 3;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: var(--pideco-hero-arrow);
+    height: var(--pideco-hero-arrow);
+    margin: 0;
+    padding: 0 !important;
+    border: 0;
     border-radius: 50%;
     background: rgba(255, 249, 241, .88);
     color: var(--pideco-wine);
@@ -445,17 +461,32 @@ body.editor_enable .pideco-hero-carousel .stretched-link::after { display: none;
     transform: translateY(-50%);
     transition: background-color .2s ease;
 }
-.pideco-hero-carousel .carousel-control-prev { left: Clamp(.75rem, 2vw, 1.75rem); }
-.pideco-hero-carousel .carousel-control-next { right: Clamp(.75rem, 2vw, 1.75rem); }
+.pideco-hero-carousel .carousel-control-prev { left: Clamp(.75rem, 2vw, 1.5rem); }
+.pideco-hero-carousel .carousel-control-next { right: Clamp(.75rem, 2vw, 1.5rem); }
 .pideco-hero-carousel .carousel-control-prev:hover,
 .pideco-hero-carousel .carousel-control-next:hover { background: var(--pideco-cream); }
 .pideco-hero-carousel .carousel-control-prev-icon,
-.pideco-hero-carousel .carousel-control-next-icon { width: auto; height: auto; background: none; font: normal 1rem/1 FontAwesome; }
+.pideco-hero-carousel .carousel-control-next-icon {
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0;
+    background: none !important;
+    filter: none;
+    color: currentColor;
+    font: normal 1rem/1 FontAwesome;
+}
 .pideco-hero-carousel .carousel-control-prev-icon::before { content: "\f060"; }
 .pideco-hero-carousel .carousel-control-next-icon::before { content: "\f061"; }
-.pideco-hero-carousel .carousel-indicators { margin-bottom: 1.5rem; }
+.pideco-hero-carousel .carousel-indicators { z-index: 3; margin-bottom: 1.5rem; }
 .pideco-hero-carousel .carousel-indicators [data-bs-target] { width: 28px; height: 3px; margin-inline: 4px; border: 0; background-color: #fff9f1; opacity: .45; }
 .pideco-hero-carousel .carousel-indicators .active { opacity: 1; }
+@media (max-width: 991.98px) {
+    .pideco-hero-carousel { max-height: 760px; }
+    .pideco-banner-content h1,
+    .pideco-banner-content h2 { font-size: Clamp(2rem, 5.5vw, 3rem); }
+}
 
 .pideco-benefits { border-bottom: 1px solid rgba(147, 101, 70, .25); background: var(--pideco-surface); }
 .pideco-benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -1316,8 +1347,6 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-mobile-menu { display: block; width: 44px; height: 44px; }
     .pideco-actions > button,
     .pideco-actions > a { display: none; }
-    .pideco-actions .pideco-cart-button { position: relative; width: 44px; height: 44px; }
-    .pideco-actions .my_cart_quantity { position: absolute; top: 0; right: -4px; }
     html:has(.pideco-nav.show) { overflow: hidden; }
     .pideco-nav { position: fixed; z-index: 1070; top: 0; right: auto; bottom: 0; left: 0; display: flex; width: Min(88vw, 380px); max-width: 100%; height: 100dvh; padding: 1.15rem 1.35rem 2rem; flex-direction: column; align-items: stretch; gap: .9rem; overflow-y: auto; background: var(--pideco-cream); border: 0; box-shadow: 18px 0 45px rgba(42, 17, 19, .18); transform: translateX(-105%); transition: transform .28s cubic-bezier(.2, .8, .2, 1); }
     .pideco-nav {
@@ -1361,8 +1390,6 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-mobile-category-groups a { display: block; padding: .35rem 0; color: var(--pideco-wine); text-decoration: none; font-size: .88rem; }
     .pideco-mobile-category-groups .pideco-mobile-category-heading { padding-top: 0; font-weight: 700; }
     .pideco-brand { justify-self: center; }
-    .pideco-actions span { display: none; }
-    .pideco-cart-label { display: none !important; }
     .pideco-hero-grid,
     .pideco-story-grid { grid-template-columns: 1fr; }
     .pideco-hero-media { min-height: 460px; }
@@ -1410,15 +1437,22 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-hero h1 { font-size: Clamp(2.9rem, 16vw, 4.4rem); }
     .pideco-hero-media { min-height: 390px; }
     /* Background position is left to each slide's inline style: it is the focal point chosen in the editor. */
-    .pideco-hero-carousel .carousel-item { padding: 3rem .5rem 4.5rem; }
+    .pideco-hero-carousel { --pideco-hero-arrow: 40px; height: Min(calc(100svh - var(--pideco-top-h, 120px)), 680px); min-height: 440px; }
+    .pideco-hero-carousel .carousel-item { padding: 2.5rem 1.25rem 5.5rem; }
     .pideco-hero-carousel .carousel-item.active,
     .pideco-hero-carousel .carousel-item-next,
     .pideco-hero-carousel .carousel-item-prev { align-items: end; }
     .pideco-hero-carousel .o_we_bg_filter { background: linear-gradient(180deg, rgba(35, 12, 14, .08) 5%, rgba(35, 12, 14, .8) 82%); }
+    /* Arrows move to the bottom corners, level with the indicators, so they never cover the copy. */
     .pideco-hero-carousel .carousel-control-prev,
-    .pideco-hero-carousel .carousel-control-next { width: 40px; height: 40px; }
+    .pideco-hero-carousel .carousel-control-next { top: auto; bottom: 1rem; transform: none; }
+    .pideco-hero-carousel .carousel-control-prev { left: 1rem; }
+    .pideco-hero-carousel .carousel-control-next { right: 1rem; }
+    .pideco-hero-carousel .carousel-indicators { margin-bottom: calc(1rem + 18px); }
+    .pideco-banner-content .pideco-kicker { font-size: .62rem; }
     .pideco-banner-content h1,
-    .pideco-banner-content h2 { font-size: Clamp(2.7rem, 13vw, 4rem); }
+    .pideco-banner-content h2 { font-size: Clamp(1.75rem, 8vw, 2.3rem); }
+    .pideco-banner-content > p:not(.pideco-kicker) { margin: .8rem 0 1.2rem; font-size: .92rem; }
     .pideco-benefits-grid { grid-template-columns: 1fr; }
     .pideco-benefits-grid > div { min-height: 92px; justify-content: flex-start; border-right: 0; border-bottom: 1px solid rgba(147, 101, 70, .22); }
     .pideco-benefits-grid > div:last-child { border-bottom: 0; }
