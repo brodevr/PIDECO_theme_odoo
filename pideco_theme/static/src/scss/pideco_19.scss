@@ -77,11 +77,6 @@ body:has(.pideco-header) .modal .btn-primary:hover {
     background-color: #351014;
     border-color: #351014;
 }
-/* The PIDECO cart drawer opens after adding a product, so Odoo's "added to cart" toast
-   (it shows the product image) would overlap it. Warning toasts (e.g. stock) stay visible. */
-body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-warning)) {
-    display: none !important;
-}
 #wrapwrap .btn-primary:hover,
 #wrapwrap .btn-primary:focus {
     border-color: #351014;
@@ -318,8 +313,7 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
 }
 .pideco-search-overlay.is-open .pideco-search-panel { transform: translateY(0); }
 .pideco-panel-heading { display: flex; justify-content: space-between; align-items: center; color: var(--pideco-clay); font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
-.pideco-panel-heading button,
-.pideco-cart-head button { width: 42px; height: 42px; border: 1px solid rgba(78, 14, 20, .3); border-radius: 50%; background: transparent; color: var(--pideco-wine); }
+.pideco-panel-heading button { width: 42px; height: 42px; border: 1px solid rgba(78, 14, 20, .3); border-radius: 50%; background: transparent; color: var(--pideco-wine); }
 .pideco-overlay-form { position: relative; margin-top: 2rem; }
 .pideco-overlay-input { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; border-bottom: 2px solid var(--pideco-wine); }
 .pideco-overlay-input > i { color: var(--pideco-clay); font-size: 1.25rem; }
@@ -335,52 +329,7 @@ body:has(#pideco-cart-drawer) .toast:has(.o_cart_product_image):not(:has(.alert-
 .pideco-live-copy { display: flex; min-width: 0; flex-direction: column; }
 .pideco-live-copy small { color: var(--pideco-clay); }
 
-.pideco-drawer-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: 1050;
-    visibility: hidden;
-    opacity: 0;
-    background: rgba(42, 17, 19, .46);
-    transition: opacity .25s ease, visibility .25s ease;
-}
-.pideco-cart-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1060;
-    display: flex;
-    width: Min(92vw, 480px);
-    padding: 1.6rem;
-    flex-direction: column;
-    background: var(--pideco-surface);
-    box-shadow: -20px 0 60px rgba(42, 17, 19, .2);
-    transform: translateX(105%);
-    transition: transform .32s cubic-bezier(.2, .8, .2, 1);
-}
-.pideco-cart-open .pideco-drawer-backdrop { visibility: visible; opacity: 1; }
-.pideco-cart-open .pideco-cart-drawer { transform: translateX(0); }
-.pideco-cart-open,
 .pideco-search-open { overflow: hidden; }
-.pideco-cart-head { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 1.2rem; border-bottom: 1px solid var(--pideco-border); }
-.pideco-cart-head small { color: var(--pideco-clay); font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; }
-.pideco-cart-head h2 { margin: .3rem 0 0; font-size: 1.5rem; }
-.pideco-cart-lines { flex: 1; overflow-y: auto; padding: 1.15rem .25rem 1rem 0; }
-.pideco-cart-line { display: grid; grid-template-columns: 76px 1fr; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid rgba(213, 199, 187, .75); }
-.pideco-cart-thumb img { width: 76px; height: 76px; border-radius: .75rem; object-fit: cover; background: var(--pideco-cream); }
-.pideco-cart-line > div { display: grid; grid-template-columns: 1fr auto; align-content: start; gap: .3rem .8rem; }
-.pideco-cart-line > div > a { font-weight: 600; text-decoration: none; }
-.pideco-cart-line small { grid-column: 1; color: var(--pideco-clay); }
-.pideco-cart-line strong { grid-column: 2; grid-row: 1 / span 2; color: var(--pideco-wine); }
-.pideco-empty-cart { padding: 3.5rem 1rem; text-align: center; }
-.pideco-empty-cart i { color: var(--pideco-clay); font-size: 2.5rem; }
-.pideco-empty-cart h3 { margin-top: 1.2rem; }
-.pideco-cart-summary { position: sticky; bottom: 0; padding-top: 1rem; border-top: 1px solid var(--pideco-border); background: var(--pideco-surface); }
-.pideco-cart-summary > div { display: flex; justify-content: space-between; padding: .35rem 0; }
-.pideco-cart-summary span { color: var(--pideco-clay); }
-.pideco-cart-total { margin: .35rem 0 1rem; padding-top: .8rem !important; border-top: 1px solid var(--pideco-border); font-size: 1.2rem; }
-.pideco-cart-shop { margin-top: auto; }
 
 .pideco-footer { padding: 4rem 0 1.4rem; background: var(--pideco-wine); color: var(--pideco-cream); }
 .pideco-footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 2.5rem; }

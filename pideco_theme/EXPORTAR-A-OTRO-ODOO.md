@@ -1,6 +1,6 @@
 # PIDECO Theme — instalación en Odoo 19
 
-Módulo visual para Website y eCommerce en Odoo 19 Community o Enterprise. Incluye el home (carrusel principal, secciones e imágenes), header, footer, buscador, carrito lateral, tienda, ficha de producto, estilos responsive, interacciones, fuentes y traducciones (español y chino; los textos base están en inglés).
+Módulo visual para Website y eCommerce en Odoo 19 Community o Enterprise. Incluye el home (carrusel principal, secciones e imágenes), header, footer, buscador, tienda, ficha de producto, estilos responsive, interacciones, fuentes y traducciones (español y chino; los textos base están en inglés).
 
 El historial de cambios por versión está en `CHANGELOG.md`.
 
@@ -67,9 +67,9 @@ Para reemplazarlas en el módulo, conviene respetar la orientación y usar JPG o
 - **Opción de Odoo:** el diseño funciona con la galería en modo **Carrusel**, que es el valor por defecto de Odoo (editor del website → página de producto → imágenes). Si se cambia a **Grilla**, se usa la grilla nativa de Odoo y el mosaico PIDECO no se aplica.
 - Es un ajuste solo de estilos: no reemplaza plantillas de `website_sale`, así que las opciones y funciones nativas de la ficha siguen disponibles.
 
-## Carrito lateral y buscador
+## Carrito y buscador
 
-- Al agregar un producto se abre el carrito lateral PIDECO. El aviso flotante de Odoo ("agregado al carrito") se oculta para que no quede encima; los avisos de advertencia, como falta de stock, se siguen mostrando.
+- El theme no tiene carrito propio: el ícono del header lleva a la página de carrito de Odoo (`/shop/cart`) y muestra la cantidad de productos. Al agregar un producto aparece el aviso nativo de Odoo, con la foto, el precio y el botón "Ver carrito".
 - El buscador se abre como un panel pegado al borde superior de la pantalla, con resultados en vivo a partir de 2 caracteres y sugerencias fijas (Baskets, Jars, Cutlery, Rugs), que se editan en `views/pideco_theme_19.xml`.
 
 ## Montos escritos en el sitio
@@ -106,7 +106,7 @@ Para reproducir el catálogo hay que importar sus datos e imágenes por separado
 - Carrusel del home: cambia cada 4 segundos, las flechas funcionan, toda la diapositiva lleva al link del botón y desde el editor se pueden agregar diapositivas y cambiar la velocidad.
 - Probar editar el carrusel del home, actualizar el módulo y verificar que la personalización del editor se conserve.
 - Ficha de producto: revisar productos con 1, 2 y 4 o más imágenes, que los detalles queden fijos al hacer scroll en escritorio, y el carrusel con miniaturas en celular.
-- Agregar al carrito desde el home, la tienda y la ficha: debe abrirse solo el carrito lateral, sin el aviso flotante de Odoo encima.
+- Agregar al carrito desde el home, la tienda y la ficha: debe aparecer el aviso nativo de Odoo y actualizarse el contador del header. El ícono del carrito lleva a `/shop/cart`.
 - Abrir el buscador con la página scrolleada: el panel debe quedar pegado arriba.
 - Cambiar entre ES, EN y ZH desde el footer y volver, en distintas páginas.
 - Header: en escritorio se ven solo los íconos de búsqueda, cuenta y carrito; en celular, menú, logo centrado, búsqueda y carrito (también en 320 px). El contador del carrito queda en la esquina del ícono.
@@ -120,8 +120,8 @@ El footer PIDECO reemplaza únicamente el primer bloque visual del footer están
 
 Plantillas que modifica el módulo (`views/pideco_theme_19.xml`):
 
-- `pideco_layout_19` (hereda `website.layout`): header, barra de anuncios, buscador, carrito lateral y footer con selector de idioma.
+- `pideco_layout_19` (hereda `website.layout`): header, barra de anuncios, buscador y footer con selector de idioma.
 - `pideco_homepage_19` (hereda `website.homepage`): contenido completo del home.
 - `pideco_product_page_19`, `pideco_product_title_19` y `pideco_product_terms_19` (heredan de `website_sale`): recomendaciones, descuentos, categoría y SKU sobre el título, y garantías de compra.
 
-La página de producto, el aviso del carrito y la posición del buscador se ajustan solo con CSS, sin reemplazar plantillas nativas. El JS (`static/src/js/pideco_ui.js`) maneja el buscador en vivo, el carrito lateral, el menú, los sliders, el cambio de idioma y la medición del alto del header para el carrusel del home.
+La página de producto y la posición del buscador se ajustan solo con CSS, sin reemplazar plantillas nativas. El JS (`static/src/js/pideco_ui.js`) maneja el buscador en vivo, el menú, los sliders, el cambio de idioma y la medición del alto del header para el carrusel del home.

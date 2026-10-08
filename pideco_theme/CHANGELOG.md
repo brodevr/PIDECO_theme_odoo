@@ -31,7 +31,7 @@
 
 ### Carrito
 
-- Al agregar un producto ya no aparece el aviso flotante de Odoo encima del carrito lateral: se abre solo el carrito lateral. Los avisos de advertencia (por ejemplo, falta de stock) se siguen mostrando.
+- Se quitó el carrito lateral propio del theme. Al agregar un producto se muestra el aviso nativo de Odoo, y el ícono del carrito del header lleva a la página de carrito de Odoo (`/shop/cart`), con el contador de productos.
 
 ### Traducciones
 
@@ -41,7 +41,7 @@
 
 ### Documentación
 
-- La guía de instalación ya no pide seleccionar el módulo como tema activo, suma el inglés a los idiomas del sitio y documenta el carrusel, las imágenes del home, la página de producto, el carrito lateral, el buscador y los montos escritos en el sitio.
+- La guía de instalación ya no pide seleccionar el módulo como tema activo, suma el inglés a los idiomas del sitio y documenta el carrusel, las imágenes del home, la página de producto, el carrito, el buscador y los montos escritos en el sitio.
 - Nuevas validaciones de UAT para el carrusel, la galería, el carrito y el buscador.
 - El README del repositorio explica la documentación, las ramas y cómo publicar una versión.
 

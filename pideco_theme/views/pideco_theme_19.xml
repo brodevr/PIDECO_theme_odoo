@@ -59,7 +59,7 @@
                         <a class="pideco-account-link" t-att-href="'/web/login' if request.env.user._is_public() else '/my'" aria-label="My account" title="My account"><i class="fa fa-user-o" t-translation="off"/></a>
                         <!-- o_wsale_my_cart / my_cart_quantity are the hooks Odoo's cart JS updates. The wishlist lives in the menu and on each product. -->
                         <t t-set="pideco_order" t-value="request.cart"/>
-                        <ul class="list-unstyled m-0"><li class="pideco-header-cart o_wsale_my_cart"><button type="button" data-pideco-cart-open="" class="pideco-cart-button" aria-label="Open cart" title="Open cart"><i class="fa fa-shopping-bag" t-translation="off"/><sup t-attf-class="my_cart_quantity #{'d-none' if not pideco_order.cart_quantity else ''}" t-out="pideco_order.cart_quantity or 0"/></button></li></ul>
+                        <ul class="list-unstyled m-0"><li class="pideco-header-cart o_wsale_my_cart"><a href="/shop/cart" class="pideco-cart-button" aria-label="View cart" title="View cart"><i class="fa fa-shopping-bag" t-translation="off"/><sup t-attf-class="my_cart_quantity #{'d-none' if not pideco_order.cart_quantity else ''}" t-out="pideco_order.cart_quantity or 0"/></a></li></ul>
                     </div>
                 </div>
             </header>
@@ -73,28 +73,6 @@
                     <div class="pideco-search-hints"><span>Suggestions</span><a href="/shop?search=Canastos">Baskets</a><a href="/shop?search=Frascos">Jars</a><a href="/shop?search=Cubiertos">Cutlery</a><a href="/shop?search=Alfombras">Rugs</a></div>
                 </div>
             </div>
-
-            <div class="pideco-drawer-backdrop" data-pideco-cart-close=""/>
-            <aside id="pideco-cart-drawer" class="pideco-cart-drawer" aria-hidden="true">
-                <t t-set="website_sale_order" t-value="request.cart"/>
-                <div class="pideco-cart-head"><div><small>Your cart</small><h2><span t-out="website_sale_order.cart_quantity or 0"/> products</h2></div><button type="button" data-pideco-cart-close="" aria-label="Close cart"><i class="fa fa-times"/></button></div>
-                <div class="pideco-cart-lines">
-                    <t t-if="website_sale_order and website_sale_order.website_order_line">
-                        <article class="pideco-cart-line" t-foreach="website_sale_order.website_order_line" t-as="line">
-                            <a t-att-href="line.product_id.website_url" class="pideco-cart-thumb"><img t-att-src="'/web/image/product.product/%s/image_128' % line.product_id.id" t-att-alt="line.name_short"/></a>
-                            <div><a t-att-href="line.product_id.website_url" t-out="line.name_short"/><small>Quantity <span t-out="int(line.product_uom_qty) if line.product_uom_qty.is_integer() else line.product_uom_qty"/></small><strong t-out="line.price_total" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
-                        </article>
-                    </t>
-                    <div t-else="" class="pideco-empty-cart"><i class="fa fa-shopping-bag"/><h3>Your cart is empty</h3><p>Discover simple, durable objects for your home.</p></div>
-                </div>
-                <div class="pideco-cart-summary" t-if="website_sale_order and website_sale_order.website_order_line">
-                    <div><span>Subtotal</span><strong t-field="website_sale_order.amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
-                    <div><span>VAT</span><strong t-field="website_sale_order.amount_tax" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
-                    <div class="pideco-cart-total"><span>Total</span><strong t-field="website_sale_order.amount_total" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/></div>
-                    <a href="/shop/cart" class="btn btn-primary w-100">View cart and checkout</a>
-                </div>
-                <a t-else="" href="/shop" class="btn btn-primary pideco-cart-shop">Go to the shop</a>
-            </aside>
         </xpath>
 
         <xpath expr="//footer" position="attributes">

@@ -104,11 +104,6 @@ msgid "<small>View products <i class=\"fa fa-arrow-right\"/></small>"
 msgstr "<small>Ver productos <i class=\"fa fa-arrow-right\"/></small>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<small>Your cart</small>"
-msgstr "<small>Tu carrito</small>"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid ""
 "<span class=\"pideco-product-link\">View product <i class=\"fa fa-arrow-"
@@ -211,23 +206,8 @@ msgstr "<span>Buscar productos</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Subtotal</span>"
-msgstr "<span>Subtotal</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "<span>Suggestions</span>"
 msgstr "<span>Sugerencias</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Total</span>"
-msgstr "<span>Total</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>VAT</span>"
-msgstr "<span>IVA</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
@@ -293,11 +273,6 @@ msgstr "Elegí el medio de pago que mejor se adapte a tu pedido."
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close cart"
-msgstr "Cerrar carrito"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "Close menu"
 msgstr "Cerrar menú"
 
@@ -335,11 +310,6 @@ msgstr "Descuentos"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Discounts by order amount"
 msgstr "Descuentos por monto de compra"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Discover simple, durable objects for your home."
-msgstr "Descubrí objetos simples y durables para tu casa."
 
 #. module: pideco_theme
 #: model:ir.model.fields,field_description:pideco_theme.field_res_config_settings__display_name
@@ -515,11 +485,6 @@ msgstr "Oferta"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Open cart"
-msgstr "Abrir carrito"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "Open menu"
 msgstr "Abrir menú"
 
@@ -595,11 +560,6 @@ msgstr "Cargá productos publicados desde Odoo para verlos aquí."
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Purchasing for your business"
 msgstr "Compras para tu negocio"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Quantity"
-msgstr "Cantidad"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
@@ -687,11 +647,6 @@ msgid "View all <i class=\"fa fa-arrow-right\"/>"
 msgstr "Ver todos <i class=\"fa fa-arrow-right\"/>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "View cart and checkout"
-msgstr "Ver carrito y finalizar"
-
-#. module: pideco_theme
 #: model:ir.model,name:pideco_theme.model_website
 msgid "Website"
 msgstr "Sitio web"
@@ -710,16 +665,6 @@ msgstr "Beneficios mayoristas"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid "You may also like"
 msgstr "También te puede gustar"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Your cart is empty"
-msgstr "Tu carrito está vacío"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "products"
-msgstr "productos"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
@@ -885,3 +830,8 @@ msgstr "EN"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "ZH"
 msgstr "ZH"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "View cart"
+msgstr "Ver carrito"

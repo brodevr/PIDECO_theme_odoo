@@ -115,37 +115,6 @@ function closeSearch() {
     document.documentElement.classList.remove("pideco-search-open");
 }
 
-async function openCart() {
-    const drawer = document.querySelector("#pideco-cart-drawer");
-    if (!drawer || drawer.getAttribute("aria-busy") === "true") return;
-    // Language url codes come from the footer selector, so any website language is supported.
-    const langCodes = [...document.querySelectorAll("[data-pideco-language]")].map((link) => link.dataset.pidecoLanguage);
-    const firstSegment = window.location.pathname.split("/")[1];
-    const prefix = langCodes.includes(firstSegment) ? `/${firstSegment}` : "";
-    const cartUrl = `${prefix}/shop/cart`;
-    drawer.setAttribute("aria-busy", "true");
-    try {
-        // Render the current order through Odoo, including its translated totals.
-        const response = await fetch(cartUrl, {credentials: "same-origin", cache: "no-store"});
-        if (!response.ok) throw new Error("Cart unavailable");
-        const page = new DOMParser().parseFromString(await response.text(), "text/html");
-        const updated = page.querySelector("#pideco-cart-drawer");
-        if (!updated) throw new Error("Cart unavailable");
-        drawer.innerHTML = updated.innerHTML;
-        document.documentElement.classList.add("pideco-cart-open");
-        drawer.setAttribute("aria-hidden", "false");
-    } catch {
-        window.location.assign(cartUrl);
-    } finally {
-        drawer.removeAttribute("aria-busy");
-    }
-}
-
-function closeCart() {
-    document.documentElement.classList.remove("pideco-cart-open");
-    document.querySelector("#pideco-cart-drawer")?.setAttribute("aria-hidden", "true");
-}
-
 function moveSlider(name, direction) {
     const slider = document.querySelector(`[data-pideco-slider="${name}"]`);
     if (!slider) return;
@@ -269,8 +238,6 @@ document.addEventListener("click", (event) => {
     }
     if (event.target.closest("[data-pideco-search-open]")) return openSearch();
     if (event.target.closest("[data-pideco-search-close]")) return closeSearch();
-    if (event.target.closest("[data-pideco-cart-open]")) return openCart();
-    if (event.target.closest("[data-pideco-cart-close]")) return closeCart();
     const previous = event.target.closest("[data-pideco-slider-prev]");
     if (previous) return moveSlider(previous.dataset.pidecoSliderPrev, -1);
     const next = event.target.closest("[data-pideco-slider-next]");
@@ -287,7 +254,6 @@ document.addEventListener("keydown", (event) => {
     }
     if (event.key === "Escape") {
         closeSearch();
-        closeCart();
         closeMenu();
         document.querySelectorAll("[data-pideco-mega].is-open").forEach((mega) => {
             mega.classList.remove("is-open");
@@ -301,18 +267,6 @@ document.addEventListener("input", (event) => {
     window.clearTimeout(searchTimer);
     searchTimer = window.setTimeout(() => searchProducts(event.target), 220);
 });
-
-// Odoo emits this event after the cart service successfully adds a line.
-// Refresh and open the PIDECO mini-cart so the shopper sees the updated order.
-function initAutoCart() {
-    document.querySelectorAll(".oe_website_sale").forEach((container) => {
-        if (container.dataset.pidecoCartReady) return;
-        container.dataset.pidecoCartReady = "true";
-        container.addEventListener("add_to_cart_event", () => {
-            window.setTimeout(() => openCart(), 180);
-        });
-    });
-}
 
 // The hero carousel fills the viewport below the header, whose height changes with
 // the announcement bar and breakpoints. The CSS falls back to 140px without this.
@@ -328,11 +282,9 @@ function initHeroHeight() {
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
         initPromoSliders();
-        initAutoCart();
         initHeroHeight();
     }, {once: true});
 } else {
     initPromoSliders();
-    initAutoCart();
     initHeroHeight();
 }

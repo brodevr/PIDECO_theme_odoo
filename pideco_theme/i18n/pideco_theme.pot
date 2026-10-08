@@ -84,11 +84,6 @@ msgid "<small>View products <i class=\"fa fa-arrow-right\"/></small>"
 msgstr ""
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<small>Your cart</small>"
-msgstr ""
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid ""
 "<span class=\"pideco-product-link\">View product <i class=\"fa fa-arrow-"
@@ -187,22 +182,7 @@ msgstr ""
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Subtotal</span>"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "<span>Suggestions</span>"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>Total</span>"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>VAT</span>"
 msgstr ""
 
 #. module: pideco_theme
@@ -267,11 +247,6 @@ msgstr ""
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Close cart"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "Close menu"
 msgstr ""
 
@@ -308,11 +283,6 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Discounts by order amount"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Discover simple, durable objects for your home."
 msgstr ""
 
 #. module: pideco_theme
@@ -483,11 +453,6 @@ msgstr ""
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Open cart"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "Open menu"
 msgstr ""
 
@@ -562,11 +527,6 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Purchasing for your business"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Quantity"
 msgstr ""
 
 #. module: pideco_theme
@@ -655,11 +615,6 @@ msgid "View all <i class=\"fa fa-arrow-right\"/>"
 msgstr ""
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "View cart and checkout"
-msgstr ""
-
-#. module: pideco_theme
 #: model:ir.model,name:pideco_theme.model_website
 msgid "Website"
 msgstr ""
@@ -677,16 +632,6 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid "You may also like"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "Your cart is empty"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "products"
 msgstr ""
 
 #. module: pideco_theme
@@ -833,4 +778,9 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "ZH"
+msgstr ""
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "View cart"
 msgstr ""

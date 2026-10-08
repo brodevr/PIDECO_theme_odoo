@@ -1,6 +1,6 @@
 # PIDECO_theme_odoo
 
-Módulo de Odoo 19 `pideco_theme`: identidad visual de PIDECO para Website y eCommerce (home, header, footer, buscador, carrito lateral, tienda y ficha de producto), con traducciones al español y al chino.
+Módulo de Odoo 19 `pideco_theme`: identidad visual de PIDECO para Website y eCommerce (home, header, footer, buscador, tienda y ficha de producto), con traducciones al español y al chino.
 
 ## Documentación
 
