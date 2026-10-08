@@ -147,11 +147,6 @@ msgid "<span>My account</span>"
 msgstr "<span>Mi cuenta</span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>PIDECO</span>"
-msgstr "<span>PIDECO</span>"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid "<span>Purchasing $1,000,000</span><strong>15% Off</strong>"
@@ -356,7 +351,6 @@ msgstr ""
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "Go to the shop"
 msgstr "Ir a la tienda"
 
@@ -441,6 +435,7 @@ msgstr ""
 "cada idioma del sitio para mantener sus traducciones."
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
 msgid "Minimum purchase $200,000"
 msgstr "Compra mínima $200.000"
@@ -617,6 +612,7 @@ msgid "Shop now"
 msgstr "Comprar ahora"
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
 msgid "Store pickup available"
 msgstr "Retiro en tienda disponible"
@@ -835,3 +831,36 @@ msgstr "ZH"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "View cart"
 msgstr "Ver carrito"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Next</span>"
+msgstr ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Siguiente</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Previous</span>"
+msgstr ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Anterior</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Nationwide shipping"
+msgstr "Envíos a todo el país"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "View all"
+msgstr "Ver todo"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Wishlist"
+msgstr "Lista de deseos"

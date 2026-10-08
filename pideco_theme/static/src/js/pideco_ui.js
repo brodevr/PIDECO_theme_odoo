@@ -247,7 +247,7 @@ document.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
     const nav = document.querySelector("#pidecoNav.show");
     if (event.key === "Tab" && nav && window.matchMedia("(max-width: 991.98px)").matches) {
-        const controls = [...nav.querySelectorAll("a[href], button, input")].filter(el => el.getClientRects().length && getComputedStyle(el).visibility === "visible" && !el.disabled);
+        const controls = [...nav.querySelectorAll("a[href], button, input, summary")].filter(el => el.getClientRects().length && getComputedStyle(el).visibility === "visible" && !el.disabled);
         const first = controls[0], last = controls.at(-1);
         if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
@@ -268,23 +268,50 @@ document.addEventListener("input", (event) => {
     searchTimer = window.setTimeout(() => searchProducts(event.target), 220);
 });
 
-// The hero carousel fills the viewport below the header, whose height changes with
-// the announcement bar and breakpoints. The CSS falls back to 140px without this.
-function initHeroHeight() {
+// Header metrics used by the CSS:
+// --pideco-top-h: header height. The hero carousel fills the viewport below it; it changes with
+//   the announcement bar and breakpoints, and the CSS falls back to a fixed value without it.
+// --pideco-header-bottom: how much of the header is still on screen. Odoo's cart notification is
+//   drawn at the top of the viewport and starts right below that.
+function initHeaderMetrics() {
     const header = document.querySelector(".pideco-header");
-    if (!header || header.dataset.pidecoHeightReady || !window.ResizeObserver) return;
-    header.dataset.pidecoHeightReady = "true";
-    new ResizeObserver(() => {
-        document.documentElement.style.setProperty("--pideco-top-h", `${header.offsetHeight}px`);
-    }).observe(header);
+    if (!header || header.dataset.pidecoMetricsReady) return;
+    header.dataset.pidecoMetricsReady = "true";
+    const root = document.documentElement;
+    let lastBottom;
+    const updateBottom = () => {
+        const bottom = `${Math.max(0, Math.round(header.getBoundingClientRect().bottom))}px`;
+        // Once the header has scrolled away the value stays at 0px and nothing is written.
+        if (bottom === lastBottom) return;
+        lastBottom = bottom;
+        root.style.setProperty("--pideco-header-bottom", bottom);
+    };
+    let scheduled = false;
+    const onScroll = () => {
+        if (scheduled) return;
+        scheduled = true;
+        window.requestAnimationFrame(() => {
+            scheduled = false;
+            updateBottom();
+        });
+    };
+    // Capture phase: scroll events do not bubble, and the page may scroll inside #wrapwrap.
+    document.addEventListener("scroll", onScroll, {passive: true, capture: true});
+    if (window.ResizeObserver) {
+        new ResizeObserver(() => {
+            root.style.setProperty("--pideco-top-h", `${header.offsetHeight}px`);
+            updateBottom();
+        }).observe(header);
+    }
+    updateBottom();
 }
 
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
         initPromoSliders();
-        initHeroHeight();
+        initHeaderMetrics();
     }, {once: true});
 } else {
     initPromoSliders();
-    initHeroHeight();
+    initHeaderMetrics();
 }

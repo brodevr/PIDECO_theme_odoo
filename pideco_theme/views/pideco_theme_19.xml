@@ -4,16 +4,20 @@
             <header id="top" class="pideco-header">
                 <div class="pideco-announcement" data-pideco-promo-slider="" aria-live="polite">
                     <div class="pideco-promo-track">
-                        <span class="pideco-promo-item is-active" t-field="website.pideco_promo_text_1"/>
-                        <span class="pideco-promo-item" t-field="website.pideco_promo_text_2"/>
-                        <span class="pideco-promo-item" t-field="website.pideco_promo_text_3"/>
+                        <!-- While a message still holds its original text, the copy below is shown instead, so it is translated like any other template text. Once edited in Settings, the field takes over. -->
+                        <span t-if="website.pideco_promo_text_1 == 'Nationwide shipping'" class="pideco-promo-item is-active">Nationwide shipping</span>
+                        <span t-else="" class="pideco-promo-item is-active" t-field="website.pideco_promo_text_1"/>
+                        <span t-if="website.pideco_promo_text_2 == 'Minimum purchase $200,000'" class="pideco-promo-item">Minimum purchase $200,000</span>
+                        <span t-else="" class="pideco-promo-item" t-field="website.pideco_promo_text_2"/>
+                        <span t-if="website.pideco_promo_text_3 == 'Store pickup available'" class="pideco-promo-item">Store pickup available</span>
+                        <span t-else="" class="pideco-promo-item" t-field="website.pideco_promo_text_3"/>
                     </div>
                 </div>
                 <div class="container-fluid pideco-header-main">
                     <button class="pideco-mobile-menu" type="button" data-pideco-menu-open="" aria-controls="pidecoNav" aria-expanded="false" aria-label="Open menu"><i class="fa fa-bars" t-translation="off"/></button>
                     <ul class="top_menu d-none"><li class="o_no_autohide_item"/></ul>
                     <nav id="pidecoNav" class="pideco-nav d-lg-flex">
-                        <div class="pideco-nav-mobile-head"><span>PIDECO</span><button type="button" data-pideco-menu-close="" aria-label="Close menu"><i class="fa fa-times" t-translation="off"/></button></div>
+                        <div class="pideco-nav-mobile-head"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/><button type="button" data-pideco-menu-close="" aria-label="Close menu"><i class="fa fa-times" t-translation="off"/></button></div>
                         <form class="pideco-nav-search" action="/shop" method="get" role="search">
                             <input type="search" name="search" placeholder="Search products…" aria-label="Search"/>
                             <button type="submit" aria-label="Search"><i class="fa fa-search" t-translation="off"/></button>
@@ -38,11 +42,19 @@
                         <div class="pideco-mobile-category-view" data-pideco-mobile-category-view="" aria-hidden="true" t-if="pideco_menu_categories">
                             <button type="button" class="pideco-mobile-category-back" data-pideco-mobile-category-back=""><i class="fa fa-arrow-left" t-translation="off"/> <span>Back to menu</span></button>
                             <h2>Categories</h2>
+                            <!-- One row per category; those with subcategories open as an accordion (native <details>, no JS). -->
                             <div class="pideco-mobile-category-groups">
-                                <section t-foreach="pideco_menu_categories" t-as="mobile_category">
-                                    <a class="pideco-mobile-category-heading" t-att-href="'/shop/category/%s' % slug(mobile_category)" t-out="mobile_category.name"/>
-                                    <a t-foreach="mobile_category.child_id.filtered_domain([('has_published_products', 'in', [True])] + list(website.website_domain()))[:6]" t-as="mobile_child" t-att-href="'/shop/category/%s' % slug(mobile_child)" t-out="mobile_child.name"/>
-                                </section>
+                                <t t-foreach="pideco_menu_categories" t-as="mobile_category">
+                                    <t t-set="mobile_children" t-value="mobile_category.child_id.filtered_domain([('has_published_products', 'in', [True])] + list(website.website_domain()))"/>
+                                    <details t-if="mobile_children" class="pideco-mobile-category">
+                                        <summary><span t-out="mobile_category.name"/><i class="fa fa-angle-down" t-translation="off"/></summary>
+                                        <div class="pideco-mobile-category-links">
+                                            <a class="pideco-mobile-category-all" t-att-href="'/shop/category/%s' % slug(mobile_category)">View all</a>
+                                            <a t-foreach="mobile_children" t-as="mobile_child" t-att-href="'/shop/category/%s' % slug(mobile_child)" t-out="mobile_child.name"/>
+                                        </div>
+                                    </details>
+                                    <a t-else="" class="pideco-mobile-category pideco-mobile-category-link" t-att-href="'/shop/category/%s' % slug(mobile_category)"><span t-out="mobile_category.name"/><i class="fa fa-angle-right" t-translation="off"/></a>
+                                </t>
                             </div>
                         </div>
                         <a href="/#historia">About us</a>
@@ -57,7 +69,9 @@
                     <div class="pideco-actions">
                         <button type="button" data-pideco-search-open="" aria-label="Search" title="Search"><i class="fa fa-search" t-translation="off"/></button>
                         <a class="pideco-account-link" t-att-href="'/web/login' if request.env.user._is_public() else '/my'" aria-label="My account" title="My account"><i class="fa fa-user-o" t-translation="off"/></a>
-                        <!-- o_wsale_my_cart / my_cart_quantity are the hooks Odoo's cart JS updates. The wishlist lives in the menu and on each product. -->
+                        <!-- o_wsale_my_wish / o_wsale_my_cart / my_*_quantity are the hooks Odoo's wishlist and cart JS update. -->
+                        <t t-set="pideco_wishcount" t-value="len(request.env['product.wishlist'].current())"/>
+                        <a href="/shop/wishlist" class="o_wsale_my_wish pideco-wish-button" aria-label="Wishlist" title="Wishlist"><i class="fa fa-heart-o" t-translation="off"/><sup t-attf-class="my_wish_quantity #{'d-none' if not pideco_wishcount else ''}" t-out="pideco_wishcount"/></a>
                         <t t-set="pideco_order" t-value="request.cart"/>
                         <ul class="list-unstyled m-0"><li class="pideco-header-cart o_wsale_my_cart"><a href="/shop/cart" class="pideco-cart-button" aria-label="View cart" title="View cart"><i class="fa fa-shopping-bag" t-translation="off"/><sup t-attf-class="my_cart_quantity #{'d-none' if not pideco_order.cart_quantity else ''}" t-out="pideco_order.cart_quantity or 0"/></a></li></ul>
                     </div>
@@ -93,6 +107,7 @@
                         <t t-set="pideco_lang_es" t-value="website.language_ids.filtered_domain([('code', '=', 'es_AR')])[:1]"/>
                         <t t-set="pideco_lang_zh" t-value="website.language_ids.filtered_domain([('code', '=', 'zh_CN')])[:1]"/>
                         <t t-set="pideco_lang_en" t-value="website.language_ids.filtered_domain([('code', '=like', 'en_%')])[:1]"/>
+                        <i class="fa fa-globe" t-translation="off"/>
                         <span>Language</span>
                         <a t-if="pideco_lang_es" t-att-href="'/website/lang/%s?r=/' % pideco_lang_es.url_code" t-att-data-pideco-language="pideco_lang_es.url_code" t-att-class="'is-active' if request.env.lang == 'es_AR' else ''" lang="es">ES</a>
                         <a t-if="pideco_lang_en" t-att-href="'/website/lang/%s?r=/' % pideco_lang_en.url_code" t-att-data-pideco-language="pideco_lang_en.url_code" t-att-class="'is-active' if request.env.lang == pideco_lang_en.code else ''" lang="en">EN</a>
@@ -105,8 +120,13 @@
 
     <template id="pideco_homepage_19" inherit_id="website.homepage" name="PIDECO homepage" priority="90">
         <xpath expr="//div[@id='wrap']" position="replace">
-            <div id="wrap" class="oe_structure pideco-home oe_website_sale">
-                <!-- Native Odoo s_carousel markup, so the website editor can add slides, change backgrounds, links and speed. -->
+            <!-- The home alternates editable zones (oe_structure with an id: the website editor can add, remove,
+                 reorder and edit their blocks, and saves each zone on its own) with automatic sections that are
+                 rendered from the catalog on every visit and therefore are not part of any zone. -->
+            <div id="wrap" class="pideco-home oe_website_sale">
+                <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
+                <!-- Zone 1: hero carousel (native Odoo s_carousel markup, so the editor can add slides and change backgrounds, links and speed) and benefits. -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_1">
                 <section class="s_carousel_wrapper p-0 pideco-hero-carousel" data-snippet="s_carousel" data-name="Banner principal PIDECO" data-vxml="001" data-vcss="001">
                     <div id="pidecoHeroCarousel" class="s_carousel s_carousel_default carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                         <div class="carousel-inner">
@@ -135,14 +155,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="prev" aria-label="Previous" title="Previous">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"/>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="next" aria-label="Next" title="Next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"/>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <button class="carousel-control-prev o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="prev" aria-label="Previous" title="Previous"><span class="carousel-control-prev-icon" aria-hidden="true"/><span class="visually-hidden">Previous</span></button>
+                        <button class="carousel-control-next o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="next" aria-label="Next" title="Next"><span class="carousel-control-next-icon" aria-hidden="true"/><span class="visually-hidden">Next</span></button>
                         <div class="carousel-indicators o_not_editable">
                             <button type="button" data-bs-target="#pidecoHeroCarousel" data-bs-slide-to="0" class="active" aria-label="Carousel indicator"/>
                             <button type="button" data-bs-target="#pidecoHeroCarousel" data-bs-slide-to="1" aria-label="Carousel indicator"/>
@@ -158,10 +172,10 @@
                         <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Arrange your pickup</small></span></div>
                     </div>
                 </section>
+                </div>
 
                 <section class="container pideco-home-section pideco-category-slider-section" data-name="Categorías principales">
                     <div class="pideco-section-head"><div><p class="pideco-kicker">Explore</p><h2>Every corner of your home</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="categories" aria-label="Previous category"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="categories" aria-label="Next category"><i class="fa fa-arrow-right"/></button></div></div>
-                    <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
                     <t t-set="pideco_categories" t-value="request.env['product.public.category'].search([('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id')"/>
                     <div class="pideco-category-slider pideco-slider-track" data-pideco-slider="categories">
                         <a class="pideco-category-slide" t-foreach="pideco_categories" t-as="category" t-att-href="'/shop/category/%s' % slug(category)"><div class="pideco-category-slide-image"><img t-att-src="'/web/image/product.public.category/%s/image_512' % category.id" t-att-alt="category.name"/></div><span><strong t-out="category.name"/><small>View products <i class="fa fa-arrow-right"/></small></span></a>
@@ -169,7 +183,9 @@
                     </div>
                 </section>
 
-                <section class="container pideco-home-section pideco-essence" data-name="Nuestra esencia">
+                <!-- Zone 2: brand essence. id="historia" is the target of the "About us" menu link and of the footer brand links. -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_2">
+                <section id="historia" class="container pideco-home-section pideco-essence" data-name="Nuestra esencia">
                     <div class="pideco-essence-grid">
                         <div class="pideco-essence-media"><img src="/pideco_theme/static/src/img/home/esencia.jpg" alt="PIDECO home decor"/></div>
                         <div class="pideco-essence-copy">
@@ -186,6 +202,7 @@
                         </div>
                     </div>
                 </section>
+                </div>
 
                 <section class="container pideco-home-section pideco-featured" data-name="Productos destacados">
                     <div class="pideco-section-head"><div><p class="pideco-kicker">Selected for you</p><h2>Featured products</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="featured" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="featured" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
@@ -196,12 +213,15 @@
                     </div>
                 </section>
 
+                <!-- Zone 3: editorial banners. -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_3">
                 <section class="container pideco-home-section" data-name="Banners editoriales">
                     <div class="pideco-promo-grid">
                         <a href="/shop?search=Cocina" class="pideco-promo-card pideco-promo-card-light"><img src="/pideco_theme/static/src/img/home/editorial-cocina.jpg" alt="Refresh your kitchen"/><span><small>Small moments at home</small><strong>A simpler kitchen</strong><em>Discover the collection</em></span></a>
                         <a href="/shop?search=Organizadores" class="pideco-promo-card pideco-promo-card-dark"><img src="/pideco_theme/static/src/img/home/editorial-orden.jpg" alt="Order and design"/><span><small>Calm and order</small><strong>Everything in its place</strong><em>View organizers</em></span></a>
                     </div>
                 </section>
+                </div>
 
                 <section class="container pideco-home-section pideco-transform" data-name="Transformá tus espacios">
                     <div class="pideco-section-head"><div><p class="pideco-kicker">Ideas for your home</p><h2>Transform your spaces</h2><p>Create cozy, bright and balanced spaces with essential, timeless pieces.</p></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="transform" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="transform" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
@@ -209,6 +229,8 @@
                     <div class="pideco-product-grid pideco-product-grid-short pideco-slider-track" data-pideco-slider="transform"><t t-foreach="pideco_short_products" t-as="product"><t t-call="pideco_theme.pideco_slider_product_card"/></t></div>
                 </section>
 
+                <!-- Zone 4: wholesale benefits and discounts by order amount. -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_4">
                 <section class="pideco-wholesale" data-name="Beneficios mayoristas">
                     <div class="container pideco-wholesale-grid">
                         <div><p class="pideco-kicker">Purchasing for your business</p><h2>Wholesale benefits</h2><p>Get volume discounts, personal service and offers tailored to retailers, projects and large orders.</p><a class="btn btn-light" href="/contactus">I want to buy wholesale</a></div>
@@ -224,6 +246,7 @@
                     </div>
                     <p class="pideco-discount-note">* Discounts are subject to change and do not apply to sale items.</p>
                 </section>
+                </div>
             </div>
         </xpath>
     </template>

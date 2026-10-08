@@ -140,11 +140,6 @@ msgid "<span>My account</span>"
 msgstr "<span>我的账户</span>"
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
-msgid "<span>PIDECO</span>"
-msgstr "<span>PIDECO</span>"
-
-#. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 msgid "<span>Purchasing $1,000,000</span><strong>15% Off</strong>"
@@ -345,7 +340,6 @@ msgstr "享受批量折扣、专属服务，以及为商店、项目和大宗采
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "Go to the shop"
 msgstr "前往商店"
 
@@ -428,6 +422,7 @@ msgid ""
 msgstr "消息每四秒垂直轮播。请在各网站语言中编辑，以保持翻译一致。"
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
 msgid "Minimum purchase $200,000"
 msgstr "最低购买金额 $200,000"
@@ -604,6 +599,7 @@ msgid "Shop now"
 msgstr "立即购买"
 
 #. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
 msgid "Store pickup available"
 msgstr "支持门店自提"
@@ -805,3 +801,36 @@ msgstr "ZH"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "View cart"
 msgstr "查看购物车"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Next</span>"
+msgstr ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">下一张</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Previous</span>"
+msgstr ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">上一张</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Nationwide shipping"
+msgstr "全国配送"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "View all"
+msgstr "查看全部"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Wishlist"
+msgstr "愿望清单"

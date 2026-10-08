@@ -4,26 +4,38 @@
 
 ### Home
 
-- El banner principal pasa a ser un carrusel de 3 diapositivas que cambia cada 4 segundos, con flechas a los lados e indicadores. Ocupa todo el ancho y el alto de la pantalla debajo del encabezado.
-- Usa el carrusel nativo de Odoo, así que desde el editor se pueden agregar o quitar diapositivas y cambiar la imagen de fondo, los textos, el botón y la velocidad.
+- El banner principal pasa a ser un carrusel de 3 diapositivas que cambia cada 4 segundos, con flechas a los lados e indicadores. Ocupa todo el ancho y el alto de la pantalla debajo del encabezado, con un alto máximo para que no quede desproporcionado en pantallas altas.
+- Usa el carrusel nativo de Odoo, así que desde el editor se pueden agregar o quitar diapositivas y cambiar la imagen de fondo, los textos, el botón y la velocidad. También se respetan sus opciones de ocultar flechas y de cambiar el estilo de los indicadores.
 - Toda la diapositiva es clickeable y lleva al link de su botón.
-- En celular el texto se ubica abajo y cada diapositiva muestra la parte de la imagen elegida como punto de foco en el editor.
-- Textos del banner más chicos, con tamaños escalonados para escritorio, tablet y celular. El alto tiene un máximo para que no quede desproporcionado en pantallas altas.
-- Flechas de navegación centradas y con márgenes laterales para que no se superpongan con el texto. En celular bajan a las esquinas inferiores, a la altura de los indicadores.
+- Textos del banner con tamaños escalonados para escritorio, tablet y celular.
+- En celular el texto se ubica abajo, las flechas van en las esquinas inferiores a la altura de los indicadores, y cada diapositiva muestra la parte de la imagen elegida como punto de foco en el editor.
+- Corrección: los estilos propios del carrusel de Odoo pisaban el relleno de las diapositivas y la posición y el tamaño de las flechas, sobre todo por debajo de 768 px, y el banner se veía roto en celular. Las reglas del banner ahora tienen prioridad sobre esas.
+- El home se divide en cuatro zonas editables, intercaladas con las secciones automáticas de categorías y productos. En cada zona el editor de Odoo permite agregar, quitar, reordenar y editar bloques, y cada zona se guarda por separado. Antes el editor solo dejaba cambiar textos e imágenes dentro de cada bloque.
 - Nueva sección "Nuestra esencia" con los cuatro valores del manual de marca (Sencillez práctica, Esencia orgánica, Cercanía en el diseño y Encuentro en el hogar) y una imagen con forma de arco.
 - Textos del home reescritos con el tono del manual de marca: carrusel, categorías, banners editoriales y "Transformá tus espacios".
+- Corrección: los links "Nosotros" del menú y "Nuestra historia" y "Materiales" del footer apuntaban a un ancla que no existía en el home. Ahora llevan a la sección "Nuestra esencia".
 
 ### Página de producto
 
 - La ficha ocupa todo el ancho de la pantalla.
 - En escritorio, la galería se muestra como mosaico: la primera imagen grande a lo ancho y el resto en dos columnas. Los detalles del producto quedan fijos a la derecha mientras se recorren las imágenes.
 - En celular, la imagen va de borde a borde, con las miniaturas debajo.
+- Vuelve a mostrarse la leyenda "Precio s/Imp. Nac." de la localización argentina, solo en la página de producto y debajo del precio. Sigue oculta en el listado y en las ventanas emergentes.
+- Correcciones de la galería frente a los estilos y el script propios de Odoo: el mosaico ya no puede desbordar sobre la sección siguiente, las imágenes cuadradas ya no se estiran, y en celular las miniaturas muestran su imagen (Odoo las convierte en puntos por debajo de 992 px).
 - Es un cambio solo visual (CSS): no modifica las plantillas ni las opciones de Odoo.
 
-### Encabezado
+### Encabezado y menú
 
-- El header muestra solo íconos: búsqueda, cuenta y carrito en escritorio; menú, búsqueda y carrito en celular. Cada ícono tiene un área de toque de 44 px y el contador del carrito queda en su esquina. Los nombres siguen disponibles para lectores de pantalla y al pasar el mouse.
-- Favoritos sale del header: sigue accesible desde el menú y desde cada producto.
+- El header muestra solo íconos: búsqueda, cuenta, favoritos y carrito en escritorio; menú, búsqueda y carrito en celular. Los íconos están agrupados, cada uno con un área de toque de 44 px, y los contadores de favoritos y carrito quedan en la esquina del ícono. Los nombres siguen disponibles para lectores de pantalla y al pasar el mouse.
+- En celular, cuenta y favoritos están dentro del menú.
+- El menú de celular muestra el logo en lugar del texto "PIDECO".
+- La vista de categorías del menú de celular pasa a ser un acordeón: una fila por categoría, y las subcategorías se despliegan al tocar. Antes se listaban todas juntas.
+- Corrección: el logo del header no quedaba centrado en celular.
+
+### Footer
+
+- El selector de idioma es más visible: un grupo con ícono, etiqueta y botones más grandes.
+- En celular el footer se muestra en una sola columna centrada, con el selector de idioma primero en la franja inferior.
 
 ### Buscador
 
@@ -32,17 +44,20 @@
 ### Carrito
 
 - Se quitó el carrito lateral propio del theme. Al agregar un producto se muestra el aviso nativo de Odoo, y el ícono del carrito del header lleva a la página de carrito de Odoo (`/shop/cart`), con el contador de productos.
+- Corrección: el aviso nativo quedaba en parte detrás del header y se veía cortado. Ahora aparece por encima y justo debajo de la parte visible del header.
+- Corrección: los botones de cantidad (+/−) y los botones tipo link de Odoo heredaban el estilo de los botones de marca (píldora ancha en mayúsculas) y se veían deformados, por ejemplo en la página del carrito. Vuelven a su tamaño nativo.
 
 ### Traducciones
 
-- Traducciones al español y al chino de todos los textos nuevos del home: carrusel, "Nuestra esencia", banners editoriales y secciones reescritas.
-- Se quitaron del archivo base (.pot) y de las traducciones los textos que ya no se usan.
+- Traducciones al español y al chino de todos los textos nuevos: carrusel, "Nuestra esencia", banners editoriales, menú de celular y secciones reescritas.
+- Los archivos de traducción se verificaron contra el mismo algoritmo con el que Odoo extrae los textos de las plantillas: coinciden exactamente, sin entradas faltantes ni sobrantes.
+- Corrección: los mensajes de la barra de anuncios aparecían en inglés en español y en chino mientras no se editaran a mano. Ahora, mientras conservan su texto original, se muestran traducidos; al editarlos en Ajustes se usa el texto cargado.
 - El selector de idioma del footer suma inglés y muestra los tres idiomas como códigos: ES · EN · ZH. Antes el chino se mostraba como "中文", que se veía con caracteres extraños en equipos sin fuentes chinas. El inglés aparece si el website tiene activa alguna variante de inglés.
 
 ### Documentación
 
-- La guía de instalación ya no pide seleccionar el módulo como tema activo, suma el inglés a los idiomas del sitio y documenta el carrusel, las imágenes del home, la página de producto, el carrito, el buscador y los montos escritos en el sitio.
-- Nuevas validaciones de UAT para el carrusel, la galería, el carrito y el buscador.
+- La guía de instalación ya no pide seleccionar el módulo como tema activo, suma el inglés a los idiomas del sitio y documenta el carrusel, las zonas editables y las imágenes del home, la página de producto, el carrito, el buscador y los montos escritos en el sitio.
+- Nuevas validaciones de UAT para el carrusel, la edición del home, la galería, el carrito, el buscador y el menú de celular.
 - El README del repositorio explica la documentación, las ramas y cómo publicar una versión.
 
 ## 19.0.1.2.0
