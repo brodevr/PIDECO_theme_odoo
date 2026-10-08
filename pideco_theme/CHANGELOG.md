@@ -12,7 +12,7 @@
 - Corrección: los estilos propios del carrusel de Odoo pisaban el relleno de las diapositivas y la posición y el tamaño de las flechas, sobre todo por debajo de 768 px, y el banner se veía roto en celular. Las reglas del banner ahora tienen prioridad sobre esas.
 - Corrección: por debajo de 768 px Odoo anula el alto de todas las secciones, así que el banner quedaba más bajo de lo previsto y con una franja vacía debajo. El alto ahora se aplica al carrusel, y en celular el banner ocupa la pantalla debajo del encabezado.
 - El home se divide en cuatro zonas editables, intercaladas con las secciones automáticas de categorías y productos. En cada zona el editor de Odoo permite agregar, quitar, reordenar y editar bloques, y cada zona se guarda por separado. Antes el editor solo dejaba cambiar textos e imágenes dentro de cada bloque.
-- Nueva sección "Nuestra esencia" con los cuatro valores del manual de marca (Sencillez práctica, Esencia orgánica, Cercanía en el diseño y Encuentro en el hogar) y una imagen con forma de arco.
+- Nueva sección "Nuestra esencia" con los cuatro valores del manual de marca (Sencillez práctica, Esencia orgánica, Cercanía en el diseño y Encuentro en el hogar). El texto va en una tarjeta que se superpone a una imagen grande, y los valores quedan en una fila propia debajo, con números grandes. En celular la tarjeta se apoya sobre la parte inferior de la imagen y los valores pasan a una lista compacta.
 - Textos del home reescritos con el tono del manual de marca: carrusel, categorías, banners editoriales y "Transformá tus espacios".
 - Corrección: los links "Nosotros" del menú y "Nuestra historia" y "Materiales" del footer apuntaban a un ancla que no existía en el home. Ahora llevan a la sección "Nuestra esencia".
 

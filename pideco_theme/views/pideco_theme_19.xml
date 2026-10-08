@@ -192,14 +192,14 @@
                             <p class="pideco-kicker">Our essence</p>
                             <h2>Designed for everyday life</h2>
                             <p>We select noble, durable pieces that balance usefulness and beauty, so every routine at home becomes a meaningful moment.</p>
-                            <div class="pideco-essence-values">
-                                <div><span class="pideco-essence-num">01</span><strong>Practical simplicity</strong><p>Every piece serves a clear purpose.</p></div>
-                                <div><span class="pideco-essence-num">02</span><strong>Organic essence</strong><p>Noble materials and gentle textures.</p></div>
-                                <div><span class="pideco-essence-num">03</span><strong>Approachable design</strong><p>Aesthetic distinction for real life.</p></div>
-                                <div><span class="pideco-essence-num">04</span><strong>Gathering at home</strong><p>Corners that invite rest and time with family.</p></div>
-                            </div>
                             <a class="btn btn-primary" href="/shop">Discover the collection</a>
                         </div>
+                    </div>
+                    <div class="pideco-essence-values">
+                        <div><span class="pideco-essence-num">01</span><strong>Practical simplicity</strong><p>Every piece serves a clear purpose.</p></div>
+                        <div><span class="pideco-essence-num">02</span><strong>Organic essence</strong><p>Noble materials and gentle textures.</p></div>
+                        <div><span class="pideco-essence-num">03</span><strong>Approachable design</strong><p>Aesthetic distinction for real life.</p></div>
+                        <div><span class="pideco-essence-num">04</span><strong>Gathering at home</strong><p>Corners that invite rest and time with family.</p></div>
                     </div>
                 </section>
                 </div>

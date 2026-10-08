@@ -74,7 +74,7 @@ El home usa 6 imágenes que viajan con el módulo, en `static/src/img/home/`. As
 | Carrusel, diapositiva 1 | `hero-1.jpg` (mesa de comedor) | 1672 × 941 px | Motivo centrado; en celular se recorta a lo alto |
 | Carrusel, diapositiva 2 | `hero-2.jpg` (consola de madera) | 1672 × 941 px | Igual que la 1 |
 | Carrusel, diapositiva 3 | `hero-3.jpg` (showroom mayorista) | 1672 × 941 px | Igual que la 1 |
-| Nuestra esencia | `esencia.jpg` (sillón borgoña) | 1122 × 1402 px | Se muestra con la parte superior en arco |
+| Nuestra esencia | `esencia.jpg` (sillón borgoña) | 1122 × 1402 px | Se recorta en horizontal en escritorio y tablet, y en cuadrado en celular; el motivo principal conviene en el centro o algo más abajo |
 | Banner editorial "cocina" | `editorial-cocina.jpg` (utensilios) | 1400 × 788 px | El texto va abajo a la izquierda |
 | Banner editorial "orden" | `editorial-orden.jpg` (tarros de vidrio) | 1355 × 1161 px | El texto va abajo a la izquierda |
 
