@@ -31,6 +31,8 @@ Para actualizar una instalación existente:
 odoo -d NOMBRE_BASE -u pideco_theme --stop-after-init
 ```
 
+Si la base ya tuvo instalada una versión anterior con otros textos, conviene agregar `--i18n-overwrite`. Sin esa opción, Odoo conserva lo que tenía guardado para cada texto que cambió poco (aunque fuera el texto viejo sin traducir) y no carga la traducción nueva.
+
 ## Edición del home desde Odoo
 
 El home alterna **zonas editables** con **secciones automáticas**:
@@ -137,6 +139,7 @@ Para reproducir el catálogo hay que importar sus datos e imágenes por separado
 - Agregar al carrito desde el home, la tienda y la ficha: debe aparecer el aviso nativo de Odoo completo, debajo del header y sin quedar tapado, y actualizarse el contador del header. El ícono del carrito lleva a `/shop/cart`.
 - Página del carrito: los botones de cantidad (+/−) se ven compactos, como en un Odoo sin theme.
 - Abrir el buscador con la página scrolleada: el panel debe quedar pegado arriba.
+- Escribir en el buscador (por ejemplo "alfombra"): los resultados muestran imagen, nombre con el término en negrita y precio, sin etiquetas HTML a la vista. En celular el precio queda debajo del nombre.
 - Cambiar entre ES, EN y ZH desde el footer y volver, en distintas páginas.
 - Header: en escritorio se ven solo los íconos de búsqueda, cuenta, favoritos y carrito, agrupados; en celular, menú, logo centrado, búsqueda y carrito (también en 320 px). Los contadores de favoritos y carrito quedan en la esquina del ícono y se actualizan al agregar o quitar.
 - Menú de celular: muestra el logo arriba; en "Categorías", cada categoría es una fila y las subcategorías se despliegan al tocar.
@@ -157,6 +160,6 @@ Plantillas que modifica el módulo (`views/pideco_theme_19.xml`):
 
 La página de producto, el aviso del carrito y la posición del buscador se ajustan solo con CSS, sin reemplazar plantillas nativas. El JS (`static/src/js/pideco_ui.js`) maneja el buscador en vivo, el menú, los sliders, el cambio de idioma y la medición del header (su alto, para el carrusel del home, y cuánto queda visible, para ubicar el aviso del carrito).
 
-Odoo aplica estilos propios, con selectores muy específicos, al carrusel del home (`.s_carousel_wrapper[data-vcss='001'] .s_carousel …`) y a la galería de producto (`#o-carousel-product …`), y un script suyo fija un alto mínimo en línea a cada diapositiva. Las reglas del theme para esas dos piezas están escritas con mayor especificidad a propósito; al modificarlas hay que conservarla.
+Odoo aplica estilos propios, con selectores muy específicos, al carrusel del home (`.s_carousel_wrapper[data-vcss='001'] .s_carousel …`) y a la galería de producto (`#o-carousel-product …`), y un script suyo fija un alto mínimo en línea a cada diapositiva. Las reglas del theme para esas dos piezas están escritas con mayor especificidad a propósito; al modificarlas hay que conservarla. Además, por debajo de 768 px Odoo fuerza `height: auto` en todas las etiquetas `section`: por eso el alto del banner está puesto en el carrusel (`.s_carousel`) y no en su sección.
 
 Traducciones: los archivos de `i18n/` deben coincidir con los textos que Odoo extrae de las plantillas. Odoo agrupa cada bloque de texto con sus etiquetas en línea (`span`, `strong`, `small`, `em`, `br`, `i`…) como una sola entrada, y trata por separado los atributos `alt`, `title`, `aria-label` y `placeholder`. Después de cambiar textos conviene regenerar el `.pot` desde Odoo (*Ajustes → Traducciones → Exportar traducción*) y completar los `.po`. Al actualizar, las traducciones ya cargadas en la base no se pisan salvo que se use `--i18n-overwrite`.

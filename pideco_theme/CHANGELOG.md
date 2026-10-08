@@ -10,6 +10,7 @@
 - Textos del banner con tamaños escalonados para escritorio, tablet y celular.
 - En celular el texto se ubica abajo, las flechas van en las esquinas inferiores a la altura de los indicadores, y cada diapositiva muestra la parte de la imagen elegida como punto de foco en el editor.
 - Corrección: los estilos propios del carrusel de Odoo pisaban el relleno de las diapositivas y la posición y el tamaño de las flechas, sobre todo por debajo de 768 px, y el banner se veía roto en celular. Las reglas del banner ahora tienen prioridad sobre esas.
+- Corrección: por debajo de 768 px Odoo anula el alto de todas las secciones, así que el banner quedaba más bajo de lo previsto y con una franja vacía debajo. El alto ahora se aplica al carrusel, y en celular el banner ocupa la pantalla debajo del encabezado.
 - El home se divide en cuatro zonas editables, intercaladas con las secciones automáticas de categorías y productos. En cada zona el editor de Odoo permite agregar, quitar, reordenar y editar bloques, y cada zona se guarda por separado. Antes el editor solo dejaba cambiar textos e imágenes dentro de cada bloque.
 - Nueva sección "Nuestra esencia" con los cuatro valores del manual de marca (Sencillez práctica, Esencia orgánica, Cercanía en el diseño y Encuentro en el hogar) y una imagen con forma de arco.
 - Textos del home reescritos con el tono del manual de marca: carrusel, categorías, banners editoriales y "Transformá tus espacios".
@@ -40,6 +41,8 @@
 ### Buscador
 
 - El panel de búsqueda se abre pegado al borde superior de la pantalla, deslizándose desde arriba, en lugar de aparecer a mitad de pantalla cuando la página está scrolleada.
+- Corrección: los resultados de la búsqueda en vivo mostraban etiquetas HTML (`<span class=…>`) en lugar del nombre, la descripción y el precio. Odoo ya entrega esos textos como HTML y el theme los volvía a escapar. Ahora se muestran limpios, con el término buscado en negrita.
+- En celular, los nombres largos de los resultados ya no se superponen con el precio: el nombre ocupa todo el ancho y el precio va debajo. Si la lista no entra en la pantalla, se puede scrollear.
 
 ### Carrito
 
@@ -51,6 +54,8 @@
 
 - Traducciones al español y al chino de todos los textos nuevos: carrusel, "Nuestra esencia", banners editoriales, menú de celular y secciones reescritas.
 - Los archivos de traducción se verificaron contra el mismo algoritmo con el que Odoo extrae los textos de las plantillas: coinciden exactamente, sin entradas faltantes ni sobrantes.
+- Las flechas del banner ya no llevan un texto oculto duplicado: su nombre para lectores de pantalla es la etiqueta del botón, que sí se traduce.
+- Texto en inglés corregido: "The more you buy, the more you save".
 - Corrección: los mensajes de la barra de anuncios aparecían en inglés en español y en chino mientras no se editaran a mano. Ahora, mientras conservan su texto original, se muestran traducidos; al editarlos en Ajustes se usa el texto cargado.
 - El selector de idioma del footer suma inglés y muestra los tres idiomas como códigos: ES · EN · ZH. Antes el chino se mostraba como "中文", que se veía con caracteres extraños en equipos sin fuentes chinas. El inglés aparece si el website tiene activa alguna variante de inglés.
 

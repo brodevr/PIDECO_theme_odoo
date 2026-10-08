@@ -31,10 +31,38 @@ const searchOverlaySelector = "[data-pideco-search-overlay]";
 const searchFormSelector = ".pideco-overlay-form";
 let searchTimer;
 
-function escapeHtml(value) {
-    const node = document.createElement("div");
-    node.textContent = value || "";
-    return node.innerHTML;
+/* Odoo's autocomplete returns every field as an HTML fragment: the text comes already escaped, and
+   the matched term and the price are wrapped in <span>. Escaping it again would show the tags as
+   text, so the fragment is parsed (inert, inside a <template>) and only its text and those spans,
+   with nothing but their class, are kept. */
+function parseFragment(html) {
+    const template = document.createElement("template");
+    template.innerHTML = html || "";
+    for (const node of template.content.querySelectorAll("*")) {
+        if (node.tagName === "SCRIPT" || node.tagName === "STYLE") {
+            node.remove();
+            continue;
+        }
+        if (node.tagName !== "SPAN") {
+            node.replaceWith(...node.childNodes);
+            continue;
+        }
+        for (const attribute of [...node.attributes]) {
+            if (attribute.name !== "class") node.removeAttribute(attribute.name);
+        }
+    }
+    return template.content;
+}
+
+function fragmentText(html) {
+    return parseFragment(html).textContent.trim();
+}
+
+function resultElement(tagName, html, className) {
+    const node = document.createElement(tagName);
+    if (className) node.className = className;
+    node.append(parseFragment(html));
+    return node;
 }
 
 function clearResults(form) {
@@ -46,15 +74,26 @@ function renderResults(form, results) {
     if (!results.length) return;
     const menu = document.createElement("div");
     menu.className = "pideco-live-results dropdown-menu show";
-    menu.innerHTML = results.map((item) => `
-        <a class="dropdown-item" href="${escapeHtml(item.website_url || "/shop")}">
-            ${item.image_url ? `<img src="${escapeHtml(item.image_url)}" alt=""/>` : ""}
-            <span class="pideco-live-copy">
-                <span>${escapeHtml(item.name)}</span>
-                ${item.description ? `<small>${escapeHtml(item.description)}</small>` : ""}
-            </span>
-            ${item.detail ? `<em>${escapeHtml(item.detail)}</em>` : ""}
-        </a>`).join("");
+    for (const item of results) {
+        const link = document.createElement("a");
+        link.className = "dropdown-item";
+        const url = fragmentText(item.website_url);
+        link.setAttribute("href", url.startsWith("/") ? url : "/shop");
+        const imageUrl = fragmentText(item.image_url);
+        if (imageUrl.startsWith("/")) {
+            const image = document.createElement("img");
+            image.setAttribute("src", imageUrl);
+            image.alt = "";
+            link.append(image);
+        }
+        const copy = document.createElement("span");
+        copy.className = "pideco-live-copy";
+        copy.append(resultElement("span", item.name, "pideco-live-name"));
+        if (fragmentText(item.description)) copy.append(resultElement("small", item.description));
+        link.append(copy);
+        if (fragmentText(item.detail)) link.append(resultElement("em", item.detail));
+        menu.append(link);
+    }
     form.append(menu);
 }
 

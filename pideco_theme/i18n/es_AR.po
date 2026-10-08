@@ -442,7 +442,7 @@ msgstr "Compra mínima $200.000"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "More you buy, more you save"
+msgid "The more you buy, the more you save"
 msgstr "Cuanto más comprás, más ahorrás"
 
 #. module: pideco_theme
@@ -831,24 +831,6 @@ msgstr "ZH"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "View cart"
 msgstr "Ver carrito"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
-"class=\"visually-hidden\">Next</span>"
-msgstr ""
-"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
-"class=\"visually-hidden\">Siguiente</span>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
-"class=\"visually-hidden\">Previous</span>"
-msgstr ""
-"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
-"class=\"visually-hidden\">Anterior</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19

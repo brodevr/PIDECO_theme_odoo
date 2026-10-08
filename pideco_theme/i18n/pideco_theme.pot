@@ -410,7 +410,7 @@ msgstr ""
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "More you buy, more you save"
+msgid "The more you buy, the more you save"
 msgstr ""
 
 #. module: pideco_theme
@@ -779,20 +779,6 @@ msgstr ""
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "View cart"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
-"class=\"visually-hidden\">Next</span>"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid ""
-"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
-"class=\"visually-hidden\">Previous</span>"
 msgstr ""
 
 #. module: pideco_theme

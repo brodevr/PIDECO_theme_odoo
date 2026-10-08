@@ -155,8 +155,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="prev" aria-label="Previous" title="Previous"><span class="carousel-control-prev-icon" aria-hidden="true"/><span class="visually-hidden">Previous</span></button>
-                        <button class="carousel-control-next o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="next" aria-label="Next" title="Next"><span class="carousel-control-next-icon" aria-hidden="true"/><span class="visually-hidden">Next</span></button>
+                        <button class="carousel-control-prev o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="prev" aria-label="Previous" title="Previous"><span class="carousel-control-prev-icon" aria-hidden="true"/></button>
+                        <button class="carousel-control-next o_not_editable" contenteditable="false" data-bs-target="#pidecoHeroCarousel" data-bs-slide="next" aria-label="Next" title="Next"><span class="carousel-control-next-icon" aria-hidden="true"/></button>
                         <div class="carousel-indicators o_not_editable">
                             <button type="button" data-bs-target="#pidecoHeroCarousel" data-bs-slide-to="0" class="active" aria-label="Carousel indicator"/>
                             <button type="button" data-bs-target="#pidecoHeroCarousel" data-bs-slide-to="1" aria-label="Carousel indicator"/>
@@ -239,7 +239,7 @@
                 </section>
 
                 <section class="container pideco-home-section pideco-discounts" data-name="Discounts">
-                    <div class="pideco-section-head"><div><p class="pideco-kicker">More you buy, more you save</p><h2>Discounts by order amount</h2><p>Choose the payment method that works best for your order.</p></div></div>
+                    <div class="pideco-section-head"><div><p class="pideco-kicker">The more you buy, the more you save</p><h2>Discounts by order amount</h2><p>Choose the payment method that works best for your order.</p></div></div>
                     <div class="pideco-discount-grid">
                         <div class="pideco-discount-card"><h3>Cash payment</h3><div><span>Purchasing $200,000</span><strong>5% Off</strong></div><div><span>Purchasing $400,000</span><strong>10% Off</strong></div><div><span>Purchasing $700,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>20% Off</strong></div></div>
                         <div class="pideco-discount-card"><h3>Bank transfer</h3><div><span>Purchasing $300,000</span><strong>5% Off</strong></div><div><span>Purchasing $600,000</span><strong>10% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,500,000</span><strong>20% Off</strong></div></div>
