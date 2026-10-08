@@ -1407,7 +1407,7 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-nav-account i { font-size: 1.1rem; }
     .pideco-nav-backdrop { position: fixed; z-index: 1060; inset: 0; display: block; visibility: hidden; opacity: 0; background: rgba(42, 17, 19, .48); transition: opacity .28s ease, visibility .28s ease; pointer-events: none; }
     .pideco-header:has(.pideco-nav.show) .pideco-nav-backdrop { visibility: visible; opacity: 1; pointer-events: auto; }
-    .pideco-nav-mobile-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--pideco-border); color: var(--pideco-wine); font-family: Georgia, serif; font-size: 1.35rem; }
+    .pideco-nav-mobile-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--pideco-border); color: var(--pideco-wine); font-size: 1.35rem; }
     .pideco-nav-mobile-head img { display: block; width: 132px; height: auto; }
     .pideco-nav-mobile-head button { width: 40px; height: 40px; border: 1px solid rgba(78, 14, 20, .3); border-radius: 50%; background: transparent; color: var(--pideco-wine); }
     .pideco-mega-toggle { width: 100%; justify-content: space-between; }
@@ -1422,7 +1422,7 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-nav.pideco-mobile-category-view-open > .pideco-nav-account { display: none; }
     .pideco-nav.pideco-mobile-category-view-open .pideco-mobile-category-view { display: block; }
     .pideco-mobile-category-back { display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--pideco-clay); font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-    .pideco-mobile-category-view h2 { margin: 1.4rem 0 1rem; color: var(--pideco-wine); font-family: Georgia, serif; font-size: 1.8rem; }
+    .pideco-mobile-category-view h2 { margin: 1.4rem 0 1rem; color: var(--pideco-wine); font-size: 1.8rem; }
     /* Category list: one tappable row per category; subcategories open as an accordion (<details>). */
     .pideco-mobile-category-groups { display: grid; border-top: 1px solid var(--pideco-border); }
     .pideco-mobile-category { border-bottom: 1px solid var(--pideco-border); }

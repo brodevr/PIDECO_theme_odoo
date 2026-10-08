@@ -30,6 +30,7 @@
 - El header muestra solo íconos: búsqueda, cuenta, favoritos y carrito en escritorio; menú, búsqueda y carrito en celular. Los íconos están agrupados, cada uno con un área de toque de 44 px, y los contadores de favoritos y carrito quedan en la esquina del ícono. Los nombres siguen disponibles para lectores de pantalla y al pasar el mouse.
 - En celular, cuenta y favoritos están dentro del menú.
 - El menú de celular muestra el logo en lugar del texto "PIDECO".
+- El menú de celular usa una sola tipografía: el título "Categorías" ya no va en una fuente con serifa.
 - La vista de categorías del menú de celular pasa a ser un acordeón: una fila por categoría, y las subcategorías se despliegan al tocar. Antes se listaban todas juntas.
 - Corrección: el logo del header no quedaba centrado en celular.
 
