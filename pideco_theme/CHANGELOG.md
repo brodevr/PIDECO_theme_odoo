@@ -1,5 +1,11 @@
 # Historial de cambios — PIDECO Theme
 
+## 19.0.1.4.2
+
+### Página de producto
+
+- Corrección: en la 19.0.1.4.1 la descripción se veía completa y el botón "Ver más" no hacía nada. Odoo arma la clase de esa caja con `t-attf-class`, que pisaba la clase que agregaba el módulo; ahora se agrega en ese mismo atributo.
+
 ## 19.0.1.4.1
 
 ### Página de producto
