@@ -1,6 +1,6 @@
 # Historial de cambios — PIDECO Theme
 
-## Sin publicar
+## 19.0.1.4.1
 
 ### Página de producto
 
