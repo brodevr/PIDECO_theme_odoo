@@ -1,7 +1,7 @@
 {
     "name": "PIDECO Theme",
     "summary": "Identidad PIDECO para Website y eCommerce en Odoo 19",
-    "version": "19.0.1.3.0",
+    "version": "19.0.1.4.0",
     "category": "Website/eCommerce",
     "license": "LGPL-3",
     "author": "PIDECO",
