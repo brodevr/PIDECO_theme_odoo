@@ -600,7 +600,8 @@ body.editor_enable .pideco-hero-carousel .stretched-link::after,
 
 .pideco-promo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
 .pideco-promo-card { position: relative; min-height: 520px; overflow: hidden; border-radius: 1.3rem; color: #fff9f1; text-decoration: none; }
-.pideco-promo-card::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(40, 14, 16, .78)); content: ""; }
+/* pointer-events: none lets clicks reach the image, so the editor can select and replace it. */
+.pideco-promo-card::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(40, 14, 16, .78)); content: ""; pointer-events: none; }
 .pideco-promo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .pideco-promo-card-light img { object-position: 30% center; }
 .pideco-promo-card-dark img { object-position: 75% center; filter: saturate(.8) brightness(.72); }
@@ -799,6 +800,33 @@ body.editor_enable .pideco-hero-carousel .stretched-link::after,
 
 .o_wsale_products_page #o_wsale_products_grid .o_wsale_products_item_title a {
     color: var(--pideco-wine);
+}
+
+/* Website description: first lines at the bottom of the product card, full text in a card below. */
+.pideco-product-description { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--pideco-border); }
+.pideco-product-description h2,
+.pideco-product-description-card h2 { margin: 0 0 .6rem; color: var(--pideco-wine); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.pideco-product-description-excerpt { display: -webkit-box; overflow: hidden; color: var(--pideco-text); font-size: .92rem; line-height: 1.6; -webkit-box-orient: vertical; -webkit-line-clamp: 5; }
+.pideco-product-description-excerpt > * { margin-bottom: 0; }
+.pideco-product-description-more { display: inline-block; margin-top: .6rem; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.pideco-product-description.is-short .pideco-product-description-more { display: none; }
+.pideco-product-description-section { margin-top: Clamp(2rem, 4vw, 3.5rem); scroll-margin-top: calc(var(--pideco-header-bottom, 0px) + 1.5rem); }
+.pideco-product-description-card { padding: Clamp(1.5rem, 3vw, 2.75rem); border: 1px solid rgba(147, 101, 70, .16); border-radius: 1.5rem; background: var(--pideco-surface); }
+.pideco-product-description-card h2 { margin-bottom: 1.1rem; }
+/* Readable line length, whatever markup the description has. */
+.pideco-product-description-card > .oe_structure { max-width: 860px; color: var(--pideco-text); font-size: 1rem; line-height: 1.7; }
+.pideco-product-description-card > .oe_structure > :last-child { margin-bottom: 0; }
+
+/* Internal reference above the product name, on every product tile. */
+.pideco-product-reference {
+    display: block;
+    margin-bottom: .3rem;
+    color: #8a8178;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
 }
 
 .o_wsale_products_page #o_wsale_products_grid .oe_subdescription {

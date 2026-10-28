@@ -238,7 +238,7 @@
                     </div>
                 </section>
 
-                <section class="container pideco-home-section pideco-discounts" data-name="Discounts">
+                <section class="container pideco-home-section pideco-discounts" data-name="Descuentos por monto">
                     <div class="pideco-section-head"><div><p class="pideco-kicker">The more you buy, the more you save</p><h2>Discounts by order amount</h2><p>Choose the payment method that works best for your order.</p></div></div>
                     <div class="pideco-discount-grid">
                         <div class="pideco-discount-card"><h3>Cash payment</h3><div><span>Purchasing $200,000</span><strong>5% Off</strong></div><div><span>Purchasing $400,000</span><strong>10% Off</strong></div><div><span>Purchasing $700,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>20% Off</strong></div></div>
@@ -253,6 +253,14 @@
 
     <template id="pideco_product_page_19" inherit_id="website_sale.product" name="PIDECO product page" priority="90">
         <xpath expr="//section[@id='product_detail']" position="after">
+            <!-- Full website description, in its own card right below the product. The product card only
+                 shows its first lines (pideco_product_terms_19). This is the editable copy. -->
+            <section id="pideco-product-description" t-if="product.description_ecommerce or editable" class="container pideco-product-description-section">
+                <div class="pideco-product-description-card">
+                    <h2>Description</h2>
+                    <div t-field="product.description_ecommerce" class="oe_structure"/>
+                </div>
+            </section>
             <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
             <t t-set="pideco_recommendation_domain" t-value="pideco_sale_domain + [('id', '!=', product.id)] + ([('public_categ_ids', 'in', product.public_categ_ids.ids)] if product.public_categ_ids else [])"/>
             <t t-set="pideco_primary_recommendations" t-value="product.alternative_product_ids.filtered_domain(pideco_sale_domain) | request.env['product.template'].search(pideco_recommendation_domain, order='website_sequence, id desc', limit=4)"/>
@@ -280,7 +288,7 @@
                     </a>
                 </div>
             </section>
-            <section class="container pideco-product-discounts" data-name="Discounts">
+            <section class="container pideco-product-discounts" data-name="Descuentos por monto">
                 <div class="pideco-section-head"><div><p class="pideco-kicker">Save on larger orders</p><h2>Discounts</h2><p>Choose the payment method that works best for your order.</p></div></div>
                 <div class="pideco-discount-grid">
                     <div class="pideco-discount-card"><h3>Cash payment</h3><div><span>Purchasing $200,000</span><strong>5% Off</strong></div><div><span>Purchasing $400,000</span><strong>10% Off</strong></div><div><span>Purchasing $700,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>20% Off</strong></div></div>
@@ -292,11 +300,23 @@
     </template>
 
     <template id="pideco_product_title_19" inherit_id="website_sale.product_title" name="PIDECO product title" priority="90">
+        <!-- The website description moves to the bottom of the product card (pideco_product_terms_19). -->
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="replace"/>
         <xpath expr="//h1" position="before">
             <div class="pideco-product-meta">
                 <a t-if="product.public_categ_ids" t-att-href="'/shop/category/%s' % slug(product.public_categ_ids[:1])" t-out="product.public_categ_ids[:1].name"/>
                 <span t-if="product_variant.default_code">SKU <t t-out="product_variant.default_code"/></span>
             </div>
+        </xpath>
+    </template>
+
+    <!-- Product tile (shop grid, wishlist and Odoo's product snippets): internal reference above the name.
+         A tile for a given variant shows that variant's code; a product with several variants has no
+         single code, so nothing is shown for it. -->
+    <template id="pideco_products_item_19" inherit_id="website_sale.products_item" name="PIDECO product tile reference" priority="90">
+        <xpath expr="//h2[hasclass('o_wsale_products_item_title')]" position="before">
+            <t t-set="pideco_reference" t-value="(product_variant or product).default_code"/>
+            <small t-if="pideco_reference" class="pideco-product-reference" t-out="pideco_reference"/>
         </xpath>
     </template>
 
@@ -306,6 +326,14 @@
                 <div><i class="fa fa-shopping-bag"/><span><strong>Minimum order $200,000</strong><small>Applies to wholesale orders</small></span></div>
                 <div><i class="fa fa-truck"/><span><strong>Nationwide shipping</strong><small>We coordinate the delivery of your order</small></span></div>
                 <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Available by prior arrangement</small></span></div>
+            </div>
+            <!-- First lines of the website description, at the bottom of the card. The full text is in its
+                 own card below the product; the link is hidden by pideco_ui.js when the text fits. Not
+                 shown while editing: the description is edited in the full card. -->
+            <div t-if="product.description_ecommerce and not editable" class="pideco-product-description">
+                <h2>Description</h2>
+                <div class="pideco-product-description-excerpt" t-out="product.description_ecommerce"/>
+                <a class="pideco-product-description-more" href="#pideco-product-description">View full description</a>
             </div>
         </xpath>
     </template>

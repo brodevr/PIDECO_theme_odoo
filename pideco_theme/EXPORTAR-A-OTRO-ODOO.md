@@ -49,6 +49,9 @@ El home alterna **zonas editables** con **secciones automáticas**:
 
 - **En las zonas editables** el editor del website permite agregar bloques nuevos, quitar, reordenar y editar los existentes (textos, imágenes, links, colores).
 - **Las secciones automáticas** se arman en cada visita con el catálogo y no pueden moverse ni borrarse desde el editor. Sus títulos sí se pueden editar.
+- **Las tarjetas de productos y de categorías** no se editan en el editor: el nombre, la imagen y el precio salen de cada producto o categoría y se cambian ahí.
+- **Imágenes de los banners editoriales:** se reemplazan haciendo clic sobre la imagen.
+- **Barra de anuncios:** mientras se edita la página queda quieta en el primer mensaje. Sus textos se cambian en Ajustes (ver "Montos y textos informativos").
 - **Cada zona se guarda por separado.** Al editar una zona, esa zona conserva la versión personalizada de esa base, y las demás siguen recibiendo los cambios que traiga el módulo en futuras versiones.
 - Si se edita el título de una sección automática, Odoo guarda una copia personalizada de todo el home para ese website, y las actualizaciones del módulo dejan de aplicarse a ese home hasta que se restablezca la vista.
 

@@ -181,6 +181,16 @@ function initPromoSliders() {
         slider.dataset.pidecoPromoReady = "true";
         let currentIndex = 0;
         let timer;
+        // The messages are editable in the website editor, which records every class change on them
+        // as an edit of the header. While editing, the bar stays still and as rendered by the server.
+        const isEditing = () => document.body.classList.contains("editor_enable");
+        const reset = () => {
+            items.forEach((item, index) => {
+                item.classList.toggle("is-active", index === 0);
+                if (item.classList.contains("is-previous")) item.classList.remove("is-previous");
+            });
+            currentIndex = 0;
+        };
 
         const showNext = () => {
             const current = items[currentIndex];
@@ -194,7 +204,7 @@ function initPromoSliders() {
             currentIndex = nextIndex;
         };
         const start = () => {
-            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            if (isEditing() || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
             window.clearInterval(timer);
             timer = window.setInterval(showNext, 4000);
         };
@@ -204,6 +214,12 @@ function initPromoSliders() {
         slider.addEventListener("mouseleave", start);
         slider.addEventListener("focusin", stop);
         slider.addEventListener("focusout", start);
+        // React as soon as edit mode starts, before the editor begins recording changes.
+        new MutationObserver(() => {
+            if (!isEditing()) return;
+            stop();
+            reset();
+        }).observe(document.body, {attributes: true, attributeFilter: ["class"]});
         start();
     });
 }
@@ -345,12 +361,28 @@ function initHeaderMetrics() {
     updateBottom();
 }
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
-        initPromoSliders();
-        initHeaderMetrics();
-    }, {once: true});
-} else {
+// Product card description: the "view full description" link only when the first lines cut the text.
+function initDescriptionExcerpts() {
+    const update = () => {
+        document.querySelectorAll(".pideco-product-description").forEach((box) => {
+            const excerpt = box.querySelector(".pideco-product-description-excerpt");
+            if (excerpt) box.classList.toggle("is-short", excerpt.scrollHeight <= excerpt.clientHeight + 1);
+        });
+    };
+    update();
+    window.addEventListener("resize", update, {passive: true});
+    // Web fonts change the text height once loaded.
+    document.fonts?.ready.then(update);
+}
+
+function startPidecoUi() {
     initPromoSliders();
     initHeaderMetrics();
+    initDescriptionExcerpts();
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startPidecoUi, {once: true});
+} else {
+    startPidecoUi();
 }

@@ -795,3 +795,14 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
 msgid "Wishlist"
 msgstr ""
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "Description"
+msgstr ""
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "View full description"
+msgstr ""

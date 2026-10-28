@@ -1,5 +1,21 @@
 # Historial de cambios — PIDECO Theme
 
+## Sin publicar
+
+### Tienda
+
+- Las tarjetas de producto muestran la referencia interna del producto, en pequeño y gris, arriba del nombre. Aplica a la tienda, a la lista de deseos y a los bloques de productos de Odoo. Los productos con varias variantes no tienen una referencia única y no la muestran.
+
+### Página de producto
+
+- La "Descripción para el sitio web" del producto deja el área del título. Al final de la tarjeta de detalles, debajo de los avisos de compra, se ven sus primeras líneas con el link "Ver descripción completa" (solo si el texto no entra). El texto completo va en una tarjeta propia justo debajo del producto, con un ancho de lectura cómodo. Si el producto no tiene descripción no se muestra nada, salvo en el editor, donde la tarjeta completa queda disponible para escribirla.
+
+### Edición desde Odoo
+
+- Corrección: en el editor, las imágenes de los dos banners editoriales no se podían seleccionar ni reemplazar, porque la capa de degradado las tapaba. Ahora se reemplazan haciendo clic sobre la imagen.
+- Corrección: en el editor, la barra de anuncios seguía rotando y Odoo registraba cada cambio como una edición del header. Al guardar cualquier otra cosa se habría guardado también una copia del header con la barra a mitad de rotación. Ahora la barra se detiene al entrar en modo edición.
+- El bloque de descuentos se llama "Descuentos por monto" en el editor (antes "Discounts").
+
 ## 19.0.1.3.0
 
 ### Home
