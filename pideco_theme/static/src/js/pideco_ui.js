@@ -361,14 +361,35 @@ function initHeaderMetrics() {
     updateBottom();
 }
 
-// Product card description: the "view full description" link only when the first lines cut the text.
-function initDescriptionExcerpts() {
+// Product description under the title: shown trimmed, with a "View more" toggle that opens it in place.
+// A text that already fits is left whole and loses the toggle. Nothing runs in the website editor,
+// where the description must stay whole and editable.
+function initDescriptionToggles() {
+    const isEditing = () => document.body.classList.contains("editor_enable");
     const update = () => {
-        document.querySelectorAll(".pideco-product-description").forEach((box) => {
-            const excerpt = box.querySelector(".pideco-product-description-excerpt");
-            if (excerpt) box.classList.toggle("is-short", excerpt.scrollHeight <= excerpt.clientHeight + 1);
+        if (isEditing()) return;
+        document.querySelectorAll(".pideco-product-description").forEach((description) => {
+            const toggle = description.parentElement.querySelector("[data-pideco-description-toggle]");
+            if (!toggle || description.classList.contains("is-expanded")) return;
+            description.classList.remove("is-short");
+            const fits = description.scrollHeight <= description.clientHeight + 1;
+            description.classList.toggle("is-short", fits);
+            toggle.classList.toggle("is-hidden", fits);
         });
     };
+    document.addEventListener("click", (event) => {
+        const toggle = event.target.closest("[data-pideco-description-toggle]");
+        if (!toggle || isEditing()) return;
+        const description = toggle.parentElement.querySelector(".pideco-product-description");
+        if (!description) return;
+        const expanded = !description.classList.contains("is-expanded");
+        description.classList.toggle("is-expanded", expanded);
+        toggle.setAttribute("aria-expanded", String(expanded));
+        // Closing a long text: bring its start back into view.
+        if (!expanded && description.getBoundingClientRect().top < 0) {
+            description.scrollIntoView({block: "start", behavior: "smooth"});
+        }
+    });
     update();
     window.addEventListener("resize", update, {passive: true});
     // Web fonts change the text height once loaded.
@@ -378,7 +399,7 @@ function initDescriptionExcerpts() {
 function startPidecoUi() {
     initPromoSliders();
     initHeaderMetrics();
-    initDescriptionExcerpts();
+    initDescriptionToggles();
 }
 
 if (document.readyState === "loading") {

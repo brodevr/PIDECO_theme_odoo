@@ -1,5 +1,11 @@
 # Historial de cambios — PIDECO Theme
 
+## Sin publicar
+
+### Página de producto
+
+- La descripción para el sitio web vuelve a su lugar de Odoo, debajo del título. Se ven sus primeras líneas, que se desvanecen, y el botón "Ver más" la despliega ahí mismo ("Ver menos" la cierra). Si el texto es corto se muestra entero y sin botón. En el editor de Odoo se ve siempre completa, para poder editarla. Reemplaza la tarjeta de descripción separada de la 19.0.1.4.0.
+
 ## 19.0.1.4.0
 
 ### Tienda

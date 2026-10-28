@@ -797,12 +797,8 @@ msgid "Wishlist"
 msgstr ""
 
 #. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
-msgid "Description"
-msgstr ""
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
-msgid "View full description"
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_title_19
+msgid ""
+"<span class=\"pideco-when-collapsed\">View more</span><span "
+"class=\"pideco-when-expanded\">View less</span>"
 msgstr ""

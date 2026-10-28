@@ -253,14 +253,6 @@
 
     <template id="pideco_product_page_19" inherit_id="website_sale.product" name="PIDECO product page" priority="90">
         <xpath expr="//section[@id='product_detail']" position="after">
-            <!-- Full website description, in its own card right below the product. The product card only
-                 shows its first lines (pideco_product_terms_19). This is the editable copy. -->
-            <section id="pideco-product-description" t-if="product.description_ecommerce or editable" class="container pideco-product-description-section">
-                <div class="pideco-product-description-card">
-                    <h2>Description</h2>
-                    <div t-field="product.description_ecommerce" class="oe_structure"/>
-                </div>
-            </section>
             <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
             <t t-set="pideco_recommendation_domain" t-value="pideco_sale_domain + [('id', '!=', product.id)] + ([('public_categ_ids', 'in', product.public_categ_ids.ids)] if product.public_categ_ids else [])"/>
             <t t-set="pideco_primary_recommendations" t-value="product.alternative_product_ids.filtered_domain(pideco_sale_domain) | request.env['product.template'].search(pideco_recommendation_domain, order='website_sequence, id desc', limit=4)"/>
@@ -300,8 +292,14 @@
     </template>
 
     <template id="pideco_product_title_19" inherit_id="website_sale.product_title" name="PIDECO product title" priority="90">
-        <!-- The website description moves to the bottom of the product card (pideco_product_terms_19). -->
-        <xpath expr="//div[@t-field='product.description_ecommerce']" position="replace"/>
+        <!-- Website description in Odoo's own place, under the title: only its first lines, with a
+             "View more" toggle (pideco_ui.js hides it when the text fits). -->
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="attributes">
+            <attribute name="class" add="pideco-product-description" separator=" "/>
+        </xpath>
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="after">
+            <button t-if="product.description_ecommerce" type="button" class="pideco-description-toggle" aria-expanded="false" data-pideco-description-toggle=""><span class="pideco-when-collapsed">View more</span><span class="pideco-when-expanded">View less</span> <i class="fa fa-angle-down" t-translation="off"/></button>
+        </xpath>
         <xpath expr="//h1" position="before">
             <div class="pideco-product-meta">
                 <a t-if="product.public_categ_ids" t-att-href="'/shop/category/%s' % slug(product.public_categ_ids[:1])" t-out="product.public_categ_ids[:1].name"/>
@@ -326,14 +324,6 @@
                 <div><i class="fa fa-shopping-bag"/><span><strong>Minimum order $200,000</strong><small>Applies to wholesale orders</small></span></div>
                 <div><i class="fa fa-truck"/><span><strong>Nationwide shipping</strong><small>We coordinate the delivery of your order</small></span></div>
                 <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Available by prior arrangement</small></span></div>
-            </div>
-            <!-- First lines of the website description, at the bottom of the card. The full text is in its
-                 own card below the product; the link is hidden by pideco_ui.js when the text fits. Not
-                 shown while editing: the description is edited in the full card. -->
-            <div t-if="product.description_ecommerce and not editable" class="pideco-product-description">
-                <h2>Description</h2>
-                <div class="pideco-product-description-excerpt" t-out="product.description_ecommerce"/>
-                <a class="pideco-product-description-more" href="#pideco-product-description">View full description</a>
             </div>
         </xpath>
     </template>

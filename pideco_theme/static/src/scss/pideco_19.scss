@@ -802,20 +802,20 @@ body.editor_enable .pideco-hero-carousel .stretched-link::after,
     color: var(--pideco-wine);
 }
 
-/* Website description: first lines at the bottom of the product card, full text in a card below. */
-.pideco-product-description { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--pideco-border); }
-.pideco-product-description h2,
-.pideco-product-description-card h2 { margin: 0 0 .6rem; color: var(--pideco-wine); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-.pideco-product-description-excerpt { display: -webkit-box; overflow: hidden; color: var(--pideco-text); font-size: .92rem; line-height: 1.6; -webkit-box-orient: vertical; -webkit-line-clamp: 5; }
-.pideco-product-description-excerpt > * { margin-bottom: 0; }
-.pideco-product-description-more { display: inline-block; margin-top: .6rem; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.pideco-product-description.is-short .pideco-product-description-more { display: none; }
-.pideco-product-description-section { margin-top: Clamp(2rem, 4vw, 3.5rem); scroll-margin-top: calc(var(--pideco-header-bottom, 0px) + 1.5rem); }
-.pideco-product-description-card { padding: Clamp(1.5rem, 3vw, 2.75rem); border: 1px solid rgba(147, 101, 70, .16); border-radius: 1.5rem; background: var(--pideco-surface); }
-.pideco-product-description-card h2 { margin-bottom: 1.1rem; }
-/* Readable line length, whatever markup the description has. */
-.pideco-product-description-card > .oe_structure { max-width: 860px; color: var(--pideco-text); font-size: 1rem; line-height: 1.7; }
-.pideco-product-description-card > .oe_structure > :last-child { margin-bottom: 0; }
+/* Website description under the product title: first lines only, with a fade, until "View more" opens
+   it in place. Never trimmed in the editor, so the whole text can be edited. */
+.pideco-product-description { position: relative; overflow-wrap: anywhere; }
+body:not(.editor_enable) .pideco-product-description:not(.is-expanded):not(.is-short) { max-height: 7.4em; overflow: hidden; margin-bottom: 0 !important; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
+.pideco-product-description > :last-child { margin-bottom: 0; }
+.pideco-description-toggle { display: inline-flex; align-items: center; gap: .35rem; margin: .35rem 0 1rem; padding: 0; border: 0; background: none; color: var(--pideco-wine); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.pideco-description-toggle:hover { color: var(--pideco-clay); }
+.pideco-description-toggle i { transition: transform .2s ease; }
+.pideco-description-toggle .pideco-when-expanded,
+.pideco-description-toggle[aria-expanded="true"] .pideco-when-collapsed { display: none; }
+.pideco-description-toggle[aria-expanded="true"] .pideco-when-expanded { display: inline; }
+.pideco-description-toggle[aria-expanded="true"] i { transform: rotate(180deg); }
+.pideco-description-toggle.is-hidden,
+body.editor_enable .pideco-description-toggle { display: none; }
 
 /* Internal reference above the product name, on every product tile. */
 .pideco-product-reference {
