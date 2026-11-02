@@ -1,9 +1,46 @@
+/* Brand typography: Coolvetica for the main titles (h1, h2), Barlow for everything else. Both travel
+   with the module. Coolvetica has a single weight, so bold is never synthesized for it. */
 @font-face {
-    font-family: "Pideco Hanken";
-    src: url("/pideco_theme/static/src/assets/hanken-latin.woff2") format("woff2");
+    font-family: "Pideco Coolvetica";
+    src: url("/pideco_theme/static/src/assets/fonts/coolvetica-regular.woff2") format("woff2");
     font-display: swap;
     font-style: normal;
-    font-weight: 100 900;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Pideco Barlow";
+    src: url("/pideco_theme/static/src/assets/fonts/barlow-regular.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Pideco Barlow";
+    src: url("/pideco_theme/static/src/assets/fonts/barlow-italic.woff2") format("woff2");
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Pideco Barlow";
+    src: url("/pideco_theme/static/src/assets/fonts/barlow-medium.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Pideco Barlow";
+    src: url("/pideco_theme/static/src/assets/fonts/barlow-semibold.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Pideco Barlow";
+    src: url("/pideco_theme/static/src/assets/fonts/barlow-bold.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
 }
 
 :root {
@@ -24,12 +61,18 @@ body,
     --bs-link-hover-color: #936546;
     background: var(--pideco-cream);
     color: var(--pideco-text);
-    font-family: "Pideco Hanken", "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+    font-family: "Pideco Barlow", "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6,
 button, input, select, textarea { font-family: inherit; }
 h1, h2, h3, h4, h5, h6 { color: var(--pideco-wine); }
+h1, h2, .h1, .h2 {
+    font-family: "Pideco Coolvetica", "Pideco Barlow", "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: -.01em;
+}
 a { color: var(--pideco-wine); }
 a:hover { color: var(--pideco-clay); }
 

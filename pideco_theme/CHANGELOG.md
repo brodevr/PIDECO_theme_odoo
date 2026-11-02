@@ -18,6 +18,10 @@
 
 - Pasa a ser una cinta que se desliza de forma continua (en lugar de cambiar de mensaje cada 4 segundos) y se detiene al pasar el mouse. Queda quieta en el editor y con movimiento reducido.
 
+### Tipografía
+
+- Los títulos principales (h1 y h2) usan Coolvetica y el resto del sitio Barlow, como en el PDF. Las dos fuentes viajan con el módulo (`static/src/assets/fonts/`); Coolvetica tiene un solo peso y nunca se engrosa artificialmente. Reemplazan a Hanken Grotesk.
+
 ### Footer
 
 - Fondo claro con el logo, "Calidez en cada rincón", la dirección y las columnas Ayuda, Legales y Seguinos. Se conserva el selector de idioma.
