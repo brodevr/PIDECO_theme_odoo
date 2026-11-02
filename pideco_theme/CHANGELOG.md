@@ -17,6 +17,8 @@
 - Nuevas fotos del carrusel (los textos no cambian): diapositiva 1 la mesa con la tetera, 2 la consola de madera, 3 el depósito con cajas Pídeco.
 - Nuevo popup "Sumate a la casa Pídeco", solo en el home, a los 3 segundos: foto, nombre y email. Cada suscripción crea un contacto en la lista "PIDECO news" de Marketing por correo. Es el popup y el formulario nativos de Odoo, así que se edita desde el editor; una vez cerrado no vuelve a aparecer por 7 días.
 
+- Corrección: las zonas de categorías, "La marca", el formulario de mail y el popup no se podían editar en el editor, porque tenían atributos de plantilla (`t-…`) adentro y Odoo las trataba como contenido dinámico. Ahora no tienen ninguno: el id de la lista de correo se pasa a los formularios desde `pideco_ui.js`.
+
 ### Barra de anuncios
 
 - Pasa a ser una cinta que se desliza de forma continua (en lugar de cambiar de mensaje cada 4 segundos) y se detiene al pasar el mouse. Queda quieta en el editor y con movimiento reducido.

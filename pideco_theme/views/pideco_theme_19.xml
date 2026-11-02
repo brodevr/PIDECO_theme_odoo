@@ -127,7 +127,11 @@
             <!-- The home alternates editable zones (oe_structure with an id: the website editor can add, remove,
                  reorder and edit their blocks, and saves each zone on its own) with automatic sections that are
                  rendered from the catalog on every visit and therefore are not part of any zone. -->
-            <div id="wrap" class="pideco-home oe_website_sale">
+            <!-- Editable zones must not hold QWeb directives (t-*): Odoo would treat them as dynamic and not let
+                 the editor change them. The "PIDECO news" list id is therefore rendered here, outside the zones,
+                 and pideco_ui.js passes it to the newsletter form and to the popup form. -->
+            <t t-set="pideco_news_list" t-value="request.env.ref('pideco_theme.mailing_list_pideco_news', raise_if_not_found=False)"/>
+            <div id="wrap" class="pideco-home oe_website_sale" t-att-data-pideco-news-list="pideco_news_list.id if pideco_news_list else None">
                 <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
                 <!-- Zone 1: hero carousel (native Odoo s_carousel markup, so the editor can add slides and change backgrounds, links and speed). -->
                 <div class="oe_structure oe_empty" id="oe_structure_pideco_home_1">
@@ -182,12 +186,12 @@
                             <p>Choose by room and find what you need for your kitchen, your table and every corner of your home.</p>
                         </div>
                         <div class="row pideco-cat-row">
-                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-cocina.jpg" alt="Kitchen" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Kitchen</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
-                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-mesa-vajilla.jpg" alt="Table and tableware" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Table and tableware</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
-                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-bar-cafe.jpg" alt="Bar, coffee and drinks" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Bar, coffee and drinks</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
-                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-organizacion.jpg" alt="Organization and storage" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Organization and storage</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
-                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-hogar-bano.jpg" alt="Home and bath" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Home and bath</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
-                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-nuevo.jpg" alt="New" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">New</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-cocina.jpg" alt="Kitchen" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Kitchen</a><i class="fa fa-long-arrow-right"></i></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-mesa-vajilla.jpg" alt="Table and tableware" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Table and tableware</a><i class="fa fa-long-arrow-right"></i></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-bar-cafe.jpg" alt="Bar, coffee and drinks" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Bar, coffee and drinks</a><i class="fa fa-long-arrow-right"></i></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-organizacion.jpg" alt="Organization and storage" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Organization and storage</a><i class="fa fa-long-arrow-right"></i></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-hogar-bano.jpg" alt="Home and bath" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Home and bath</a><i class="fa fa-long-arrow-right"></i></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-nuevo.jpg" alt="New" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">New</a><i class="fa fa-long-arrow-right"></i></p></div></div>
                         </div>
                     </div>
                 </section>
@@ -217,9 +221,9 @@
                             <a class="btn btn-primary" href="#">See how Pídeco came together</a>
                         </div>
                         <div class="pideco-brandstory-swatches">
-                            <div class="pideco-swatch pideco-swatch-wine"><strong>Burgundy</strong><span t-translation="off">#4E0E14</span></div>
-                            <div class="pideco-swatch pideco-swatch-cream"><strong>Cream</strong><span t-translation="off">#ECD8CC</span></div>
-                            <div class="pideco-swatch pideco-swatch-type"><span class="pideco-swatch-aa" t-translation="off">Aa</span><strong>Typography</strong></div>
+                            <div class="pideco-swatch pideco-swatch-wine"><strong>Burgundy</strong><span>#4E0E14</span></div>
+                            <div class="pideco-swatch pideco-swatch-cream"><strong>Cream</strong><span>#ECD8CC</span></div>
+                            <div class="pideco-swatch pideco-swatch-type"><span class="pideco-swatch-aa">Aa</span><strong>Typography</strong></div>
                         </div>
                     </div>
                 </section>
@@ -260,10 +264,9 @@
                     <div class="container pideco-newsletter-inner">
                         <h2>Be the first to know</h2>
                         <p>Pídeco news and offers, straight to your inbox.</p>
-                        <t t-set="pideco_news_list" t-value="request.env.ref('pideco_theme.mailing_list_pideco_news', raise_if_not_found=False)"/>
-                        <div class="s_newsletter_subscribe_form s_newsletter_list js_subscribe pideco-newsletter-form" data-vxml="001" t-att-data-list-id="pideco_news_list.id if pideco_news_list else 0" data-name="Newsletter Form" data-snippet="s_newsletter_subscribe_form">
+                        <div class="s_newsletter_subscribe_form s_newsletter_list js_subscribe pideco-newsletter-form" data-vxml="001" data-list-id="0" data-name="Newsletter Form" data-snippet="s_newsletter_subscribe_form">
                             <div class="js_subscribed_wrap d-none">
-                                <p class="pideco-newsletter-thanks"><i class="fa fa-check-circle-o" role="img" t-translation="off"/> Thanks for subscribing!</p>
+                                <p class="pideco-newsletter-thanks"><i class="fa fa-check-circle-o" role="img"></i> Thanks for subscribing!</p>
                             </div>
                             <div class="js_subscribe_wrap">
                                 <label class="pideco-newsletter-label" for="pidecoNewsletterEmail">Your email</label>
@@ -294,7 +297,6 @@
                                         <p class="pideco-popup-kicker">News</p>
                                         <h2>Join the Pídeco home</h2>
                                         <p class="pideco-popup-lead">Be the first to hear about news, new products and the opening of our store at Perón 2560.</p>
-                                        <t t-set="pideco_news_list" t-value="request.env.ref('pideco_theme.mailing_list_pideco_news', raise_if_not_found=False)"/>
                                         <div class="s_website_form pideco-popup-form" data-vcss="001" data-snippet="s_website_form" data-name="Form">
                                             <form action="/website/form/" method="post" enctype="multipart/form-data" data-model_name="mailing.contact" data-success-mode="message" data-pre-fill="true">
                                                 <div class="s_website_form_rows row s_col_no_bgcolor">
@@ -307,7 +309,7 @@
                                                         <input class="form-control s_website_form_input" type="email" name="email" required="1" data-fill-with="email" id="pidecoPopupEmail" placeholder="youremail@example.com" autocomplete="email"/>
                                                     </div>
                                                     <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_dnone">
-                                                        <input type="hidden" class="form-control s_website_form_input" name="list_ids" t-att-value="pideco_news_list.id if pideco_news_list else ''"/>
+                                                        <input type="hidden" class="form-control s_website_form_input" name="list_ids" value=""/>
                                                     </div>
                                                     <div class="mb-0 col-12 s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
                                                         <span id="s_website_form_result"/>

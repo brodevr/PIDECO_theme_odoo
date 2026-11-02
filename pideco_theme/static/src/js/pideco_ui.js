@@ -375,7 +375,22 @@ function initDescriptionToggles() {
     document.fonts?.ready.then(update);
 }
 
+// The newsletter form and the popup form of the home subscribe to the "PIDECO news" list. Its id is
+// rendered on #wrap, outside the editable zones, and passed here to the forms that have no list yet,
+// so the zones stay free of QWeb directives and editable in the website editor.
+function initNewsletterLists() {
+    const listId = document.querySelector("[data-pideco-news-list]")?.dataset.pidecoNewsList;
+    if (!listId) return;
+    document.querySelectorAll(".pideco-newsletter-form").forEach((form) => {
+        if (!Number(form.dataset.listId)) form.dataset.listId = listId;
+    });
+    document.querySelectorAll(".pideco-popup-form input[name='list_ids']").forEach((input) => {
+        if (!input.value) input.value = listId;
+    });
+}
+
 function startPidecoUi() {
+    initNewsletterLists();
     initPromoMarquee();
     initHeaderMetrics();
     initDescriptionToggles();
