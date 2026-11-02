@@ -206,7 +206,9 @@
 
                 <section class="container pideco-home-section pideco-featured" data-name="Productos destacados">
                     <div class="pideco-section-head"><div><p class="pideco-kicker">Selected for you</p><h2>Featured products</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="featured" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="featured" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
-                    <t t-set="pideco_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id desc', limit=8)"/>
+                    <!-- Products marked "Featured on the home page", in the shop order; while none is marked, the latest published ones. -->
+                    <t t-set="pideco_products" t-value="request.env['product.template'].search(pideco_sale_domain + [('pideco_featured', '=', True)], order='website_sequence, id desc', limit=12)"/>
+                    <t t-if="not pideco_products" t-set="pideco_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id desc', limit=8)"/>
                     <div class="pideco-product-grid pideco-slider-track pideco-featured-slider" data-pideco-slider="featured">
                         <t t-foreach="pideco_products" t-as="product"><t t-call="pideco_theme.pideco_slider_product_card"/></t>
                         <div class="pideco-products-empty" t-if="not pideco_products"><h3>The collection is on its way</h3><p>Publish products in Odoo to display them here.</p><a href="/shop" class="btn btn-primary">Go to the shop</a></div>
