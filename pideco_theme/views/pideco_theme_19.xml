@@ -207,15 +207,15 @@
                 <!-- Zone "brand": the brand, step by step, and the store opening. id="historia" is the target of the
                      "About us" menu link. Buttons without a destination yet (href="#"): set them in the editor. -->
                 <div class="oe_structure oe_empty" id="oe_structure_pideco_home_brand">
-                <section id="historia" class="pideco-brand" data-name="La marca, paso a paso">
-                    <div class="container pideco-brand-grid">
-                        <div class="pideco-brand-copy">
+                <section id="historia" class="pideco-brandstory" data-name="La marca, paso a paso">
+                    <div class="container pideco-brandstory-grid">
+                        <div class="pideco-brandstory-copy">
                             <p class="pideco-kicker">The brand, step by step</p>
                             <h2>We believe in the beauty of everyday life.</h2>
                             <p>In the objects that accompany our rituals, in materials that convey warmth and in the small details that turn a house into a home.</p>
                             <a class="btn btn-primary" href="#">See how Pídeco came together</a>
                         </div>
-                        <div class="pideco-brand-swatches">
+                        <div class="pideco-brandstory-swatches">
                             <div class="pideco-swatch pideco-swatch-wine"><strong>Burgundy</strong><span t-translation="off">#4E0E14</span></div>
                             <div class="pideco-swatch pideco-swatch-cream"><strong>Cream</strong><span t-translation="off">#ECD8CC</span></div>
                             <div class="pideco-swatch pideco-swatch-type"><span class="pideco-swatch-aa" t-translation="off">Aa</span><strong>Typography</strong></div>

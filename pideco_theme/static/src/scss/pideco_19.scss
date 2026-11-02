@@ -201,7 +201,9 @@ body:has(.pideco-header) .position-fixed.pe-none > .container > .toast { top: va
 .pideco-footer-grid::before,
 .pideco-footer-grid::after,
 .pideco-footer-bottom::before,
-.pideco-footer-bottom::after {
+.pideco-footer-bottom::after,
+.pideco-brandstory-grid::before,
+.pideco-brandstory-grid::after {
     display: none !important;
     content: none !important;
 }
@@ -1441,8 +1443,8 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 .pideco-centered-head p { margin: .9rem 0 0; color: var(--pideco-text); font-size: 1.05rem; line-height: 1.6; }
 
 /* "Discover our products": six editable category cards in Bootstrap columns (3 per row, 2 on mobile). */
-.pideco-cat-row { --bs-gutter-x: 1.5rem; --bs-gutter-y: 1.75rem; }
-.pideco-cat-card { display: flex; flex-direction: column; gap: .9rem; color: var(--pideco-wine); text-decoration: none; }
+.pideco-categories-grid .pideco-cat-row { --bs-gutter-x: 1.75rem; --bs-gutter-y: 0; row-gap: 2.25rem; }
+.pideco-cat-card { display: flex; flex-direction: column; gap: 1rem; color: var(--pideco-wine); text-decoration: none; }
 .pideco-cat-card:hover { color: var(--pideco-wine); }
 .pideco-cat-card img { display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: .45rem; background: var(--pideco-border); object-fit: cover; transition: transform .35s ease, filter .35s ease; }
 .pideco-cat-card:hover img { filter: brightness(.95); transform: translateY(-3px); }
@@ -1466,12 +1468,12 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 .pideco-arrivals .pideco-card-add:focus-visible { border-color: var(--pideco-wine); background: var(--pideco-wine); color: var(--pideco-cream); }
 
 /* "The brand, step by step": copy and the three brand swatches. */
-.pideco-brand { margin-top: Clamp(4.5rem, 8vw, 7.5rem); padding: Clamp(4rem, 8vw, 6.5rem) 0; background: #dbc3ab; }
-.pideco-brand-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: Clamp(2.5rem, 6vw, 5rem); align-items: center; }
-.pideco-brand .pideco-kicker { color: #6e4a3a; }
-.pideco-brand h2 { max-width: 15ch; margin: 0; font-size: Clamp(2.1rem, 3.6vw, 3rem); line-height: 1.08; }
-.pideco-brand-copy > p:not(.pideco-kicker) { max-width: 34rem; margin: 1.25rem 0 2rem; color: #55352a; font-size: 1.1rem; line-height: 1.6; }
-.pideco-brand-swatches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+.pideco-brandstory { margin-top: Clamp(4.5rem, 8vw, 7.5rem); padding: Clamp(4rem, 8vw, 6.5rem) 0; background: #dbc3ab; }
+.pideco-brandstory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: Clamp(2.5rem, 6vw, 5rem); align-items: center; }
+.pideco-brandstory .pideco-kicker { color: #6e4a3a; }
+.pideco-brandstory h2 { max-width: 15ch; margin: 0; font-size: Clamp(2.1rem, 3.6vw, 3rem); line-height: 1.08; }
+.pideco-brandstory-copy > p:not(.pideco-kicker) { max-width: 34rem; margin: 1.25rem 0 2rem; color: #55352a; font-size: 1.1rem; line-height: 1.6; }
+.pideco-brandstory-swatches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
 .pideco-swatch { display: flex; flex-direction: column; justify-content: flex-end; aspect-ratio: 1; padding: Clamp(.9rem, 1.6vw, 1.3rem); border: 1.5px solid var(--pideco-wine); border-radius: .45rem; color: var(--pideco-wine); }
 .pideco-swatch strong { font-size: Clamp(.95rem, 1.4vw, 1.2rem); font-weight: 600; }
 .pideco-swatch span { font-size: .85rem; letter-spacing: .06em; }
@@ -1489,8 +1491,8 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 .pideco-opening-address { margin: 0; color: #fff9f1; font-size: 1.1rem; font-weight: 600; }
 .pideco-opening-hours { margin: 0; color: #d9bba6; font-size: .95rem; font-weight: 600; letter-spacing: .04em; }
 .pideco-opening .btn { margin-top: .5rem; }
-/* On the home, wholesale follows the opening block in the same burgundy: a thin line separates them. */
-.pideco-home .pideco-wholesale { margin-top: 0; border-top: 1px solid rgba(243, 230, 218, .22); }
+/* On the home, wholesale follows the opening block in the same burgundy, as one continuous band. */
+.pideco-home .pideco-wholesale { margin-top: 0; border-top: 0; }
 
 /* "Be the first to know": Odoo's newsletter form, restyled. */
 .pideco-newsletter { margin-top: Clamp(3rem, 6vw, 5rem); padding: Clamp(4rem, 7vw, 6rem) 0; border-top: 1px solid rgba(147, 101, 70, .25); }
@@ -1507,18 +1509,18 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 
 @media (max-width: 991.98px) {
     .pideco-arrivals-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; }
-    .pideco-brand-grid { grid-template-columns: minmax(0, 1fr); }
+    .pideco-brandstory-grid { grid-template-columns: minmax(0, 1fr); }
     .pideco-opening { grid-template-columns: minmax(0, 1fr); }
     .pideco-opening-media { min-height: 0; aspect-ratio: 16 / 10; }
 }
 @media (max-width: 575.98px) {
-    .pideco-cat-row { --bs-gutter-x: 1rem; --bs-gutter-y: 1.4rem; }
+    .pideco-categories-grid .pideco-cat-row { --bs-gutter-x: 1rem; row-gap: 1.5rem; }
     .pideco-cat-card { gap: .6rem; }
     .pideco-cat-card strong { font-size: .95rem; }
     .pideco-cat-card i { font-size: 1.1rem; }
     .pideco-arrivals .pideco-product-card h3 { font-size: .9rem; }
-    .pideco-arrivals .pideco-card-add { font-size: .8rem; }
-    .pideco-brand-swatches { gap: .6rem; }
+    .pideco-arrivals .pideco-card-add { min-height: 44px; padding: .45rem .6rem; font-size: .78rem; line-height: 1.2; white-space: normal; text-align: center; }
+    .pideco-brandstory-swatches { gap: .6rem; }
     .pideco-swatch span { font-size: .7rem; letter-spacing: .02em; }
     .pideco-newsletter-row .btn { flex: 1 1 100%; justify-content: center; }
 }
