@@ -14,6 +14,9 @@
 - Se quitan la franja de beneficios de compra debajo del carrusel, "Nuestra esencia", los banners editoriales y "Transformá tus espacios".
 - Los botones nuevos y los links del footer quedan sin destino (`#`) y los textos entre corchetes quedan para completar desde el editor.
 
+- Nuevas fotos del carrusel (los textos no cambian): diapositiva 1 la mesa con la tetera, 2 la consola de madera, 3 el depósito con cajas Pídeco.
+- Nuevo popup "Sumate a la casa Pídeco", solo en el home, a los 3 segundos: foto, nombre y email. Cada suscripción crea un contacto en la lista "PIDECO news" de Marketing por correo. Es el popup y el formulario nativos de Odoo, así que se edita desde el editor; una vez cerrado no vuelve a aparecer por 7 días.
+
 ### Barra de anuncios
 
 - Pasa a ser una cinta que se desliza de forma continua (en lugar de cambiar de mensaje cada 4 segundos) y se detiene al pasar el mouse. Queda quieta en el editor y con movimiento reducido.

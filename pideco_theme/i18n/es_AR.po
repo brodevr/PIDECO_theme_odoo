@@ -1100,3 +1100,77 @@ msgstr "Organización y Almacenamiento"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Home and bath"
 msgstr "Hogar y Baño"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Pídeco tote bag"
+msgstr "Bolsa de Pídeco"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "News"
+msgstr "Novedades"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Join the Pídeco home"
+msgstr "Sumate a la casa Pídeco"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid ""
+"Be the first to hear about news, new products and the opening of our store "
+"at Perón 2560."
+msgstr ""
+"Recibí primero las novedades, los nuevos productos y el aviso de apertura "
+"del local en Perón 2560."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "<span class=\"s_website_form_label_content\">Name</span>"
+msgstr "<span class=\"s_website_form_label_content\">Nombre</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "What's your name"
+msgstr "Cómo te llamás"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "<span class=\"s_website_form_label_content\">Email</span>"
+msgstr "<span class=\"s_website_form_label_content\">Email</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "youremail@example.com"
+msgstr "tuemail@ejemplo.com"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "I want to subscribe"
+msgstr "Quiero suscribirme"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Thanks for joining! We will write to you soon."
+msgstr "¡Gracias por sumarte! Pronto te vamos a escribir."
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "News first"
+msgstr "Novedades en primicia"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "No spam"
+msgstr "Sin spam"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "No, thanks"
+msgstr "No, gracias"

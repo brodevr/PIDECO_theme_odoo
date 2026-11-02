@@ -1567,3 +1567,30 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-swatch span { font-size: .7rem; letter-spacing: .02em; }
     .pideco-newsletter-row .btn { flex: 1 1 100%; justify-content: center; }
 }
+
+/* "Join the Pídeco home" popup (native s_popup + website form). */
+.pideco-popup .modal-dialog { max-width: Min(960px, calc(100% - 2rem)); }
+.pideco-popup .modal-content { overflow: hidden; border: 0; border-radius: 1rem; background: #f9f5f2; }
+.pideco-popup .s_popup_close { z-index: 2; color: var(--pideco-wine); font-size: 1.6rem; }
+.pideco-popup-body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.pideco-popup-media { min-height: 100%; background: var(--pideco-border); }
+.pideco-popup-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pideco-popup-copy { padding: Clamp(2rem, 4vw, 3.25rem) Clamp(1.5rem, 4vw, 3.25rem); }
+.pideco-popup-kicker { margin: 0 0 .4rem; color: #8a6650; font-size: .9rem; letter-spacing: .06em; text-transform: uppercase; }
+.pideco-popup h2 { margin: 0; font-size: Clamp(1.8rem, 3vw, 2.4rem); line-height: 1.1; }
+.pideco-popup-lead { margin: 1rem 0 1.25rem; color: var(--pideco-clay); font-size: 1.05rem; font-weight: 600; line-height: 1.5; }
+.pideco-popup-form .s_website_form_label { width: auto !important; margin-bottom: .35rem; color: #3e2219; font-size: .9rem; font-weight: 600; }
+.pideco-popup-form .form-control { height: 50px; padding-inline: 1rem; border: 1.5px solid #dcc6b3; border-radius: .6rem; background: #fff; }
+.pideco-popup-form .form-control:focus { border-color: var(--pideco-wine); box-shadow: 0 0 0 .2rem rgba(78, 14, 20, .12); }
+.pideco-popup-form .s_website_form_send { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 50px; margin-top: .5rem; font-size: 1rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.pideco-popup-thanks { margin: 1rem 0; color: var(--pideco-wine); font-size: 1.05rem; font-weight: 600; }
+.pideco-popup-perks { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.4rem; margin: 1rem 0 0; padding: 0; list-style: none; color: var(--pideco-clay); font-size: .85rem; font-weight: 600; }
+.pideco-popup-perks li { display: flex; align-items: center; gap: .4rem; }
+.pideco-popup-perks li::before { width: 6px; height: 6px; border-radius: 50%; background: var(--pideco-clay); content: ""; }
+.pideco-popup-dismiss { display: block; width: max-content; margin: .9rem auto 0; color: var(--pideco-clay); font-weight: 600; text-decoration: underline; text-underline-offset: .25em; }
+.pideco-popup-dismiss:hover { color: var(--pideco-wine); }
+@media (max-width: 767.98px) {
+    .pideco-popup-body { grid-template-columns: minmax(0, 1fr); }
+    .pideco-popup-media { display: none; }
+    .pideco-popup-copy { padding: 2.25rem 1.25rem 1.5rem; }
+}

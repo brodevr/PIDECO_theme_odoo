@@ -276,6 +276,57 @@
                     </div>
                 </section>
                 </div>
+
+                <!-- Zone "popup": "Join the Pídeco home", only on the home, 3 seconds after loading. Odoo's native popup
+                     (once closed it stays hidden for 7 days) with Odoo's native form: each entry creates a contact,
+                     with name and email, in the "PIDECO news" mailing list. Everything is editable in the website
+                     editor (the popup is listed among the page's invisible elements). -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_popup">
+                <div class="s_popup o_snippet_invisible pideco-popup" id="pidecoNewsPopup" data-vcss="001" data-snippet="s_popup" data-name="Popup Sumate a la casa Pídeco" data-invisible="1">
+                    <div class="modal fade s_popup_middle" style="background-color: rgba(40, 14, 16, .55) !important;" data-show-after="3000" data-display="afterDelay" data-consents-duration="7" data-bs-focus="false" data-bs-backdrop="false" tabindex="-1" role="dialog" aria-label="Join the Pídeco home">
+                        <div class="modal-dialog d-flex">
+                            <div class="modal-content oe_structure">
+                                <div class="s_popup_close js_close_popup o_we_no_overlay o_not_editable" aria-label="Close">&#215;</div>
+                                <section class="pideco-popup-body" data-name="Suscripción">
+                                    <div class="pideco-popup-media"><img src="/pideco_theme/static/src/img/home/popup-bolsa.jpg" alt="Pídeco tote bag" loading="lazy"/></div>
+                                    <div class="pideco-popup-copy">
+                                        <p class="pideco-popup-kicker">News</p>
+                                        <h2>Join the Pídeco home</h2>
+                                        <p class="pideco-popup-lead">Be the first to hear about news, new products and the opening of our store at Perón 2560.</p>
+                                        <t t-set="pideco_news_list" t-value="request.env.ref('pideco_theme.mailing_list_pideco_news', raise_if_not_found=False)"/>
+                                        <div class="s_website_form pideco-popup-form" data-vcss="001" data-snippet="s_website_form" data-name="Form">
+                                            <form action="/website/form/" method="post" enctype="multipart/form-data" data-model_name="mailing.contact" data-success-mode="message" data-pre-fill="true">
+                                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                    <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char">
+                                                        <label class="s_website_form_label" for="pidecoPopupName"><span class="s_website_form_label_content">Name</span></label>
+                                                        <input class="form-control s_website_form_input" type="text" name="name" required="1" data-fill-with="name" id="pidecoPopupName" placeholder="What's your name" autocomplete="name"/>
+                                                    </div>
+                                                    <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required" data-type="email">
+                                                        <label class="s_website_form_label" for="pidecoPopupEmail"><span class="s_website_form_label_content">Email</span></label>
+                                                        <input class="form-control s_website_form_input" type="email" name="email" required="1" data-fill-with="email" id="pidecoPopupEmail" placeholder="youremail@example.com" autocomplete="email"/>
+                                                    </div>
+                                                    <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_dnone">
+                                                        <input type="hidden" class="form-control s_website_form_input" name="list_ids" t-att-value="pideco_news_list.id if pideco_news_list else ''"/>
+                                                    </div>
+                                                    <div class="mb-0 col-12 s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
+                                                        <span id="s_website_form_result"/>
+                                                        <a href="#" role="button" class="btn btn-primary s_website_form_send">I want to subscribe</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="s_website_form_end_message d-none">
+                                                <p class="pideco-popup-thanks">Thanks for joining! We will write to you soon.</p>
+                                            </div>
+                                        </div>
+                                        <ul class="pideco-popup-perks"><li>News first</li><li>Ideas for your home</li><li>No spam</li></ul>
+                                        <a href="#" class="pideco-popup-dismiss js_close_popup">No, thanks</a>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </xpath>
     </template>

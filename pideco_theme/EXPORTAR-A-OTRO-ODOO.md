@@ -52,6 +52,7 @@ El home alterna **zonas editables** con **secciones automáticas**:
 - **Recién llegados:** muestra los productos marcados con **"Destacado en el home"** (ficha del producto, pestaña Ventas, sección de la tienda), en el orden de la tienda y hasta 4. Si no hay ninguno marcado, muestra los últimos 4 publicados. En la lista de productos hay un filtro "Destacado en el home". Las tarjetas (nombre, imagen, precio) salen de cada producto.
 - **Botones y links sin destino:** "Conocé cómo se armó Pídeco", "Avisame cuando abra" y los links del footer quedan con `#` para completarlos desde el editor. Los textos entre corchetes (fecha de apertura, horarios, número de WhatsApp, beneficio de bienvenida) también se completan ahí.
 - **Formulario de mail:** cada dirección se suma a la lista de correo "PIDECO news" de Marketing por correo, que el módulo crea al instalarse. Desde las opciones del formulario en el editor se puede elegir otra lista.
+- **Popup "Sumate a la casa Pídeco":** aparece solo en el home a los 3 segundos y, una vez cerrado, no vuelve por 7 días. En el editor se encuentra en el panel de elementos invisibles de la página: ahí se cambian textos, foto, demora y duración, o se oculta. El formulario crea un contacto (nombre y email) en la lista "PIDECO news".
 - **Barra de anuncios:** es una cinta que se desliza de forma continua y se detiene al pasar el mouse. Mientras se edita la página queda quieta. Sus textos se cambian en Ajustes (ver "Montos y textos informativos"); un mensaje vacío no se muestra.
 - **Cada zona se guarda por separado.** Al editar una zona, esa zona conserva la versión personalizada de esa base, y las demás siguen recibiendo los cambios que traiga el módulo en futuras versiones.
 - Si se edita el título de una sección automática, Odoo guarda una copia personalizada de todo el home para ese website, y las actualizaciones del módulo dejan de aplicarse a ese home hasta que se restablezca la vista.
@@ -75,9 +76,9 @@ El home usa 10 imágenes que viajan con el módulo, en `static/src/img/home/`. A
 
 | Espacio | Archivo | Tamaño actual | Encuadre |
 |---|---|---|---|
-| Carrusel, diapositiva 1 | `hero-1.jpg` (mesa de comedor) | 1672 × 941 px | Motivo centrado; en celular se recorta a lo alto |
-| Carrusel, diapositiva 2 | `hero-2.jpg` (consola de madera) | 1672 × 941 px | Igual que la 1 |
-| Carrusel, diapositiva 3 | `hero-3.jpg` (showroom mayorista) | 1672 × 941 px | Igual que la 1 |
+| Carrusel, diapositiva 1 | `hero-1.jpg` (mesa con tetera) | 1663 × 718 px | Motivo centrado; en celular se recorta a lo alto |
+| Carrusel, diapositiva 2 | `hero-2.jpg` (consola de madera) | 2400 × 1340 px | Igual que la 1 |
+| Carrusel, diapositiva 3 | `hero-3.jpg` (depósito con cajas) | 1600 × 900 px | Igual que la 1 |
 | Conocé nuestros productos | `cat-cocina.jpg`, `cat-mesa-vajilla.jpg`, `cat-bar-cafe.jpg`, `cat-organizacion.jpg`, `cat-hogar-bano.jpg`, `cat-nuevo.jpg` | 1080 × 810 px | Horizontal 4:3 |
 | Estamos por abrir | `local-peron.jpg` (el local) | 423 × 246 px | Se recorta para llenar media pantalla; **conviene reemplazarla por una de al menos 1400 px de ancho**, la actual se ve borrosa en pantallas grandes |
 
