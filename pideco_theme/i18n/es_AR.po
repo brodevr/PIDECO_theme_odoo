@@ -397,6 +397,7 @@ msgstr "Frascos"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Kitchen"
 msgstr "Cocina"
 
@@ -1079,3 +1080,23 @@ msgstr "<strong>Crema</strong>"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "<strong>Typography</strong>"
 msgstr "<strong>Tipografía</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Table and tableware"
+msgstr "Mesa y Vajilla"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Bar, coffee and drinks"
+msgstr "Bar, Café y Bebidas"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Organization and storage"
+msgstr "Organización y Almacenamiento"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Home and bath"
+msgstr "Hogar y Baño"

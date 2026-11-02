@@ -386,6 +386,7 @@ msgstr "罐子"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Kitchen"
 msgstr "厨房"
 
@@ -1038,3 +1039,23 @@ msgstr "<strong>奶油色</strong>"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "<strong>Typography</strong>"
 msgstr "<strong>字体</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Table and tableware"
+msgstr "餐桌与餐具"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Bar, coffee and drinks"
+msgstr "吧台、咖啡与饮品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Organization and storage"
+msgstr "整理与收纳"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Home and bath"
+msgstr "家居与卫浴"
