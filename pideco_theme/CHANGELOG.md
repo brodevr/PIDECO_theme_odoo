@@ -1,5 +1,32 @@
 # Historial de cambios — PIDECO Theme
 
+## 19.0.1.5.0
+
+### Home (rediseño según el PDF "PÁGINA WEB")
+
+- Orden nuevo: carrusel, "Conocé nuestros productos", "Recién llegados", "La marca, paso a paso", "Estamos por abrir nuestras puertas", beneficios mayoristas, descuentos por monto, "Enterate primero de todo" y footer.
+- "Conocé nuestros productos": grilla de 6 cuadros de categorías (3 por fila, 2 en celular) con foto, nombre y flecha. Son bloques editables: foto, nombre y link se cambian en el editor. Reemplaza el slider automático de categorías.
+- "Recién llegados": 4 productos, sin carrusel, con la etiqueta "Nuevo" y el botón "Agregar al carrito" con borde. Muestra los productos marcados como "Destacado en el home"; si no hay ninguno marcado, los últimos 4 publicados. Reemplaza "Productos destacados".
+- Nuevo campo **"Destacado en el home"** en la ficha del producto (pestaña Ventas, sección de la tienda) y filtro con el mismo nombre en la lista de productos.
+- Nueva sección "La marca, paso a paso" con los cuadros de color Bordó, Crema y Tipografía, y nueva sección "Estamos por abrir nuestras puertas" con la foto del local.
+- "Beneficios mayoristas" va pegado a "Estamos por abrir", con el mismo bordó y una línea fina entre los dos. Los descuentos por monto siguen igual.
+- Nuevo formulario "Enterate primero de todo": suscripción por mail con Marketing por correo, a la lista "PIDECO news" que crea el módulo.
+- Se quitan la franja de beneficios de compra debajo del carrusel, "Nuestra esencia", los banners editoriales y "Transformá tus espacios".
+- Los botones nuevos y los links del footer quedan sin destino (`#`) y los textos entre corchetes quedan para completar desde el editor.
+
+### Barra de anuncios
+
+- Pasa a ser una cinta que se desliza de forma continua (en lugar de cambiar de mensaje cada 4 segundos) y se detiene al pasar el mouse. Queda quieta en el editor y con movimiento reducido.
+
+### Footer
+
+- Fondo claro con el logo, "Calidez en cada rincón", la dirección y las columnas Ayuda, Legales y Seguinos. Se conserva el selector de idioma.
+
+### Requisitos
+
+- Nueva dependencia: `website_mass_mailing` (Marketing por correo). Odoo la instala al actualizar el módulo.
+- Si una base ya tenía guardada la zona del carrusel con el editor, la franja de beneficios de compra puede seguir apareciendo debajo del carrusel: se borra desde el editor.
+
 ## 19.0.1.4.2
 
 ### Página de producto

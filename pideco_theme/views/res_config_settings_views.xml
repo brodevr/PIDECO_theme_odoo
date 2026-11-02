@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="website.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//block[@id='website_info_settings']" position="inside">
-                <setting id="pideco_promo_bar" string="PIDECO promotional bar" help="Messages rotate vertically every four seconds. Edit them in each website language to maintain their translations.">
+                <setting id="pideco_promo_bar" string="PIDECO promotional bar" help="Messages scroll continuously in a ribbon at the top of the site. Leave one empty to hide it. Edit them in each website language to maintain their translations.">
                     <div class="content-group">
                         <div class="row mt8">
                             <label class="col-lg-3" string="Message 1" for="pideco_promo_text_1"/>

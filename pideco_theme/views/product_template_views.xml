@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_form_view_pideco" model="ir.ui.view">
+        <field name="name">product.template.form.pideco</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='extra_info']/field[@name='is_published']" position="after">
+                <field name="pideco_featured" widget="boolean_toggle"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_search_view_pideco" model="ir.ui.view">
+        <field name="name">product.template.search.pideco</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="website_sale.product_template_search_view_website"/>
+        <field name="arch" type="xml">
+            <filter name="published" position="after">
+                <filter string="Featured on the home page" name="pideco_featured" domain="[('pideco_featured', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

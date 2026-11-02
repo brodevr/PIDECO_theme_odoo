@@ -2,15 +2,19 @@
     <template id="pideco_layout_19" inherit_id="website.layout" name="PIDECO site shell" priority="90">
         <xpath expr="//header" position="replace">
             <header id="top" class="pideco-header">
-                <div class="pideco-announcement" data-pideco-promo-slider="" aria-live="polite">
+                <!-- Announcement bar: a ribbon that scrolls continuously. pideco_ui.js repeats the group of messages
+                     (copies hidden from screen readers) until it covers the bar, and stops it in the website editor. -->
+                <div class="pideco-announcement" data-pideco-promo-marquee="">
                     <div class="pideco-promo-track">
-                        <!-- While a message still holds its original text, the copy below is shown instead, so it is translated like any other template text. Once edited in Settings, the field takes over. -->
-                        <span t-if="website.pideco_promo_text_1 == 'Nationwide shipping'" class="pideco-promo-item is-active">Nationwide shipping</span>
-                        <span t-else="" class="pideco-promo-item is-active" t-field="website.pideco_promo_text_1"/>
-                        <span t-if="website.pideco_promo_text_2 == 'Minimum purchase $200,000'" class="pideco-promo-item">Minimum purchase $200,000</span>
-                        <span t-else="" class="pideco-promo-item" t-field="website.pideco_promo_text_2"/>
-                        <span t-if="website.pideco_promo_text_3 == 'Store pickup available'" class="pideco-promo-item">Store pickup available</span>
-                        <span t-else="" class="pideco-promo-item" t-field="website.pideco_promo_text_3"/>
+                        <div class="pideco-promo-group">
+                            <!-- While a message still holds its original text, the copy below is shown instead, so it is translated like any other template text. Once edited in Settings, the field takes over. -->
+                            <span t-if="website.pideco_promo_text_1 == 'Nationwide shipping'" class="pideco-promo-item">Nationwide shipping</span>
+                            <span t-else="" class="pideco-promo-item" t-field="website.pideco_promo_text_1"/>
+                            <span t-if="website.pideco_promo_text_2 == 'Minimum purchase $200,000'" class="pideco-promo-item">Minimum purchase $200,000</span>
+                            <span t-else="" class="pideco-promo-item" t-field="website.pideco_promo_text_2"/>
+                            <span t-if="website.pideco_promo_text_3 == 'Store pickup available'" class="pideco-promo-item">Store pickup available</span>
+                            <span t-else="" class="pideco-promo-item" t-field="website.pideco_promo_text_3"/>
+                        </div>
                     </div>
                 </div>
                 <div class="container-fluid pideco-header-main">
@@ -94,15 +98,15 @@
         </xpath>
         <xpath expr="//div[@id='footer']/section[1]" position="replace">
             <section class="pideco-footer pideco-footer-content" data-name="PIDECO footer">
+                <!-- Links without a destination yet (href="#"): set them in the website editor. -->
                 <div class="container pideco-footer-grid">
-                    <div class="pideco-footer-intro"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/><p>Homeware and decor for bright, balanced spaces.</p></div>
-                    <div><h3>Shop</h3><a href="/shop?search=Cocina">Kitchen</a><a href="/shop?search=Baño">Bathroom</a><a href="/shop?search=Bazar">Homeware</a><a href="/shop">New arrivals</a></div>
-                    <div><h3>Help</h3><a href="/contactus">Shipping and delivery times</a><a href="/contactus">Returns and exchanges</a><a href="/contactus">Product care</a><a href="/contactus">Contact</a></div>
-                    <div><h3>Brand</h3><a href="/#historia">Our story</a><a href="/#historia">Materials</a><a href="/contactus">Stores</a><a href="/contactus">Wholesale</a></div>
+                    <div class="pideco-footer-intro"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/><p>Warmth in every corner</p><p>Perón 2560 · pideco.com.ar</p></div>
+                    <div><h3>Help</h3><a href="#">Frequently asked questions</a><a href="#">Exchanges and returns</a><a href="#">WhatsApp [NUMBER]</a></div>
+                    <div><h3>Legal</h3><a href="#">Consumer protection</a><a href="#">Cancellation button</a><a href="#">Terms and conditions</a></div>
+                    <div><h3>Follow us</h3><a href="#">Instagram @pideco_bazar</a><a href="#">Facebook</a></div>
                 </div>
                 <div class="container pideco-footer-bottom">
-                    <span>© 2026 PIDECO</span>
-                    <span>Practical simplicity · Organic essence · Coming together at home</span>
+                    <span>© 2026 Pídeco. All rights reserved.</span>
                     <nav class="pideco-language-selector" aria-label="Language">
                         <t t-set="pideco_lang_es" t-value="website.language_ids.filtered_domain([('code', '=', 'es_AR')])[:1]"/>
                         <t t-set="pideco_lang_zh" t-value="website.language_ids.filtered_domain([('code', '=', 'zh_CN')])[:1]"/>
@@ -125,7 +129,7 @@
                  rendered from the catalog on every visit and therefore are not part of any zone. -->
             <div id="wrap" class="pideco-home oe_website_sale">
                 <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
-                <!-- Zone 1: hero carousel (native Odoo s_carousel markup, so the editor can add slides and change backgrounds, links and speed) and benefits. -->
+                <!-- Zone 1: hero carousel (native Odoo s_carousel markup, so the editor can add slides and change backgrounds, links and speed). -->
                 <div class="oe_structure oe_empty" id="oe_structure_pideco_home_1">
                 <section class="s_carousel_wrapper p-0 pideco-hero-carousel" data-snippet="s_carousel" data-name="Banner principal PIDECO" data-vxml="001" data-vcss="001">
                     <div id="pidecoHeroCarousel" class="s_carousel s_carousel_default carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
@@ -165,69 +169,69 @@
                     </div>
                 </section>
 
-                <section class="pideco-benefits" data-name="Beneficios de compra">
-                    <div class="container pideco-benefits-grid">
-                        <div><i class="fa fa-shopping-bag"/><span><strong>Minimum order</strong><small>$200,000</small></span></div>
-                        <div><i class="fa fa-truck"/><span><strong>Shipping</strong><small>Nationwide</small></span></div>
-                        <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Arrange your pickup</small></span></div>
-                    </div>
-                </section>
                 </div>
 
-                <section class="container pideco-home-section pideco-category-slider-section" data-name="Categorías principales">
-                    <div class="pideco-section-head"><div><p class="pideco-kicker">Explore</p><h2>Every corner of your home</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="categories" aria-label="Previous category"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="categories" aria-label="Next category"><i class="fa fa-arrow-right"/></button></div></div>
-                    <t t-set="pideco_categories" t-value="request.env['product.public.category'].search([('has_published_products', 'in', [True])] + list(website.website_domain()), order='sequence, id')"/>
-                    <div class="pideco-category-slider pideco-slider-track" data-pideco-slider="categories">
-                        <a class="pideco-category-slide" t-foreach="pideco_categories" t-as="category" t-att-href="'/shop/category/%s' % slug(category)"><div class="pideco-category-slide-image"><img t-att-src="'/web/image/product.public.category/%s/image_512' % category.id" t-att-alt="category.name"/></div><span><strong t-out="category.name"/><small>View products <i class="fa fa-arrow-right"/></small></span></a>
-                        <a class="pideco-category-slide" t-if="not pideco_categories" href="/shop"><div class="pideco-category-placeholder"><i class="fa fa-th-large"/></div><span><strong>All PIDECO</strong><small>View products <i class="fa fa-arrow-right"/></small></span></a>
-                    </div>
-                </section>
-
-                <!-- Zone 2: brand essence. id="historia" is the target of the "About us" menu link and of the footer brand links. -->
-                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_2">
-                <section id="historia" class="container pideco-home-section pideco-essence" data-name="Nuestra esencia">
-                    <div class="pideco-essence-grid">
-                        <div class="pideco-essence-media"><img src="/pideco_theme/static/src/img/home/esencia.jpg" alt="PIDECO home decor"/></div>
-                        <div class="pideco-essence-copy">
-                            <p class="pideco-kicker">Our essence</p>
-                            <h2>Designed for everyday life</h2>
-                            <p>We select noble, durable pieces that balance usefulness and beauty, so every routine at home becomes a meaningful moment.</p>
-                            <a class="btn btn-primary" href="/shop">Discover the collection</a>
+                <!-- Zone "categories": "Discover our products", six category cards. They are ordinary editable blocks (Bootstrap
+                     columns): the editor changes each photo, name and link, and adds or removes cards. -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_categories">
+                <section class="pideco-home-section pideco-categories-grid" data-name="Conocé nuestros productos">
+                    <div class="container">
+                        <div class="pideco-centered-head">
+                            <h2>Discover our products</h2>
+                            <p>Choose by room and find what you need for your kitchen, your table and every corner of your home.</p>
+                        </div>
+                        <div class="row pideco-cat-row">
+                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-cocina.jpg" alt="Kitchen" loading="lazy"/><span><strong>Kitchen</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
+                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-mesa-vajilla.jpg" alt="Table and tableware" loading="lazy"/><span><strong>Table and tableware</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
+                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-bar-cafe.jpg" alt="Bar, coffee and drinks" loading="lazy"/><span><strong>Bar, coffee and drinks</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
+                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-organizacion.jpg" alt="Organization and storage" loading="lazy"/><span><strong>Organization and storage</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
+                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-hogar-bano.jpg" alt="Home and bath" loading="lazy"/><span><strong>Home and bath</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
+                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-nuevo.jpg" alt="New" loading="lazy"/><span><strong>New</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
                         </div>
                     </div>
-                    <div class="pideco-essence-values">
-                        <div><span class="pideco-essence-num">01</span><strong>Practical simplicity</strong><p>Every piece serves a clear purpose.</p></div>
-                        <div><span class="pideco-essence-num">02</span><strong>Organic essence</strong><p>Noble materials and gentle textures.</p></div>
-                        <div><span class="pideco-essence-num">03</span><strong>Approachable design</strong><p>Aesthetic distinction for real life.</p></div>
-                        <div><span class="pideco-essence-num">04</span><strong>Gathering at home</strong><p>Corners that invite rest and time with family.</p></div>
-                    </div>
                 </section>
                 </div>
 
-                <section class="container pideco-home-section pideco-featured" data-name="Productos destacados">
-                    <div class="pideco-section-head"><div><p class="pideco-kicker">Selected for you</p><h2>Featured products</h2></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="featured" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="featured" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
-                    <t t-set="pideco_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id desc', limit=8)"/>
-                    <div class="pideco-product-grid pideco-slider-track pideco-featured-slider" data-pideco-slider="featured">
+                <!-- New arrivals: the products marked "Featured on the home page", in the shop order; while none is
+                     marked, the latest published products. Four cards, no slider. -->
+                <section class="container pideco-home-section pideco-arrivals" data-name="Recién llegados">
+                    <div class="pideco-arrivals-head"><h2>Just arrived</h2><a href="/shop?order=create_date+desc">View all</a></div>
+                    <t t-set="pideco_products" t-value="request.env['product.template'].search(pideco_sale_domain + [('pideco_featured', '=', True)], order='website_sequence, id desc', limit=4)"/>
+                    <t t-if="not pideco_products" t-set="pideco_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id desc', limit=4)"/>
+                    <div class="pideco-arrivals-grid">
                         <t t-foreach="pideco_products" t-as="product"><t t-call="pideco_theme.pideco_slider_product_card"/></t>
                         <div class="pideco-products-empty" t-if="not pideco_products"><h3>The collection is on its way</h3><p>Publish products in Odoo to display them here.</p><a href="/shop" class="btn btn-primary">Go to the shop</a></div>
                     </div>
                 </section>
 
-                <!-- Zone 3: editorial banners. -->
-                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_3">
-                <section class="container pideco-home-section" data-name="Banners editoriales">
-                    <div class="pideco-promo-grid">
-                        <a href="/shop?search=Cocina" class="pideco-promo-card pideco-promo-card-light"><img src="/pideco_theme/static/src/img/home/editorial-cocina.jpg" alt="Refresh your kitchen"/><span><small>Small moments at home</small><strong>A simpler kitchen</strong><em>Discover the collection</em></span></a>
-                        <a href="/shop?search=Organizadores" class="pideco-promo-card pideco-promo-card-dark"><img src="/pideco_theme/static/src/img/home/editorial-orden.jpg" alt="Order and design"/><span><small>Calm and order</small><strong>Everything in its place</strong><em>View organizers</em></span></a>
+                <!-- Zone "brand": the brand, step by step, and the store opening. id="historia" is the target of the
+                     "About us" menu link. Buttons without a destination yet (href="#"): set them in the editor. -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_brand">
+                <section id="historia" class="pideco-brand" data-name="La marca, paso a paso">
+                    <div class="container pideco-brand-grid">
+                        <div class="pideco-brand-copy">
+                            <p class="pideco-kicker">The brand, step by step</p>
+                            <h2>We believe in the beauty of everyday life.</h2>
+                            <p>In the objects that accompany our rituals, in materials that convey warmth and in the small details that turn a house into a home.</p>
+                            <a class="btn btn-primary" href="#">See how Pídeco came together</a>
+                        </div>
+                        <div class="pideco-brand-swatches">
+                            <div class="pideco-swatch pideco-swatch-wine"><strong>Burgundy</strong><span t-translation="off">#4E0E14</span></div>
+                            <div class="pideco-swatch pideco-swatch-cream"><strong>Cream</strong><span t-translation="off">#ECD8CC</span></div>
+                            <div class="pideco-swatch pideco-swatch-type"><span class="pideco-swatch-aa" t-translation="off">Aa</span><strong>Typography</strong></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pideco-opening" data-name="Estamos por abrir">
+                    <div class="pideco-opening-media"><img src="/pideco_theme/static/src/img/home/local-peron.jpg" alt="The Pídeco store at Perón 2560" loading="lazy"/></div>
+                    <div class="pideco-opening-copy">
+                        <h2>We are about to open our doors</h2>
+                        <p class="pideco-opening-address">Perón 2560</p>
+                        <p class="pideco-opening-hours">[OPENING DATE]: [OPENING HOURS]</p>
+                        <a class="btn btn-light" href="#">Let me know when it opens</a>
                     </div>
                 </section>
                 </div>
-
-                <section class="container pideco-home-section pideco-transform" data-name="Transformá tus espacios">
-                    <div class="pideco-section-head"><div><p class="pideco-kicker">Ideas for your home</p><h2>Transform your spaces</h2><p>Create cozy, bright and balanced spaces with essential, timeless pieces.</p></div><div class="pideco-slider-actions"><button type="button" data-pideco-slider-prev="transform" aria-label="Previous product"><i class="fa fa-arrow-left"/></button><button type="button" data-pideco-slider-next="transform" aria-label="Next product"><i class="fa fa-arrow-right"/></button></div></div>
-                    <t t-set="pideco_short_products" t-value="request.env['product.template'].search(pideco_sale_domain, order='id', limit=8)"/>
-                    <div class="pideco-product-grid pideco-product-grid-short pideco-slider-track" data-pideco-slider="transform"><t t-foreach="pideco_short_products" t-as="product"><t t-call="pideco_theme.pideco_slider_product_card"/></t></div>
-                </section>
 
                 <!-- Zone 4: wholesale benefits and discounts by order amount. -->
                 <div class="oe_structure oe_empty" id="oe_structure_pideco_home_4">
@@ -245,6 +249,31 @@
                         <div class="pideco-discount-card"><h3>Bank transfer</h3><div><span>Purchasing $300,000</span><strong>5% Off</strong></div><div><span>Purchasing $600,000</span><strong>10% Off</strong></div><div><span>Purchasing $1,000,000</span><strong>15% Off</strong></div><div><span>Purchasing $1,500,000</span><strong>20% Off</strong></div></div>
                     </div>
                     <p class="pideco-discount-note">* Discounts are subject to change and do not apply to sale items.</p>
+                </section>
+                </div>
+
+                <!-- Zone "newsletter": "Be the first to know". Odoo's newsletter form (Email Marketing): each address joins the
+                     "PIDECO news" mailing list. The editor can switch the list from the form's options. -->
+                <div class="oe_structure oe_empty" id="oe_structure_pideco_home_newsletter">
+                <section class="pideco-newsletter" data-name="Enterate primero de todo">
+                    <div class="container pideco-newsletter-inner">
+                        <h2>Be the first to know</h2>
+                        <p>Pídeco news and offers, straight to your inbox.</p>
+                        <t t-set="pideco_news_list" t-value="request.env.ref('pideco_theme.mailing_list_pideco_news', raise_if_not_found=False)"/>
+                        <div class="s_newsletter_subscribe_form s_newsletter_list js_subscribe pideco-newsletter-form" data-vxml="001" t-att-data-list-id="pideco_news_list.id if pideco_news_list else 0" data-name="Newsletter Form" data-snippet="s_newsletter_subscribe_form">
+                            <div class="js_subscribed_wrap d-none">
+                                <p class="pideco-newsletter-thanks"><i class="fa fa-check-circle-o" role="img" t-translation="off"/> Thanks for subscribing!</p>
+                            </div>
+                            <div class="js_subscribe_wrap">
+                                <label class="pideco-newsletter-label" for="pidecoNewsletterEmail">Your email</label>
+                                <div class="pideco-newsletter-row">
+                                    <input id="pidecoNewsletterEmail" type="email" name="email" class="s_newsletter_subscribe_form_input js_subscribe_value form-control" placeholder="name@mail.com" autocomplete="email"/>
+                                    <a role="button" href="#" class="js_subscribe_btn o_submit btn btn-primary">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="pideco-newsletter-note">[WELCOME BENEFIT: confirm whether there will be one]</p>
+                    </div>
                 </section>
                 </div>
             </div>

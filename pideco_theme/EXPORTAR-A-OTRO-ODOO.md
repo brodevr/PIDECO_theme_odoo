@@ -6,7 +6,7 @@ El historial de cambios por versión está en `CHANGELOG.md`.
 
 ## Requisitos
 
-- Odoo 19 con `website_sale` y `website_sale_wishlist` instalados.
+- Odoo 19 con `website_sale` y `website_sale_wishlist` instalados. Desde la 19.0.1.5.0 también depende de `website_mass_mailing` (Marketing por correo), que Odoo instala solo al instalar o actualizar el módulo; lo usa el formulario "Enterate primero de todo".
 - Los idiomas públicos del sitio son `es_AR`, inglés y `zh_CN`. `es_AR` debe quedar como idioma principal y predeterminado. Los tres deben estar activos en *Website → Configuración → Ajustes → Idiomas* para aparecer en el selector del footer (ES · EN · ZH). Sirve cualquier variante de inglés (`en_US`, `en_GB`, etc.). Los textos del theme están escritos en inglés, así que ese idioma no necesita archivo de traducción.
 - Configurar `auto_redirect_lang=False`. En esta versión de Odoo 19, el enrutador todavía puede priorizar el idioma del navegador o una selección recordada; comprobar ese comportamiento en UAT. El enlace `/website/lang/es?r=/` selecciona español explícitamente.
 - La localización argentina, impuestos, moneda, medios de pago, envíos y compra mínima se configuran en el entorno. No son dependencias del theme.
@@ -39,19 +39,20 @@ El home alterna **zonas editables** con **secciones automáticas**:
 
 | Orden | Contenido | Tipo |
 |---|---|---|
-| 1 | Carrusel principal y beneficios de compra | Zona editable |
-| 2 | Categorías | Automática (categorías con productos publicados) |
-| 3 | Nuestra esencia | Zona editable |
-| 4 | Productos destacados | Automática (últimos productos publicados) |
-| 5 | Banners editoriales | Zona editable |
-| 6 | Transformá tus espacios | Automática (productos) |
-| 7 | Beneficios mayoristas y descuentos por monto | Zona editable |
+| 1 | Carrusel principal | Zona editable |
+| 2 | Conocé nuestros productos (6 cuadros de categorías) | Zona editable |
+| 3 | Recién llegados (4 productos) | Automática |
+| 4 | La marca, paso a paso y Estamos por abrir | Zona editable |
+| 5 | Beneficios mayoristas y descuentos por monto | Zona editable |
+| 6 | Enterate primero de todo (suscripción por mail) | Zona editable |
 
 - **En las zonas editables** el editor del website permite agregar bloques nuevos, quitar, reordenar y editar los existentes (textos, imágenes, links, colores).
 - **Las secciones automáticas** se arman en cada visita con el catálogo y no pueden moverse ni borrarse desde el editor. Sus títulos sí se pueden editar.
-- **Las tarjetas de productos y de categorías** no se editan en el editor: el nombre, la imagen y el precio salen de cada producto o categoría y se cambian ahí.
-- **Imágenes de los banners editoriales:** se reemplazan haciendo clic sobre la imagen.
-- **Barra de anuncios:** mientras se edita la página queda quieta en el primer mensaje. Sus textos se cambian en Ajustes (ver "Montos y textos informativos").
+- **Cuadros de categorías:** son bloques comunes del editor. En cada uno se cambia la foto (clic sobre la imagen), el nombre y el link (al crear el módulo quedan con `#`, sin destino). Se pueden duplicar o borrar cuadros.
+- **Recién llegados:** muestra los productos marcados con **"Destacado en el home"** (ficha del producto, pestaña Ventas, sección de la tienda), en el orden de la tienda y hasta 4. Si no hay ninguno marcado, muestra los últimos 4 publicados. En la lista de productos hay un filtro "Destacado en el home". Las tarjetas (nombre, imagen, precio) salen de cada producto.
+- **Botones y links sin destino:** "Conocé cómo se armó Pídeco", "Avisame cuando abra" y los links del footer quedan con `#` para completarlos desde el editor. Los textos entre corchetes (fecha de apertura, horarios, número de WhatsApp, beneficio de bienvenida) también se completan ahí.
+- **Formulario de mail:** cada dirección se suma a la lista de correo "PIDECO news" de Marketing por correo, que el módulo crea al instalarse. Desde las opciones del formulario en el editor se puede elegir otra lista.
+- **Barra de anuncios:** es una cinta que se desliza de forma continua y se detiene al pasar el mouse. Mientras se edita la página queda quieta. Sus textos se cambian en Ajustes (ver "Montos y textos informativos"); un mensaje vacío no se muestra.
 - **Cada zona se guarda por separado.** Al editar una zona, esa zona conserva la versión personalizada de esa base, y las demás siguen recibiendo los cambios que traiga el módulo en futuras versiones.
 - Si se edita el título de una sección automática, Odoo guarda una copia personalizada de todo el home para ese website, y las actualizaciones del módulo dejan de aplicarse a ese home hasta que se restablezca la vista.
 
@@ -70,20 +71,19 @@ Si el home ya había sido editado con el editor en una versión anterior del mó
 
 ## Imágenes del home
 
-El home usa 6 imágenes que viajan con el módulo, en `static/src/img/home/`. Así aparecen al instalar en cualquier base y se pueden reemplazar desde el editor.
+El home usa 10 imágenes que viajan con el módulo, en `static/src/img/home/`. Así aparecen al instalar en cualquier base y se pueden reemplazar desde el editor.
 
 | Espacio | Archivo | Tamaño actual | Encuadre |
 |---|---|---|---|
 | Carrusel, diapositiva 1 | `hero-1.jpg` (mesa de comedor) | 1672 × 941 px | Motivo centrado; en celular se recorta a lo alto |
 | Carrusel, diapositiva 2 | `hero-2.jpg` (consola de madera) | 1672 × 941 px | Igual que la 1 |
 | Carrusel, diapositiva 3 | `hero-3.jpg` (showroom mayorista) | 1672 × 941 px | Igual que la 1 |
-| Nuestra esencia | `esencia.jpg` (sillón borgoña) | 1122 × 1402 px | Se recorta en horizontal en escritorio y tablet, y en cuadrado en celular; el motivo principal conviene en el centro o algo más abajo |
-| Banner editorial "cocina" | `editorial-cocina.jpg` (utensilios) | 1400 × 788 px | El texto va abajo a la izquierda |
-| Banner editorial "orden" | `editorial-orden.jpg` (tarros de vidrio) | 1355 × 1161 px | El texto va abajo a la izquierda |
+| Conocé nuestros productos | `cat-cocina.jpg`, `cat-mesa-vajilla.jpg`, `cat-bar-cafe.jpg`, `cat-organizacion.jpg`, `cat-hogar-bano.jpg`, `cat-nuevo.jpg` | 1080 × 810 px | Horizontal 4:3 |
+| Estamos por abrir | `local-peron.jpg` (el local) | 423 × 246 px | Se recorta para llenar media pantalla; **conviene reemplazarla por una de al menos 1400 px de ancho**, la actual se ve borrosa en pantallas grandes |
 
 Para reemplazarlas en el módulo, conviene respetar la orientación y usar JPG o WebP de menos de 400 KB. Para el carrusel se recomienda 2400 × 1350 px, así se ve nítido en pantallas grandes. Si el home ya fue editado con el editor en una base, las imágenes nuevas del módulo no reemplazan las que ya se cargaron ahí.
 
-`static/src/assets/pideco-editorial.png` ya no se usa en las plantillas, pero se conserva porque un home editado en alguna base puede seguir referenciándola.
+`static/src/assets/pideco-editorial.png`, `esencia.jpg`, `editorial-cocina.jpg` y `editorial-orden.jpg` ya no se usan en las plantillas, pero se conservan porque un home editado en alguna base puede seguir referenciándolas.
 
 ## Página de producto
 

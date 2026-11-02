@@ -154,73 +154,56 @@ function closeSearch() {
     document.documentElement.classList.remove("pideco-search-open");
 }
 
-function moveSlider(name, direction) {
-    const slider = document.querySelector(`[data-pideco-slider="${name}"]`);
-    if (!slider) return;
-    const items = [...slider.children];
-    if (items.length < 2) return;
-    const first = items[0].getBoundingClientRect();
-    const step = items[1].getBoundingClientRect().left - first.left;
-    if (step <= 0) return;
-    const current = Math.round(slider.scrollLeft / step);
-    const next = Math.max(0, Math.min(items.length - 1, current + direction));
-    // Absolute card positions avoid accumulating fractional-pixel scroll errors.
-    slider.scrollTo({
-        left: items[next].getBoundingClientRect().left - first.left,
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
-    });
-}
-
-function initPromoSliders() {
-    document.querySelectorAll("[data-pideco-promo-slider]").forEach((slider) => {
-        if (slider.dataset.pidecoPromoReady) return;
-        const items = [...slider.querySelectorAll(".pideco-promo-item")].filter(
-            (item) => item.textContent.trim()
-        );
-        if (items.length < 2) return;
-        slider.dataset.pidecoPromoReady = "true";
-        let currentIndex = 0;
-        let timer;
-        // The messages are editable in the website editor, which records every class change on them
-        // as an edit of the header. While editing, the bar stays still and as rendered by the server.
+// Announcement bar: a ribbon that scrolls continuously. The group of messages is repeated until one
+// set covers the bar, and the set is doubled, so moving the track by exactly one set loops seamlessly.
+// The copies are hidden from screen readers, which read the original group once.
+function initPromoMarquee() {
+    document.querySelectorAll("[data-pideco-promo-marquee]").forEach((bar) => {
+        if (bar.dataset.pidecoPromoReady) return;
+        const track = bar.querySelector(".pideco-promo-track");
+        const group = track?.querySelector(".pideco-promo-group");
+        if (!group || !group.textContent.trim()) return;
+        bar.dataset.pidecoPromoReady = "true";
+        // The messages are editable in the website editor, which records every DOM change in the header
+        // as an edit of it. While editing, the bar stays still and as rendered by the server.
         const isEditing = () => document.body.classList.contains("editor_enable");
-        const reset = () => {
-            items.forEach((item, index) => {
-                item.classList.toggle("is-active", index === 0);
-                if (item.classList.contains("is-previous")) item.classList.remove("is-previous");
-            });
-            currentIndex = 0;
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        let lastWidth = 0;
+        const clear = () => {
+            track.querySelectorAll("[data-pideco-promo-copy]").forEach((copy) => copy.remove());
+            bar.classList.remove("is-running");
         };
-
-        const showNext = () => {
-            const current = items[currentIndex];
-            const nextIndex = (currentIndex + 1) % items.length;
-            const next = items[nextIndex];
-            current.classList.remove("is-active");
-            current.classList.add("is-previous");
-            next.classList.remove("is-previous");
-            next.getBoundingClientRect();
-            next.classList.add("is-active");
-            currentIndex = nextIndex;
+        const build = () => {
+            clear();
+            lastWidth = bar.clientWidth;
+            if (isEditing() || reducedMotion.matches) return;
+            const groupWidth = group.getBoundingClientRect().width;
+            if (!groupWidth) return;
+            const perSet = Math.max(1, Math.ceil(bar.clientWidth / groupWidth));
+            for (let index = 1; index < perSet * 2; index++) {
+                const copy = group.cloneNode(true);
+                copy.dataset.pidecoPromoCopy = "";
+                copy.setAttribute("aria-hidden", "true");
+                track.append(copy);
+            }
+            const distance = groupWidth * perSet;
+            track.style.setProperty("--pideco-promo-distance", `-${distance}px`);
+            // About 45px per second, whatever the length of the messages.
+            track.style.setProperty("--pideco-promo-duration", `${Math.max(12, distance / 45)}s`);
+            bar.classList.add("is-running");
         };
-        const start = () => {
-            if (isEditing() || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-            window.clearInterval(timer);
-            timer = window.setInterval(showNext, 4000);
-        };
-        const stop = () => window.clearInterval(timer);
-
-        slider.addEventListener("mouseenter", stop);
-        slider.addEventListener("mouseleave", start);
-        slider.addEventListener("focusin", stop);
-        slider.addEventListener("focusout", start);
+        if (window.ResizeObserver) {
+            new ResizeObserver(() => {
+                if (bar.clientWidth !== lastWidth && !isEditing()) build();
+            }).observe(bar);
+        }
+        reducedMotion.addEventListener?.("change", build);
         // React as soon as edit mode starts, before the editor begins recording changes.
         new MutationObserver(() => {
-            if (!isEditing()) return;
-            stop();
-            reset();
+            if (isEditing() && bar.classList.contains("is-running")) clear();
         }).observe(document.body, {attributes: true, attributeFilter: ["class"]});
-        start();
+        // Web fonts change the width of the messages once loaded.
+        (document.fonts?.ready || Promise.resolve()).then(build);
     });
 }
 
@@ -293,10 +276,6 @@ document.addEventListener("click", (event) => {
     }
     if (event.target.closest("[data-pideco-search-open]")) return openSearch();
     if (event.target.closest("[data-pideco-search-close]")) return closeSearch();
-    const previous = event.target.closest("[data-pideco-slider-prev]");
-    if (previous) return moveSlider(previous.dataset.pidecoSliderPrev, -1);
-    const next = event.target.closest("[data-pideco-slider-next]");
-    if (next) return moveSlider(next.dataset.pidecoSliderNext, 1);
 });
 
 document.addEventListener("keydown", (event) => {
@@ -397,7 +376,7 @@ function initDescriptionToggles() {
 }
 
 function startPidecoUi() {
-    initPromoSliders();
+    initPromoMarquee();
     initHeaderMetrics();
     initDescriptionToggles();
 }

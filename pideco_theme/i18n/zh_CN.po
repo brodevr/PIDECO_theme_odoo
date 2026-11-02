@@ -386,6 +386,7 @@ msgstr "罐子"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "Kitchen"
 msgstr "厨房"
 
@@ -440,6 +441,7 @@ msgstr "我的账户"
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_page_19
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_slider_product_card
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "New"
 msgstr "新品"
 
@@ -825,3 +827,194 @@ msgid ""
 msgstr ""
 "<span class=\"pideco-when-collapsed\">查看更多</span><span "
 "class=\"pideco-when-expanded\">收起</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Discover our products"
+msgstr "探索我们的产品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Choose by room and find what you need for your kitchen, your table and every corner of your home."
+msgstr "按空间挑选，为您的厨房、餐桌和家中每个角落找到所需之物。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Table and tableware"
+msgstr "餐桌与餐具"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Bar, coffee and drinks"
+msgstr "吧台、咖啡与饮品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Organization and storage"
+msgstr "整理与收纳"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Home and bath"
+msgstr "家居与卫浴"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Just arrived"
+msgstr "新到商品"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "The brand, step by step"
+msgstr "品牌，一步一步"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "We believe in the beauty of everyday life."
+msgstr "我们相信日常之美。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "In the objects that accompany our rituals, in materials that convey warmth and in the small details that turn a house into a home."
+msgstr "在陪伴日常仪式的物件里，在传递温暖的材质中，在把房子变成家的细节里。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "See how Pídeco came together"
+msgstr "了解 Pídeco 的诞生"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Burgundy"
+msgstr "酒红色"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Cream"
+msgstr "奶油色"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Typography"
+msgstr "字体"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "We are about to open our doors"
+msgstr "我们即将开门迎客"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "[OPENING DATE]: [OPENING HOURS]"
+msgstr "[开业日期]：[营业时间]"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Let me know when it opens"
+msgstr "开业时通知我"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "The Pídeco store at Perón 2560"
+msgstr "位于 Perón 2560 的 Pídeco 门店"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Be the first to know"
+msgstr "抢先获悉"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Pídeco news and offers, straight to your inbox."
+msgstr "Pídeco 的最新消息与优惠，直接发送到您的邮箱。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Thanks for subscribing!"
+msgstr "感谢订阅！"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Your email"
+msgstr "您的邮箱"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "name@mail.com"
+msgstr "name@mail.com"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "Subscribe"
+msgstr "订阅"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
+msgid "[WELCOME BENEFIT: confirm whether there will be one]"
+msgstr "[欢迎礼遇：确认是否提供]"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Warmth in every corner"
+msgstr "让每个角落都温暖"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Frequently asked questions"
+msgstr "常见问题"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Exchanges and returns"
+msgstr "换货与退货"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "WhatsApp [NUMBER]"
+msgstr "WhatsApp [号码]"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Legal"
+msgstr "法律信息"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Consumer protection"
+msgstr "消费者保护"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Cancellation button"
+msgstr "撤销购买按钮"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Terms and conditions"
+msgstr "条款与条件"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Follow us"
+msgstr "关注我们"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "© 2026 Pídeco. All rights reserved."
+msgstr "© 2026 Pídeco。保留所有权利。"
+
+#. module: pideco_theme
+#: model:ir.model.fields,field_description:pideco_theme.field_product_template__pideco_featured
+#: model_terms:ir.ui.view,arch_db:pideco_theme.product_template_search_view_pideco
+msgid "Featured on the home page"
+msgstr "在首页推荐"
+
+#. module: pideco_theme
+#: model:ir.model.fields,help:pideco_theme.field_product_template__pideco_featured
+msgid "Show this product in the \"Just arrived\" section of the home page, which shows four products. Only published products are shown. While no product is marked, the section shows the latest published products."
+msgstr "在首页“新到商品”区块中展示此商品（该区块显示四件商品）。仅显示已发布的商品。若未标记任何商品，则显示最新发布的商品。"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.res_config_settings_view_form_pideco
+msgid "Messages scroll continuously in a ribbon at the top of the site. Leave one empty to hide it. Edit them in each website language to maintain their translations."
+msgstr "消息在网站顶部的横幅中连续滚动。留空即可隐藏该条。请在网站的每种语言中分别编辑，以保留其翻译。"
