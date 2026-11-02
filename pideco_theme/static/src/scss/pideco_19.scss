@@ -1487,14 +1487,16 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 
 /* "Discover our products": six editable category cards in Bootstrap columns (3 per row, 2 on mobile). */
 .pideco-categories-grid .pideco-cat-row { --bs-gutter-x: 1.75rem; --bs-gutter-y: 0; row-gap: 2.25rem; }
-.pideco-cat-card { display: flex; flex-direction: column; gap: 1rem; color: var(--pideco-wine); text-decoration: none; }
-.pideco-cat-card:hover { color: var(--pideco-wine); }
+.pideco-cat-card { position: relative; display: flex; flex-direction: column; gap: 1rem; color: var(--pideco-wine); }
 .pideco-cat-card img { display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: .45rem; background: var(--pideco-border); object-fit: cover; transition: transform .35s ease, filter .35s ease; }
 .pideco-cat-card:hover img { filter: brightness(.95); transform: translateY(-3px); }
-.pideco-cat-card > span { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
-.pideco-cat-card strong { font-size: 1.15rem; font-weight: 700; line-height: 1.25; }
-.pideco-cat-card i { flex: none; font-size: 1.35rem; transition: transform .25s ease; }
+.pideco-cat-name { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin: 0; font-size: 1.15rem; font-weight: 700; line-height: 1.25; }
+.pideco-cat-name a { color: var(--pideco-wine); text-decoration: none; }
+.pideco-cat-name i { flex: none; font-size: 1.35rem; transition: transform .25s ease; }
 .pideco-cat-card:hover i { transform: translateX(4px); }
+/* In the editor the stretched link would cover the photo: hide it so the photo can be selected and replaced. */
+body.editor_enable .pideco-cat-card .stretched-link::after,
+.o_editable .pideco-cat-card .stretched-link::after { display: none; }
 
 /* "New arrivals": four product cards, no slider. */
 .pideco-arrivals-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem; }
@@ -1559,7 +1561,7 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 @media (max-width: 575.98px) {
     .pideco-categories-grid .pideco-cat-row { --bs-gutter-x: 1rem; row-gap: 1.5rem; }
     .pideco-cat-card { gap: .6rem; }
-    .pideco-cat-card strong { font-size: .95rem; }
+    .pideco-cat-name { font-size: .95rem; }
     .pideco-cat-card i { font-size: 1.1rem; }
     .pideco-arrivals .pideco-product-card h3 { font-size: .9rem; }
     .pideco-arrivals .pideco-card-add { min-height: 44px; padding: .45rem .6rem; font-size: .78rem; line-height: 1.2; white-space: normal; text-align: center; }

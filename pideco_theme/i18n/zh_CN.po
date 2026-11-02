@@ -997,36 +997,6 @@ msgstr "<span>© 2026 Pídeco。保留所有权利。</span>"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<strong>Kitchen</strong>"
-msgstr "<strong>厨房</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<strong>Table and tableware</strong>"
-msgstr "<strong>餐桌与餐具</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<strong>Bar, coffee and drinks</strong>"
-msgstr "<strong>吧台、咖啡与饮品</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<strong>Organization and storage</strong>"
-msgstr "<strong>整理与收纳</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<strong>Home and bath</strong>"
-msgstr "<strong>家居与卫浴</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
-msgid "<strong>New</strong>"
-msgstr "<strong>新品</strong>"
-
-#. module: pideco_theme
-#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "<strong>Burgundy</strong>"
 msgstr "<strong>酒红色</strong>"
 

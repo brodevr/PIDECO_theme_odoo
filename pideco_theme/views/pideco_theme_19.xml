@@ -172,7 +172,8 @@
                 </div>
 
                 <!-- Zone "categories": "Discover our products", six category cards. They are ordinary editable blocks (Bootstrap
-                     columns): the editor changes each photo, name and link, and adds or removes cards. -->
+                     columns): the editor changes each photo, name and link, and adds or removes cards. The link is the
+                     name (edited like any text link); a stretched link makes the whole card clickable outside the editor. -->
                 <div class="oe_structure oe_empty" id="oe_structure_pideco_home_categories">
                 <section class="pideco-home-section pideco-categories-grid" data-name="Conocé nuestros productos">
                     <div class="container">
@@ -181,12 +182,12 @@
                             <p>Choose by room and find what you need for your kitchen, your table and every corner of your home.</p>
                         </div>
                         <div class="row pideco-cat-row">
-                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-cocina.jpg" alt="Kitchen" loading="lazy"/><span><strong>Kitchen</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
-                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-mesa-vajilla.jpg" alt="Table and tableware" loading="lazy"/><span><strong>Table and tableware</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
-                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-bar-cafe.jpg" alt="Bar, coffee and drinks" loading="lazy"/><span><strong>Bar, coffee and drinks</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
-                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-organizacion.jpg" alt="Organization and storage" loading="lazy"/><span><strong>Organization and storage</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
-                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-hogar-bano.jpg" alt="Home and bath" loading="lazy"/><span><strong>Home and bath</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
-                            <div class="col-6 col-lg-4"><a class="pideco-cat-card" href="#"><img src="/pideco_theme/static/src/img/home/cat-nuevo.jpg" alt="New" loading="lazy"/><span><strong>New</strong><i class="fa fa-long-arrow-right" t-translation="off"/></span></a></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-cocina.jpg" alt="Kitchen" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Kitchen</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-mesa-vajilla.jpg" alt="Table and tableware" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Table and tableware</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-bar-cafe.jpg" alt="Bar, coffee and drinks" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Bar, coffee and drinks</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-organizacion.jpg" alt="Organization and storage" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Organization and storage</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-hogar-bano.jpg" alt="Home and bath" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">Home and bath</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
+                            <div class="col-6 col-lg-4"><div class="pideco-cat-card"><img src="/pideco_theme/static/src/img/home/cat-nuevo.jpg" alt="New" loading="lazy"/><p class="pideco-cat-name"><a class="stretched-link" href="#">New</a><i class="fa fa-long-arrow-right" t-translation="off"/></p></div></div>
                         </div>
                     </div>
                 </section>
