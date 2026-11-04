@@ -23,6 +23,14 @@
 
 - Pasa a ser una cinta que se desliza de forma continua (en lugar de cambiar de mensaje cada 4 segundos) y se detiene al pasar el mouse. Queda quieta en el editor y con movimiento reducido.
 
+### Tienda y ficha de producto (documento "Ficha y Grilla")
+
+- Corrección: en celular el bloque de compra era una grilla con una segunda columna de 54 px pensada solo para favoritos; cualquier otro elemento que Odoo agregara ahí (el precio, el botón Comparar) caía en esa columna y se salía de la tarjeta, y la página se podía deslizar de costado. Ahora cantidad y botones van en la primera fila, "Agregar al carrito" debajo, y todo lo demás ocupa una fila completa.
+- Galería de la ficha como en Atelier Isadora: en escritorio, miniaturas en columna a la izquierda y la foto grande a la derecha (reemplaza al mosaico). Con una sola foto, la foto ocupa todo el ancho. En celular sigue el carrusel con miniaturas debajo.
+- Frase de bienvenida en cada categoría: se usa la descripción de la categoría de Odoo, centrada debajo del título.
+- Stock bajo ("2 unidades en stock", módulo Inventario de la tienda): texto bordó en lugar del recuadro amarillo.
+- Bloque de confianza en la ficha, debajo de las garantías de compra: cambios y devoluciones (texto entre corchetes para completar), compra segura y links a Botón de arrepentimiento y Defensa del consumidor (con `#`, se completan en el editor).
+
 ### Tipografía
 
 - Los títulos principales (h1 y h2) usan Coolvetica y el resto del sitio Barlow, como en el PDF. Las dos fuentes viajan con el módulo (`static/src/assets/fonts/`); Coolvetica tiene un solo peso y nunca se engrosa artificialmente. Reemplazan a Hanken Grotesk.

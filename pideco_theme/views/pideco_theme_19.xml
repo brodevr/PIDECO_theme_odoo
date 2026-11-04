@@ -409,6 +409,13 @@
                 <div><i class="fa fa-truck"/><span><strong>Nationwide shipping</strong><small>We coordinate the delivery of your order</small></span></div>
                 <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Available by prior arrangement</small></span></div>
             </div>
+            <!-- Trust: returns policy, secure purchase and the legal links required in Argentina. The texts in
+                 brackets and the links (href="#") are completed in the website editor. -->
+            <div class="pideco-product-trust">
+                <div><i class="fa fa-undo"/><strong>Exchanges and returns</strong><small>[RETURNS POLICY: e.g. up to 30 days after your purchase]</small></div>
+                <div><i class="fa fa-shield"/><strong>Secure purchase</strong><small>Your data is protected</small></div>
+                <p class="pideco-product-legal"><a href="#">Cancellation button</a><a href="#">Consumer protection</a></p>
+            </div>
         </xpath>
     </template>
     <template id="pideco_slider_product_card" name="PIDECO slider product card">

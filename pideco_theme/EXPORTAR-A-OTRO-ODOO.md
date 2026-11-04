@@ -33,6 +33,10 @@ odoo -d NOMBRE_BASE -u pideco_theme --stop-after-init
 
 Si la base ya tuvo instalada una versión anterior con otros textos, conviene agregar `--i18n-overwrite`. Sin esa opción, Odoo conserva lo que tenía guardado para cada texto que cambió poco (aunque fuera el texto viejo sin traducir) y no carga la traducción nueva.
 
+## Frase de bienvenida en las categorías
+
+Cada categoría puede mostrar una frase centrada debajo del título: en Sitio web → eCommerce → Categorías, abrir la categoría y escribir su descripción; después, en el editor de la tienda, activar la opción de mostrar la descripción de la categoría.
+
 ## Edición del home desde Odoo
 
 El home alterna **zonas editables** con **secciones automáticas**:
@@ -87,6 +91,12 @@ Para reemplazarlas en el módulo, conviene respetar la orientación y usar JPG o
 `static/src/assets/pideco-editorial.png`, `esencia.jpg`, `editorial-cocina.jpg` y `editorial-orden.jpg` ya no se usan en las plantillas, pero se conservan porque un home editado en alguna base puede seguir referenciándolas.
 
 ## Página de producto
+
+- **Galería (escritorio):** miniaturas en columna a la izquierda y la foto grande a la derecha.
+- **Stock bajo:** para mostrar "quedan X", en cada producto activar "Mostrar cantidad disponible" y elegir el umbral (requiere Inventario). Se ve como texto bordó.
+- **Bloque de confianza:** debajo de las garantías. El texto de la política de cambios (entre corchetes) y los links de Botón de arrepentimiento y Defensa del consumidor se completan desde el editor.
+- **Orden manual de los productos:** el orden "Destacado" de la tienda usa la secuencia de cada producto. Se cambia arrastrando en Sitio web → eCommerce → Productos (vista lista) o, en el editor de la tienda, con las opciones de cada producto (mover al principio, al final, etc.). Así se agrupan, por ejemplo, todas las cafeteras primero.
+
 
 - **Escritorio (desde 992 px):** la ficha ocupa todo el ancho. Las imágenes del producto se muestran en mosaico: la primera grande a lo ancho y el resto en dos columnas. Los detalles quedan fijos a la derecha mientras se recorren las imágenes.
 - **Celular y tablet:** carrusel con la imagen de borde a borde y las miniaturas debajo.

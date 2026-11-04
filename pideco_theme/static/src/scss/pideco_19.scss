@@ -1219,50 +1219,61 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
 .pideco-product-recommendations .pideco-product-card { min-width: 0; }
 .pideco-product-recommendations .pideco-product-card h3 { overflow-wrap: anywhere; }
 
-/* Desktop gallery as a mosaic: Odoo's product carousel shows every image at once, the first
-   one (and a lone last one) full width, the rest in two columns. Details stay sticky. */
+/* Desktop gallery (as in Atelier Isadora): thumbnails in a column on the left and the large image on the
+   right. Pure CSS over Odoo's product carousel, so it works with the thumbnails at the bottom or on the
+   left in the editor's options. With a single image there are no thumbnails and the image takes the
+   full width. Details stay sticky. */
 @media (min-width: 992px) {
     .o_wsale_product_page #product_detail_main #o-carousel-product {
-        display: block !important;
+        display: grid !important;
+        grid-template-columns: 88px minmax(0, 1fr);
+        align-items: start;
+        gap: 1rem;
         aspect-ratio: auto;
-        margin: 0 !important;
-        overflow: visible !important;
         border: 0;
         border-radius: 0;
         background: transparent;
     }
-    /* Odoo gives the carousel frame a fixed aspect ratio; the mosaic is taller than one image,
-       so the frame must grow with it instead of letting it overflow onto the next section. */
-    .o_wsale_product_page #product_detail_main #o-carousel-product .o_carousel_product_outer { display: block !important; overflow: visible !important; aspect-ratio: auto; }
-    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-inner {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: .75rem;
-        height: auto !important;
-        overflow: visible;
-    }
-    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-item {
-        display: block !important;
-        float: none;
-        height: auto !important;
-        /* Odoo's slider script sets the same inline min-height on every slide, which would
-           stretch the square tiles to the height of the large one. */
-        min-height: 0 !important;
-        margin: 0;
+    .o_wsale_product_page #product_detail_main #o-carousel-product:not(:has(.o_carousel_product_indicators)) { grid-template-columns: minmax(0, 1fr); }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .o_carousel_product_outer {
+        grid-column: -2;
+        grid-row: 1;
         aspect-ratio: 1 / 1;
         overflow: hidden;
+        border: 1px solid rgba(147, 101, 70, .2);
         border-radius: 1.25rem;
         background: var(--pideco-surface);
-        transform: none !important;
-        transition: none;
     }
-    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-item:first-child,
-    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-item:nth-child(even):last-child { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
-    .o_wsale_product_page #product_detail_main #o-carousel-product .o_product_detail_img_wrapper { height: 100% !important; padding: 0; }
-    .o_wsale_product_page #product_detail_main #o-carousel-product .product_detail_img { object-fit: cover !important; }
-    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-control-prev,
-    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-control-next,
-    .o_wsale_product_page #product_detail_main #o-carousel-product .o_carousel_product_indicators { display: none !important; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .o_carousel_product_indicators {
+        grid-column: 1;
+        grid-row: 1;
+        max-height: 100%;
+        padding: 0 !important;
+    }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-indicators {
+        position: static;
+        display: flex !important;
+        flex-direction: column;
+        gap: .65rem;
+        margin: 0 !important;
+        padding: 0;
+    }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-indicators li {
+        flex: none;
+        width: 88px;
+        height: 88px;
+        margin: 0 !important;
+        overflow: hidden;
+        border: 1px solid var(--pideco-border);
+        border-radius: .75rem;
+        background: var(--pideco-surface);
+        opacity: .75;
+        text-indent: 0;
+    }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-indicators li:hover { opacity: 1; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-indicators li.active { border: 2px solid var(--pideco-wine); opacity: 1; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-indicators li > div { display: block; width: 100%; height: 100%; }
+    .o_wsale_product_page #product_detail_main #o-carousel-product .carousel-indicators li img { width: 100%; height: 100%; object-fit: cover; }
     .o_wsale_product_page #product_details { position: sticky !important; top: 1.5rem; }
 }
 
@@ -1448,11 +1459,18 @@ small:has(> .o_l10n_ar_price_tax_excluded) {
     .pideco-product-link { letter-spacing: .05em; font-size: .65rem; }
     .pideco-product-meta { letter-spacing: .05em; }
     .pideco-product-meta span { padding-left: 0; border: 0; }
-    .o_wsale_product_page #o_wsale_cta_wrapper:not(.d-none) { display: grid !important; grid-template-columns: minmax(0, 1fr) 54px; }
+    /* Buy block: quantity and wishlist/compare on the first row, Add to cart below. Anything else Odoo puts
+       in this block (a price, Buy now, a message) takes a full row, so nothing overflows the card. */
+    .o_wsale_product_page #o_wsale_cta_wrapper:not(.d-none) { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; }
     .o_wsale_product_page #add_to_cart_wrap:not(.d-none) { display: contents !important; }
-    .o_wsale_product_page .css_quantity { grid-column: 1; grid-row: 1; }
-    .o_wsale_product_page #product_option_block { grid-column: 2; grid-row: 1; }
-    .o_wsale_product_page #add_to_cart { grid-column: 1 / -1; grid-row: 2; min-height: 54px; }
+    .o_wsale_product_page #o_wsale_cta_wrapper > *,
+    .o_wsale_product_page #add_to_cart_wrap > * { grid-column: 1 / -1; min-width: 0; max-width: 100%; }
+    .o_wsale_product_page #o_wsale_cta_wrapper .css_quantity { grid-column: 1; grid-row: 1; }
+    .o_wsale_product_page #o_wsale_cta_wrapper #product_option_block { display: flex; grid-column: 2; grid-row: 1; gap: .5rem; }
+    .o_wsale_product_page #o_wsale_cta_wrapper #add_to_cart { grid-column: 1 / -1; grid-row: 2; min-height: 54px; }
+    .o_wsale_product_page #product_option_block .o_add_compare_dyn .d-lg-none { display: none !important; }
+    .o_wsale_product_page #product_option_block .o_add_compare_dyn { min-width: 54px; min-height: 54px; padding: 0; border-radius: 999px; }
+    .o_wsale_product_page .o_wsale_product_details_content_section_price .d-flex { flex-wrap: wrap; }
     /* Mobile footer: a single centered column, with the language selector first in the bottom bar. */
     .pideco-footer { padding-top: 3rem; text-align: center; }
     .pideco-footer-grid { grid-template-columns: 1fr; gap: 2.2rem; }
@@ -1596,3 +1614,23 @@ body.editor_enable .pideco-cat-card .stretched-link::after,
     .pideco-popup-media { display: none; }
     .pideco-popup-copy { padding: 2.25rem 1.25rem 1.5rem; }
 }
+
+/* Shop: category description ("welcome phrase") under the title, centered, as in Atelier Isadora.
+   It is Odoo's own category description: write it in the category and turn on "Description" in the
+   shop options of the editor. */
+.o_wsale_products_header_is_category .o_wsale_category_description { max-width: 42rem; margin-inline: auto; color: var(--pideco-text); font-size: .95rem; line-height: 1.65; text-align: center; }
+.o_wsale_products_header_is_category .o_wsale_category_description p:last-child { margin-bottom: 0; }
+
+/* Product page: low stock ("2 Units in stock", website_sale_stock) as plain burgundy text instead of a
+   yellow badge. Shown when the product has "Show available quantity" below its threshold. */
+.o_wsale_product_page #threshold_message { display: flex; align-items: center; gap: .1rem; margin: .5rem 0 .75rem !important; padding: 0; background: transparent !important; color: var(--pideco-wine) !important; font-size: .9rem; font-weight: 600; white-space: normal; text-align: left; }
+.o_wsale_product_page #threshold_message .fa-circle { color: var(--pideco-clay) !important; font-size: .5rem; }
+
+/* Product page: trust block under the buy assurances (returns, secure purchase, legal links). */
+.pideco-product-trust { display: grid; gap: .75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(147, 101, 70, .22); }
+.pideco-product-trust > div { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: .1rem .7rem; align-items: start; }
+.pideco-product-trust i { grid-row: 1 / span 2; margin-top: .2rem; color: var(--pideco-wine); font-size: 1.05rem; }
+.pideco-product-trust strong { color: var(--pideco-wine); font-size: .88rem; }
+.pideco-product-trust small { color: var(--pideco-text); font-size: .8rem; }
+.pideco-product-legal { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin: .25rem 0 0; font-size: .8rem; }
+.pideco-product-legal a { color: var(--pideco-wine); text-decoration: underline; text-underline-offset: .2em; }

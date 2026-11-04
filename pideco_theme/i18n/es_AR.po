@@ -985,11 +985,13 @@ msgstr "Legales"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
 msgid "Consumer protection"
 msgstr "Defensa del consumidor"
 
 #. module: pideco_theme
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
 msgid "Cancellation button"
 msgstr "Botón de arrepentimiento"
 
@@ -1174,3 +1176,23 @@ msgstr "<i class=\"fa fa-check-circle-o\" role=\"img\"/> ¡Gracias por suscribir
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_homepage_19
 msgid "×"
 msgstr "×"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid ""
+"<i class=\"fa fa-undo\"/><strong>Exchanges and "
+"returns</strong><small>[RETURNS POLICY: e.g. up to 30 days after your "
+"purchase]</small>"
+msgstr ""
+"<i class=\"fa fa-undo\"/><strong>Cambios y "
+"devoluciones</strong><small>[POLÍTICA DE CAMBIOS: ej. hasta 30 días después "
+"de tu compra]</small>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid ""
+"<i class=\"fa fa-shield\"/><strong>Secure purchase</strong><small>Your data "
+"is protected</small>"
+msgstr ""
+"<i class=\"fa fa-shield\"/><strong>Compra segura</strong><small>Tus datos "
+"están protegidos</small>"
