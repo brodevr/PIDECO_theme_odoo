@@ -107,6 +107,7 @@
                 </div>
                 <div class="container pideco-footer-bottom">
                     <span>© 2026 Pídeco. All rights reserved.</span>
+                    <span class="pideco-footer-secure"><i class="fa fa-shield"></i><strong>Secure purchase</strong> · Your data is protected</span>
                     <nav class="pideco-language-selector" aria-label="Language">
                         <t t-set="pideco_lang_es" t-value="website.language_ids.filtered_domain([('code', '=', 'es_AR')])[:1]"/>
                         <t t-set="pideco_lang_zh" t-value="website.language_ids.filtered_domain([('code', '=', 'zh_CN')])[:1]"/>
@@ -410,13 +411,18 @@
                 <div><i class="fa fa-shopping-bag"/><span><strong>Minimum order $200,000</strong><small>Applies to wholesale orders</small></span></div>
                 <div><i class="fa fa-truck"/><span><strong>Nationwide shipping</strong><small>We coordinate the delivery of your order</small></span></div>
                 <div><i class="fa fa-map-marker"/><span><strong>Store pickup</strong><small>Available by prior arrangement</small></span></div>
+                <div><i class="fa fa-undo"/><span><strong>Exchanges and returns</strong><small>[RETURNS POLICY: e.g. up to 30 days after your purchase]</small></span></div>
             </div>
-            <!-- Trust: returns policy, secure purchase and the legal links required in Argentina. The texts in
-                 brackets and the links (href="#") are completed in the website editor. -->
-            <div class="pideco-product-trust">
-                <div><i class="fa fa-undo"/><strong>Exchanges and returns</strong><small>[RETURNS POLICY: e.g. up to 30 days after your purchase]</small></div>
-                <div><i class="fa fa-shield"/><strong>Secure purchase</strong><small>Your data is protected</small></div>
-                <p class="pideco-product-legal"><a href="#">Cancellation button</a><a href="#">Consumer protection</a></p>
+            <!-- Accepted payment methods (no installments), under the returns policy. The text in brackets above
+                 is completed in the website editor. Secure purchase and the legal links live in the footer. -->
+            <div class="pideco-product-payments">
+                <strong>Payment methods</strong>
+                <ul>
+                    <li><i class="fa fa-fw fa-money"></i>Cash</li>
+                    <li><i class="fa fa-fw fa-university"></i>Bank transfer</li>
+                    <li><i class="fa fa-fw fa-credit-card"></i>Debit card</li>
+                    <li><i class="fa fa-fw fa-qrcode"></i>Nave QR</li>
+                </ul>
             </div>
         </xpath>
     </template>

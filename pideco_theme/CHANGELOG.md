@@ -31,7 +31,9 @@
 - Stock bajo ("2 unidades en stock", módulo Inventario de la tienda): texto bordó en lugar del recuadro amarillo.
 - La descripción corta del producto (eCommerce) se muestra completa debajo del título, sin recorte ni botón "Ver más".
 - La descripción completa del producto (la que Odoo muestra al final de la ficha) pasa a la tarjeta, debajo del título y de la descripción corta. Es el mismo campo y se edita ahí desde el editor; su lugar original al final de la página queda oculto.
-- Bloque de confianza en la ficha, debajo de las garantías de compra: cambios y devoluciones (texto entre corchetes para completar), compra segura y links a Botón de arrepentimiento y Defensa del consumidor (con `#`, se completan en el editor).
+- Galería de la ficha: fundido suave entre fotos en lugar del deslizamiento lateral de Odoo (miniaturas, flechas y deslizar en celular).
+- "Cambios y devoluciones" se suma a la lista de garantías de compra de la ficha (mismo formato de ícono), y debajo va el nuevo bloque "Medios de pago": efectivo, transferencia bancaria, débito y QR de Nave (sin cuotas).
+- "Compra segura · Tus datos están protegidos" pasa al footer, junto al copyright. Los links a Botón de arrepentimiento y Defensa del consumidor quedan solo en la columna "Legales" del footer.
 
 ### Tipografía
 

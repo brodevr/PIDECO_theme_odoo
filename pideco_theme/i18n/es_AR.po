@@ -1196,3 +1196,83 @@ msgid ""
 msgstr ""
 "<i class=\"fa fa-shield\"/><strong>Compra segura</strong><small>Tus datos "
 "están protegidos</small>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<strong>Payment methods</strong>"
+msgstr "<strong>Medios de pago</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-money\"/>Cash"
+msgstr "<i class=\"fa fa-money\"/>Efectivo"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-university\"/>Bank transfer"
+msgstr "<i class=\"fa fa-university\"/>Transferencia bancaria"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-credit-card\"/>Debit card"
+msgstr "<i class=\"fa fa-credit-card\"/>Débito"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-qrcode\"/>Nave QR"
+msgstr "<i class=\"fa fa-qrcode\"/>QR de Nave"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Perón 2560 · pideco.com.ar"
+msgstr "Perón 2560 · pideco.com.ar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Instagram @pideco_bazar"
+msgstr "Instagram @pideco_bazar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Facebook"
+msgstr "Facebook"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid ""
+"<span>© 2026 Pídeco. All rights reserved.</span>\n"
+"                    <span class=\"pideco-footer-secure\"><i class=\"fa fa-shield\"/><strong>Secure purchase</strong> · Your data is protected</span>"
+msgstr ""
+"<span>© 2026 Pídeco. Todos los derechos reservados.</span>\n"
+"                    <span class=\"pideco-footer-secure\"><i class=\"fa fa-shield\"/><strong>Compra segura</strong> · Tus datos están protegidos</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid ""
+"<i class=\"fa fa-undo\"/><span><strong>Exchanges and "
+"returns</strong><small>[RETURNS POLICY: e.g. up to 30 days after your "
+"purchase]</small></span>"
+msgstr ""
+"<i class=\"fa fa-undo\"/><span><strong>Cambios y "
+"devoluciones</strong><small>[POLÍTICA DE CAMBIOS: ej. hasta 30 días después "
+"de tu compra]</small></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-money\"/>Cash"
+msgstr "<i class=\"fa fa-fw fa-money\"/>Efectivo"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-university\"/>Bank transfer"
+msgstr "<i class=\"fa fa-fw fa-university\"/>Transferencia bancaria"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-credit-card\"/>Debit card"
+msgstr "<i class=\"fa fa-fw fa-credit-card\"/>Débito"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-qrcode\"/>Nave QR"
+msgstr "<i class=\"fa fa-fw fa-qrcode\"/>QR de Nave"

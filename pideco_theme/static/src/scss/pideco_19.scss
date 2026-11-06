@@ -1612,14 +1612,6 @@ body.editor_enable .pideco-cat-card .stretched-link::after,
 .o_wsale_product_page #threshold_message { display: flex; align-items: center; gap: .1rem; margin: .5rem 0 .75rem !important; padding: 0; background: transparent !important; color: var(--pideco-wine) !important; font-size: .9rem; font-weight: 600; white-space: normal; text-align: left; }
 .o_wsale_product_page #threshold_message .fa-circle { color: var(--pideco-clay) !important; font-size: .5rem; }
 
-/* Product page: trust block under the buy assurances (returns, secure purchase, legal links). */
-.pideco-product-trust { display: grid; gap: .75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(147, 101, 70, .22); }
-.pideco-product-trust > div { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: .1rem .7rem; align-items: start; }
-.pideco-product-trust i { grid-row: 1 / span 2; margin-top: .2rem; color: var(--pideco-wine); font-size: 1.05rem; }
-.pideco-product-trust strong { color: var(--pideco-wine); font-size: .88rem; }
-.pideco-product-trust small { color: var(--pideco-text); font-size: .8rem; }
-.pideco-product-legal { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin: .25rem 0 0; font-size: .8rem; }
-.pideco-product-legal a { color: var(--pideco-wine); text-decoration: underline; text-underline-offset: .2em; }
 
 /* Product page: full website description inside the details card, under the title (see
    pideco_product_title_19). Its native place at the bottom of the page is hidden. */
@@ -1628,3 +1620,27 @@ body.editor_enable .pideco-cat-card .stretched-link::after,
 .o_wsale_product_page .pideco-full-description > :last-child { margin-bottom: 0; }
 .o_wsale_product_page .pideco-full-description ul { padding-left: 1.2rem; }
 .o_wsale_product_page .pideco-full-description li { margin-bottom: .25rem; }
+
+/* Product gallery: a soft crossfade between photos instead of Odoo's sideways slide (Bootstrap's fade
+   transition, applied to the product carousel only). */
+.o_wsale_product_page #o-carousel-product .carousel-item { transition: opacity .55s ease; transform: none !important; opacity: 0; }
+.o_wsale_product_page #o-carousel-product .carousel-item.active,
+.o_wsale_product_page #o-carousel-product .carousel-item-next.carousel-item-start,
+.o_wsale_product_page #o-carousel-product .carousel-item-prev.carousel-item-end { z-index: 1; opacity: 1; }
+.o_wsale_product_page #o-carousel-product .active.carousel-item-start,
+.o_wsale_product_page #o-carousel-product .active.carousel-item-end { z-index: 0; opacity: 0; transition: opacity 0s .55s; }
+@media (prefers-reduced-motion: reduce) {
+    .o_wsale_product_page #o-carousel-product .carousel-item { transition: none; }
+}
+
+/* Product page: accepted payment methods, under the returns policy. */
+.pideco-product-payments { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(147, 101, 70, .22); }
+.pideco-product-payments > strong { display: block; margin-bottom: .6rem; color: var(--pideco-wine); font-size: .88rem; }
+.pideco-product-payments ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.pideco-product-payments li { display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .75rem; border: 1px solid rgba(147, 101, 70, .3); border-radius: 999px; background: var(--pideco-surface); color: var(--pideco-text); font-size: .8rem; font-weight: 600; }
+.pideco-product-payments i { color: var(--pideco-wine); }
+
+/* Footer bottom bar: secure purchase, next to the copyright. */
+.pideco-footer-secure { display: inline-flex; align-items: center; gap: .4rem; color: var(--pideco-text); font-size: .85rem; }
+.pideco-footer-secure i { color: var(--pideco-wine); }
+.pideco-footer-secure strong { color: var(--pideco-wine); font-weight: 600; }

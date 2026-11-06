@@ -1150,3 +1150,82 @@ msgid ""
 "<i class=\"fa fa-shield\"/><strong>Secure purchase</strong><small>Your data "
 "is protected</small>"
 msgstr "<i class=\"fa fa-shield\"/><strong>安全购物</strong><small>您的数据受到保护</small>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<strong>Payment methods</strong>"
+msgstr "<strong>支付方式</strong>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-money\"/>Cash"
+msgstr "<i class=\"fa fa-money\"/>现金"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-university\"/>Bank transfer"
+msgstr "<i class=\"fa fa-university\"/>银行转账"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-credit-card\"/>Debit card"
+msgstr "<i class=\"fa fa-credit-card\"/>借记卡"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-qrcode\"/>Nave QR"
+msgstr "<i class=\"fa fa-qrcode\"/>Nave 二维码"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Perón 2560 · pideco.com.ar"
+msgstr "Perón 2560 · pideco.com.ar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Instagram @pideco_bazar"
+msgstr "Instagram @pideco_bazar"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Facebook"
+msgstr "Facebook"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid ""
+"<span>© 2026 Pídeco. All rights reserved.</span>\n"
+"                    <span class=\"pideco-footer-secure\"><i class=\"fa fa-shield\"/><strong>Secure purchase</strong> · Your data is protected</span>"
+msgstr ""
+"<span>© 2026 Pídeco。保留所有权利。</span>\n"
+"                    <span class=\"pideco-footer-secure\"><i class=\"fa fa-shield\"/><strong>安全购物</strong> · 您的数据受到保护</span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid ""
+"<i class=\"fa fa-undo\"/><span><strong>Exchanges and "
+"returns</strong><small>[RETURNS POLICY: e.g. up to 30 days after your "
+"purchase]</small></span>"
+msgstr ""
+"<i class=\"fa fa-undo\"/><span><strong>换货与退货</strong><small>[退换货政策：例如购买后 30 "
+"天内]</small></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-money\"/>Cash"
+msgstr "<i class=\"fa fa-fw fa-money\"/>现金"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-university\"/>Bank transfer"
+msgstr "<i class=\"fa fa-fw fa-university\"/>银行转账"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-credit-card\"/>Debit card"
+msgstr "<i class=\"fa fa-fw fa-credit-card\"/>借记卡"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
+msgid "<i class=\"fa fa-fw fa-qrcode\"/>Nave QR"
+msgstr "<i class=\"fa fa-fw fa-qrcode\"/>Nave 二维码"
