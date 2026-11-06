@@ -335,6 +335,11 @@
     </template>
 
     <template id="pideco_product_page_19" inherit_id="website_sale.product" name="PIDECO product page" priority="90">
+        <!-- The full description is shown under the title (pideco_product_title_19): its native place at the
+             bottom stays in the page, hidden, so other modules that refer to it keep working. -->
+        <xpath expr="//div[@id='product_full_description']" position="attributes">
+            <attribute name="class" add="pideco-full-description-native" separator=" "/>
+        </xpath>
         <xpath expr="//section[@id='product_detail']" position="after">
             <t t-set="pideco_sale_domain" t-value="list(website.sale_product_domain()) + [('is_published', '=', True)]"/>
             <t t-set="pideco_recommendation_domain" t-value="pideco_sale_domain + [('id', '!=', product.id)] + ([('public_categ_ids', 'in', product.public_categ_ids.ids)] if product.public_categ_ids else [])"/>
@@ -375,6 +380,12 @@
     </template>
 
     <template id="pideco_product_title_19" inherit_id="website_sale.product_title" name="PIDECO product title" priority="90">
+        <!-- Full website description (website_description) shown in the details card, under the short
+             eCommerce description, instead of at the bottom of the page. Same field: editable here in the
+             website editor. Shown while editing even when empty, so it can be filled in. -->
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="after">
+            <div t-if="product.website_description or editable" class="pideco-full-description" t-field="product.website_description"/>
+        </xpath>
         <xpath expr="//h1" position="before">
             <div class="pideco-product-meta">
                 <a t-if="product.public_categ_ids" t-att-href="'/shop/category/%s' % slug(product.public_categ_ids[:1])" t-out="product.public_categ_ids[:1].name"/>

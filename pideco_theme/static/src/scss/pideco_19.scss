@@ -1620,3 +1620,11 @@ body.editor_enable .pideco-cat-card .stretched-link::after,
 .pideco-product-trust small { color: var(--pideco-text); font-size: .8rem; }
 .pideco-product-legal { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin: .25rem 0 0; font-size: .8rem; }
 .pideco-product-legal a { color: var(--pideco-wine); text-decoration: underline; text-underline-offset: .2em; }
+
+/* Product page: full website description inside the details card, under the title (see
+   pideco_product_title_19). Its native place at the bottom of the page is hidden. */
+.o_wsale_product_page .pideco-full-description-native { display: none !important; }
+.o_wsale_product_page .pideco-full-description { margin: 0 0 1.25rem; color: var(--pideco-text); font-size: .95rem; line-height: 1.6; overflow-wrap: anywhere; }
+.o_wsale_product_page .pideco-full-description > :last-child { margin-bottom: 0; }
+.o_wsale_product_page .pideco-full-description ul { padding-left: 1.2rem; }
+.o_wsale_product_page .pideco-full-description li { margin-bottom: .25rem; }
