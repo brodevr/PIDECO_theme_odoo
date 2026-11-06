@@ -35,7 +35,10 @@ Si la base ya tuvo instalada una versión anterior con otros textos, conviene ag
 
 ## Frase de bienvenida en las categorías
 
-Cada categoría puede mostrar una frase centrada debajo del título: en Sitio web → eCommerce → Categorías, abrir la categoría y escribir su descripción; después, en el editor de la tienda, activar la opción de mostrar la descripción de la categoría.
+Cada categoría puede mostrar su nombre en grande a la izquierda y una frase centrada a la derecha (en celular, uno debajo del otro):
+
+1. En Sitio web → eCommerce → Categorías, abrir la categoría y escribir la frase en "Descripción".
+2. Entrar a la categoría en el sitio, tocar Editar, hacer clic en el encabezado de la tienda (título y migas de pan) y activar "Mostrar título" y "Mostrar descripción". Es por categoría.
 
 ## Edición del home desde Odoo
 
