@@ -29,6 +29,7 @@
 - Galería de la ficha como en Atelier Isadora: en escritorio, miniaturas en columna a la izquierda y la foto grande a la derecha (reemplaza al mosaico). Con una sola foto, la foto ocupa todo el ancho. En celular sigue el carrusel con miniaturas debajo.
 - Frase de bienvenida en cada categoría: se usa la descripción de la categoría de Odoo, centrada debajo del título.
 - Stock bajo ("2 unidades en stock", módulo Inventario de la tienda): texto bordó en lugar del recuadro amarillo.
+- La descripción del producto se muestra completa en su lugar nativo de Odoo, debajo del título, sin recorte ni botón "Ver más".
 - Bloque de confianza en la ficha, debajo de las garantías de compra: cambios y devoluciones (texto entre corchetes para completar), compra segura y links a Botón de arrepentimiento y Defensa del consumidor (con `#`, se completan en el editor).
 
 ### Tipografía

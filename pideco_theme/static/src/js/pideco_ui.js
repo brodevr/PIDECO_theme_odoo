@@ -340,41 +340,6 @@ function initHeaderMetrics() {
     updateBottom();
 }
 
-// Product description under the title: shown trimmed, with a "View more" toggle that opens it in place.
-// A text that already fits is left whole and loses the toggle. Nothing runs in the website editor,
-// where the description must stay whole and editable.
-function initDescriptionToggles() {
-    const isEditing = () => document.body.classList.contains("editor_enable");
-    const update = () => {
-        if (isEditing()) return;
-        document.querySelectorAll(".pideco-product-description").forEach((description) => {
-            const toggle = description.parentElement.querySelector("[data-pideco-description-toggle]");
-            if (!toggle || description.classList.contains("is-expanded")) return;
-            description.classList.remove("is-short");
-            const fits = description.scrollHeight <= description.clientHeight + 1;
-            description.classList.toggle("is-short", fits);
-            toggle.classList.toggle("is-hidden", fits);
-        });
-    };
-    document.addEventListener("click", (event) => {
-        const toggle = event.target.closest("[data-pideco-description-toggle]");
-        if (!toggle || isEditing()) return;
-        const description = toggle.parentElement.querySelector(".pideco-product-description");
-        if (!description) return;
-        const expanded = !description.classList.contains("is-expanded");
-        description.classList.toggle("is-expanded", expanded);
-        toggle.setAttribute("aria-expanded", String(expanded));
-        // Closing a long text: bring its start back into view.
-        if (!expanded && description.getBoundingClientRect().top < 0) {
-            description.scrollIntoView({block: "start", behavior: "smooth"});
-        }
-    });
-    update();
-    window.addEventListener("resize", update, {passive: true});
-    // Web fonts change the text height once loaded.
-    document.fonts?.ready.then(update);
-}
-
 // The newsletter form and the popup form of the home subscribe to the "PIDECO news" list. Its id is
 // rendered on #wrap, outside the editable zones, and passed here to the forms that have no list yet,
 // so the zones stay free of QWeb directives and editable in the website editor.
@@ -393,7 +358,6 @@ function startPidecoUi() {
     initNewsletterLists();
     initPromoMarquee();
     initHeaderMetrics();
-    initDescriptionToggles();
 }
 
 if (document.readyState === "loading") {
