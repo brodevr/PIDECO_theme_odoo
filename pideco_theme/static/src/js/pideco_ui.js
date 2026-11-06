@@ -340,6 +340,50 @@ function initHeaderMetrics() {
     updateBottom();
 }
 
+// Product descriptions under the title: a long text shows its first lines and "View more" unfolds it in
+// place (the height is animated from the trimmed height to the full one); "View less" folds it back.
+// A text that fits is left whole, without the button. Nothing runs in the website editor.
+function initDescriptionToggles() {
+    const isEditing = () => document.body.classList.contains("editor_enable");
+    const update = () => {
+        if (isEditing()) return;
+        document.querySelectorAll("[data-pideco-description]").forEach((description) => {
+            if (description.classList.contains("is-expanded")) return;
+            description.classList.add("is-collapsible");
+            const fits = description.scrollHeight <= description.clientHeight + 4;
+            description.classList.toggle("is-collapsible", !fits);
+        });
+    };
+    document.addEventListener("click", (event) => {
+        const toggle = event.target.closest("[data-pideco-description-toggle]");
+        if (!toggle || isEditing()) return;
+        const description = toggle.previousElementSibling;
+        if (!description?.matches("[data-pideco-description]")) return;
+        const expand = !description.classList.contains("is-expanded");
+        if (expand) {
+            description.style.maxHeight = `${description.clientHeight}px`;
+            description.classList.add("is-expanded");
+            requestAnimationFrame(() => { description.style.maxHeight = `${description.scrollHeight}px`; });
+            description.addEventListener("transitionend", () => {
+                if (description.classList.contains("is-expanded")) description.style.maxHeight = "none";
+            }, {once: true});
+        } else {
+            description.style.maxHeight = `${description.scrollHeight}px`;
+            requestAnimationFrame(() => {
+                description.classList.remove("is-expanded");
+                description.style.maxHeight = "";
+                // Closing a long text: bring its start back into view.
+                if (description.getBoundingClientRect().top < 0) description.scrollIntoView({block: "start", behavior: "smooth"});
+            });
+        }
+        toggle.setAttribute("aria-expanded", String(expand));
+    });
+    update();
+    window.addEventListener("resize", update, {passive: true});
+    // Web fonts change the text height once loaded.
+    document.fonts?.ready.then(update);
+}
+
 // The newsletter form and the popup form of the home subscribe to the "PIDECO news" list. Its id is
 // rendered on #wrap, outside the editable zones, and passed here to the forms that have no list yet,
 // so the zones stay free of QWeb directives and editable in the website editor.
@@ -356,6 +400,7 @@ function initNewsletterLists() {
 
 function startPidecoUi() {
     initNewsletterLists();
+    initDescriptionToggles();
     initPromoMarquee();
     initHeaderMetrics();
 }

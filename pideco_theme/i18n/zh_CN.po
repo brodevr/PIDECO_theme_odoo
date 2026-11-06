@@ -1229,3 +1229,26 @@ msgstr "<i class=\"fa fa-fw fa-credit-card\"/>借记卡"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
 msgid "<i class=\"fa fa-fw fa-qrcode\"/>Nave QR"
 msgstr "<i class=\"fa fa-fw fa-qrcode\"/>Nave 二维码"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid ""
+"<i class=\"fa fa-shield\"/><span><strong>Secure purchase</strong><small>Your"
+" data is protected</small></span>"
+msgstr ""
+"<i class=\"fa fa-"
+"shield\"/><span><strong>安全购物</strong><small>您的数据受到保护</small></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Consumer protection QR code"
+msgstr "消费者保护二维码"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_title_19
+msgid ""
+"<span class=\"pideco-when-collapsed\">View more</span><span class=\"pideco-"
+"when-expanded\">View less</span> <i class=\"fa fa-angle-down\"/>"
+msgstr ""
+"<span class=\"pideco-when-collapsed\">查看更多</span><span class=\"pideco-when-"
+"expanded\">收起</span> <i class=\"fa fa-angle-down\"/>"

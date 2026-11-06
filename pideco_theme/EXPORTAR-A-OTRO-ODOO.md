@@ -95,7 +95,7 @@ Para reemplazarlas en el módulo, conviene respetar la orientación y usar JPG o
 - **Galería (escritorio):** miniaturas en columna a la izquierda y la foto grande a la derecha.
 - **Stock bajo:** para mostrar "quedan X", en cada producto activar "Mostrar cantidad disponible" y elegir el umbral (requiere Inventario). Se ve como texto bordó.
 - **Garantías, cambios y medios de pago:** la lista de garantías incluye "Cambios y devoluciones" (el texto entre corchetes se completa desde el editor) y debajo van los medios de pago. Es un bloque compartido: editarlo en una ficha lo cambia en todas.
-- **Compra segura y links legales:** están en el footer ("Compra segura" junto al copyright; Botón de arrepentimiento y Defensa del consumidor en la columna "Legales", con links para completar).
+- **Compra segura y links legales:** están en el footer, en la columna "Legales" ("Compra segura" y el espacio para el QR de Defensa del consumidor: hacer clic sobre la imagen de muestra en el editor y reemplazarla por el QR real; Botón de arrepentimiento y Defensa del consumidor en la columna "Legales", con links para completar).
 - **Orden manual de los productos:** el orden "Destacado" de la tienda usa la secuencia de cada producto. Se cambia arrastrando en Sitio web → eCommerce → Productos (vista lista) o, en el editor de la tienda, con las opciones de cada producto (mover al principio, al final, etc.). Así se agrupan, por ejemplo, todas las cafeteras primero.
 
 

@@ -102,12 +102,11 @@
                 <div class="container pideco-footer-grid">
                     <div class="pideco-footer-intro"><img src="/pideco_theme/static/src/assets/pideco-logo.png" alt="PIDECO"/><p>Warmth in every corner</p><p>Perón 2560 · pideco.com.ar</p></div>
                     <div><h3>Help</h3><a href="#">Frequently asked questions</a><a href="#">Exchanges and returns</a><a href="#">WhatsApp [NUMBER]</a></div>
-                    <div><h3>Legal</h3><a href="#">Consumer protection</a><a href="#">Cancellation button</a><a href="#">Terms and conditions</a></div>
+                    <div><h3>Legal</h3><a href="#">Consumer protection</a><a href="#">Cancellation button</a><a href="#">Terms and conditions</a><p class="pideco-footer-secure"><i class="fa fa-shield"></i><span><strong>Secure purchase</strong><small>Your data is protected</small></span></p><img class="pideco-footer-qr" src="/pideco_theme/static/src/img/qr-placeholder.svg" alt="Consumer protection QR code"/></div>
                     <div><h3>Follow us</h3><a href="#">Instagram @pideco_bazar</a><a href="#">Facebook</a></div>
                 </div>
                 <div class="container pideco-footer-bottom">
                     <span>© 2026 Pídeco. All rights reserved.</span>
-                    <span class="pideco-footer-secure"><i class="fa fa-shield"></i><strong>Secure purchase</strong> · Your data is protected</span>
                     <nav class="pideco-language-selector" aria-label="Language">
                         <t t-set="pideco_lang_es" t-value="website.language_ids.filtered_domain([('code', '=', 'es_AR')])[:1]"/>
                         <t t-set="pideco_lang_zh" t-value="website.language_ids.filtered_domain([('code', '=', 'zh_CN')])[:1]"/>
@@ -381,11 +380,19 @@
     </template>
 
     <template id="pideco_product_title_19" inherit_id="website_sale.product_title" name="PIDECO product title" priority="90">
-        <!-- Full website description (website_description) shown in the details card, under the short
-             eCommerce description, instead of at the bottom of the page. Same field: editable here in the
-             website editor. Shown while editing even when empty, so it can be filled in. -->
-        <xpath expr="//div[@t-field='product.description_ecommerce']" position="after">
-            <div t-if="product.website_description or editable" class="pideco-full-description" t-field="product.website_description"/>
+        <!-- Descriptions under the title, in one block: the short eCommerce description (moved here from its
+             native spot, right above) and the full website description (website_description, which Odoo shows
+             at the bottom of the page). Same fields, editable here in the website editor; the full one is shown
+             while editing even when empty, so it can be filled in. A long text shows its first lines and a
+             "View more" button that unfolds it in place (pideco_ui.js); never trimmed in the editor. -->
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="before">
+            <div class="pideco-product-description" data-pideco-description="">
+                <div t-if="product.website_description or editable" class="pideco-full-description" t-field="product.website_description"/>
+            </div>
+            <button t-if="product.description_ecommerce or product.website_description" type="button" class="pideco-description-toggle" aria-expanded="false" data-pideco-description-toggle=""><span class="pideco-when-collapsed">View more</span><span class="pideco-when-expanded">View less</span> <i class="fa fa-angle-down"></i></button>
+        </xpath>
+        <xpath expr="//div[hasclass('pideco-full-description')]" position="before">
+            <xpath expr="//div[@t-field='product.description_ecommerce']" position="move"/>
         </xpath>
         <xpath expr="//h1" position="before">
             <div class="pideco-product-meta">

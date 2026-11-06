@@ -1276,3 +1276,26 @@ msgstr "<i class=\"fa fa-fw fa-credit-card\"/>Débito"
 #: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_terms_19
 msgid "<i class=\"fa fa-fw fa-qrcode\"/>Nave QR"
 msgstr "<i class=\"fa fa-fw fa-qrcode\"/>QR de Nave"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid ""
+"<i class=\"fa fa-shield\"/><span><strong>Secure purchase</strong><small>Your"
+" data is protected</small></span>"
+msgstr ""
+"<i class=\"fa fa-shield\"/><span><strong>Compra segura</strong><small>Tus "
+"datos están protegidos</small></span>"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_layout_19
+msgid "Consumer protection QR code"
+msgstr "Código QR de Defensa del consumidor"
+
+#. module: pideco_theme
+#: model_terms:ir.ui.view,arch_db:pideco_theme.pideco_product_title_19
+msgid ""
+"<span class=\"pideco-when-collapsed\">View more</span><span class=\"pideco-"
+"when-expanded\">View less</span> <i class=\"fa fa-angle-down\"/>"
+msgstr ""
+"<span class=\"pideco-when-collapsed\">Ver más</span><span class=\"pideco-"
+"when-expanded\">Ver menos</span> <i class=\"fa fa-angle-down\"/>"

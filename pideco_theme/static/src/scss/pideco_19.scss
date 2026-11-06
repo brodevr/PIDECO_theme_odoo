@@ -1640,7 +1640,32 @@ body.editor_enable .pideco-cat-card .stretched-link::after,
 .pideco-product-payments li { display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .75rem; border: 1px solid rgba(147, 101, 70, .3); border-radius: 999px; background: var(--pideco-surface); color: var(--pideco-text); font-size: .8rem; font-weight: 600; }
 .pideco-product-payments i { color: var(--pideco-wine); }
 
-/* Footer bottom bar: secure purchase, next to the copyright. */
-.pideco-footer-secure { display: inline-flex; align-items: center; gap: .4rem; color: var(--pideco-text); font-size: .85rem; }
-.pideco-footer-secure i { color: var(--pideco-wine); }
+/* Footer, "Legal" column: secure purchase and the consumer protection QR code (a placeholder image that
+   is replaced in the website editor). */
+.pideco-footer-secure { display: flex; align-items: flex-start; gap: .5rem; margin: 1rem 0 .9rem; color: var(--pideco-text); font-size: .85rem; line-height: 1.35; }
+.pideco-footer-secure i { margin-top: .15rem; color: var(--pideco-wine); }
+.pideco-footer-secure span { display: flex; flex-direction: column; }
 .pideco-footer-secure strong { color: var(--pideco-wine); font-weight: 600; }
+.pideco-footer-qr { display: block; width: 88px; height: auto; }
+@media (max-width: 575.98px) {
+    .pideco-footer-secure { justify-content: center; text-align: left; }
+    .pideco-footer-qr { margin-inline: auto; }
+}
+
+/* Product descriptions under the title (short + full, one block): a long text shows its first lines with
+   a fade, and "View more" unfolds it in place with a smooth height animation (pideco_ui.js sets the
+   height). Never trimmed in the editor, so the whole text can be edited. */
+.pideco-product-description { position: relative; overflow-wrap: anywhere; transition: max-height .45s ease; }
+.pideco-product-description > :last-child { margin-bottom: 0 !important; }
+body:not(.editor_enable) .pideco-product-description.is-collapsible:not(.is-expanded) { max-height: 9.6em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
+body:not(.editor_enable) .pideco-product-description.is-collapsible.is-expanded { overflow: hidden; }
+.pideco-description-toggle { display: none; align-items: center; gap: .35rem; margin: .35rem 0 1.25rem; padding: 0; border: 0; background: none; color: var(--pideco-wine); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.pideco-product-description.is-collapsible + .pideco-description-toggle { display: inline-flex; }
+.pideco-description-toggle:hover { color: var(--pideco-clay); }
+.pideco-description-toggle i { transition: transform .25s ease; }
+.pideco-description-toggle .pideco-when-expanded,
+.pideco-description-toggle[aria-expanded="true"] .pideco-when-collapsed { display: none; }
+.pideco-description-toggle[aria-expanded="true"] .pideco-when-expanded { display: inline; }
+.pideco-description-toggle[aria-expanded="true"] i { transform: rotate(180deg); }
+body.editor_enable .pideco-description-toggle { display: none !important; }
+@media (prefers-reduced-motion: reduce) { .pideco-product-description { transition: none; } }

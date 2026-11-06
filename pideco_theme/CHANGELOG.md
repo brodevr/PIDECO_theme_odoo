@@ -29,11 +29,11 @@
 - Galería de la ficha como en Atelier Isadora: en escritorio, miniaturas en columna a la izquierda y la foto grande a la derecha (reemplaza al mosaico). Con una sola foto, la foto ocupa todo el ancho. En celular sigue el carrusel con miniaturas debajo.
 - Frase de bienvenida en cada categoría: se usa la descripción de la categoría de Odoo, centrada debajo del título.
 - Stock bajo ("2 unidades en stock", módulo Inventario de la tienda): texto bordó en lugar del recuadro amarillo.
-- La descripción corta del producto (eCommerce) se muestra completa debajo del título, sin recorte ni botón "Ver más".
-- La descripción completa del producto (la que Odoo muestra al final de la ficha) pasa a la tarjeta, debajo del título y de la descripción corta. Es el mismo campo y se edita ahí desde el editor; su lugar original al final de la página queda oculto.
+- La descripción completa del producto (la que Odoo muestra al final de la ficha) pasa a la tarjeta, debajo del título, en un solo bloque con la descripción corta de eCommerce. Son los mismos campos y se editan ahí desde el editor; el lugar original al final de la página queda oculto.
+- Si el bloque de descripción es largo, se ven sus primeras líneas con un desvanecido y "Ver más" lo despliega ahí mismo con una animación suave ("Ver menos" lo cierra). Si es corto, se muestra entero y sin botón. En el editor se ve siempre completo.
 - Galería de la ficha: fundido suave entre fotos en lugar del deslizamiento lateral de Odoo (miniaturas, flechas y deslizar en celular).
 - "Cambios y devoluciones" se suma a la lista de garantías de compra de la ficha (mismo formato de ícono), y debajo va el nuevo bloque "Medios de pago": efectivo, transferencia bancaria, débito y QR de Nave (sin cuotas).
-- "Compra segura · Tus datos están protegidos" pasa al footer, junto al copyright. Los links a Botón de arrepentimiento y Defensa del consumidor quedan solo en la columna "Legales" del footer.
+- "Compra segura · Tus datos están protegidos" pasa al footer, en la columna "Legales", con debajo un espacio para el QR de Defensa del consumidor (imagen de muestra que se reemplaza en el editor). Los links a Botón de arrepentimiento y Defensa del consumidor quedan solo en la columna "Legales" del footer.
 
 ### Tipografía
 

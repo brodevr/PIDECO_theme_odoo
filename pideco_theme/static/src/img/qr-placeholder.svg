@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <rect x="4" y="4" width="232" height="232" rx="16" fill="#fff9f1" stroke="#936546" stroke-width="4" stroke-dasharray="14 10"/>
+  <text x="120" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#4e0e14">QR</text>
+  <text x="120" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#5f3b2c">Defensa del</text>
+  <text x="120" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#5f3b2c">consumidor</text>
+</svg>
